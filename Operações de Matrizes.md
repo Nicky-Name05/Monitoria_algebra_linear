@@ -1,7 +1,8 @@
 Existem 8 operações de matrizes:
 ## 1. Soma de Matrizes
 A soma de matrizes é uma operação matricial na qual se subtrai, termo a termo, matrizes de mesmo tamanho.  
->[!example] Exemplo:
+>[!tip]
+>Exemplo:
 >
 >$$Seja\;A_{2X2}=
 \begin{pmatrix}
