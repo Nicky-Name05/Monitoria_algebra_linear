@@ -4,12 +4,12 @@ A soma de matrizes é uma operação matricial na qual se subtrai, termo a termo
 >[!note]
 >Exemplo:
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -46,12 +46,12 @@ A_{2X2}
 > [!note]
 > Exemplo:
 >
-> $$ Seja\;A_{2X2}=
+> $$ Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -120,12 +120,12 @@ Em que $p_{ij}$ é elemento de $P$, $a_{ik}$ é elemento de $A$ e $b_{kj}$ é el
 > [!note]
 > Exemplo:
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -165,7 +165,7 @@ O traço de uma matriz  é a soma da diagonal principal de uma matriz quadrada e
 > [!note]
 > Exemplo
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 11&67\\
 47&39
@@ -182,7 +182,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 > [!note]
 > Exemplo:
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 11&50\\
 47&39
@@ -202,7 +202,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 ## 7. Determinante
 É uma operação matricial na qual transforma-se a matriz em um número escalar representada da seguinte forma:
 
-$$ Sendo\; a\; matriz\;  
+$$ Sendo\  a\  matriz\   
 A = \begin{pmatrix}
 a & b & c \\
 d & e & f \\
