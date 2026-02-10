@@ -1,21 +1,21 @@
-Existem 8 operações de matrizes:
+Existem 8 operações principais de matrizes:
 ## 1. Soma de Matrizes
 A soma de matrizes é uma operação matricial na qual se subtrai, termo a termo, matrizes de mesmo tamanho.  
 >[!note]
->Exemplo:
+>**Exemplo:**
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
 \end{pmatrix},$$
-> $$
-A_{2X2}
+>
+> $$ A_{2X2}
 +B_{2X2}=
 \begin{pmatrix}
 1&5\\
@@ -35,7 +35,7 @@ A_{2X2}
 \end{pmatrix}$$
 
 > [!tip]
-> Propriedades da Soma
+> **Propriedades da Soma**
 > 1. $A+B=B+A$
 > 2. $(A+B)+C=A+(B+C)$
 > 3. Sendo $0$ a matriz nula nxm, $A+0=A$
@@ -44,14 +44,14 @@ A_{2X2}
  A diferença de matrizes é uma operação matricial na qual se subtrai, termo a termo, matrizes de mesmo tamanho. 
  
 > [!note]
-> Exemplo:
+> **Exemplo:**
 >
-> $$ Seja\;A_{2X2}=
+> $$ Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -76,17 +76,17 @@ A_{2X2}
 \end{pmatrix}$$
 
 >[!tip]
->Propriedades da Diferença
+>**Propriedades da Diferença**
 > 1. $A-B=-B+A$
 > 2. $(A+B)-C=A+(B-C) = (A-C)+B$
 > 3. Sendo $0$ a matriz nula nxm, $A-0=A$
 
 
 ## 3. Produto Escalar
-O produto escalar é uma operação matricial em que se multiplica um escalar $k$ por uma matriz $A$ resultando em uma matriz cujos elementos são os elementos de $A$ multiplicados por $k$. Exemplo:
+O produto escalar é uma operação matricial em que se multiplica um escalar $k$ por uma matriz $A$ resultando em uma matriz cujos elementos são os elementos de $A$ multiplicados por $k$.
 
 > [!note]
-> Exemplo:
+> **Exemplo:**
 >
 >$$ Seja\ A= 
 \begin{pmatrix}
@@ -105,7 +105,7 @@ O produto escalar é uma operação matricial em que se multiplica um escalar $k
 \end{pmatrix} $$
 
 >[!tip]
->Propriedades do Produto Escalar
+>**Propriedades do Produto Escalar**
 > 1. $k \cdot (A+B)=k \cdot A+k \cdot B$
 > 2. $(k_1+k_2)\cdot A=k_1\cdot A+k_2 \cdot A$
 > 3. Sendo $0$ o número real zero e $0_{nXm}$ a matriz nula, $0 \cdot A=0_{nXm}$
@@ -118,14 +118,14 @@ $$ p_{ij}=\sum_{k=1}^m a_{ik} \cdot b_{kj},$$
 Em que $p_{ij}$ é elemento de $P$, $a_{ik}$ é elemento de $A$ e $b_{kj}$ é elemento de $B$.
 
 > [!note]
-> Exemplo:
+>** Exemplo:**
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
 \end{pmatrix}
-\;e\;B_{2X2}=
+\ e\ B_{2X2}=
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -150,7 +150,7 @@ AB=
 \end{pmatrix}=P$$
 
 >[!tip]
->Propriedades do Produto Matricial
+>**Propriedades do Produto Matricial**
 > 1. $AB\ne BA$
 > 2. $I_nA=AI_n=A$
 > 3. $A(B + C) = AB + AC$
@@ -163,9 +163,9 @@ AB=
 O traço de uma matriz  é a soma da diagonal principal de uma matriz quadrada e é representado por $tr(A)$. 
 
 > [!note]
-> Exemplo
+>**Exemplo**
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 11&67\\
 47&39
@@ -173,16 +173,16 @@ O traço de uma matriz  é a soma da diagonal principal de uma matriz quadrada e
 ,\ tr(A) = 11 + 39\Rightarrow tr(A) = 50$$
 
 >[!tip]
->Propriedades do Traço
+>**Propriedades do Traço**\
 >Não existem propriedades notáveis do traço
 
 ## 6. Transposição de Matrizes
 A transposição de uma matriz é uma operação de matriz na qual, a partir de uma matriz $A$, se gera uma matriz $A^T$ na qual as linhas de $A$ são as colunas de $A^T$ e as colunas de $A$ são as linhas de $A^T$.  
 
 > [!note]
-> Exemplo:
+> **Exemplo:**
 >
->$$Seja\;A_{2X2}=
+>$$Seja\ A_{2X2}=
 \begin{pmatrix}
 11&50\\
 47&39
@@ -194,7 +194,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 \end{pmatrix}$$
 
 >[!tip]
->Propriedades da Transposição de Matrizes
+>**Propriedades da Transposição de Matrizes**
 >1. $(A^t)^t=A$
 >2. $(A+B)^t=A^t+B^t$
 >3. Sendo $k$ um escalar, $(kA)^t = kA^t$
@@ -202,7 +202,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 ## 7. Determinante
 É uma operação matricial na qual transforma-se a matriz em um número escalar representada da seguinte forma:
 
-$$ Sendo\; a\; matriz\;  
+$$ Sendo\  a\  matriz\   
 A = \begin{pmatrix}
 a & b & c \\
 d & e & f \\
@@ -219,7 +219,7 @@ g & h & i
 >[!warning]
 >Só existe determinante de matrizes quadradas. 
 
-Existem diversas formas de se calcular o determinante, mas a forma mais usada é a [Regra de Laplace](<Regra de Laplace.md>), e um dos principais motivos para se fazer esse cálculo é para achar a solução de um [Sistema Linear](<Sistema linear.md>).
+Existem diversas formas de se calcular o determinante, mas a forma mais usada é a [Regra de Laplace](<Regra de Laplace.md>), e um dos principais motivos para se fazer esse cálculo é para achar a solução de um [Sistema Linear](<Sistema Linear.md>).
 
 >[!tip]
 >Propriedades do Determinante
@@ -230,16 +230,14 @@ Existem diversas formas de se calcular o determinante, mas a forma mais usada é
 2 & 4 & 11 \\
 1 & 2 & 5 \\
 3 & 0 & 12
-\end{vmatrix}=$$
->$$d
-(L_1\leftarrow L_1-2 \cdot L_2)$$
->$$=
+\end{vmatrix}\xlongequal
+{L_1\leftarrow L_1-2 \cdot L_2}
 \begin{vmatrix}
 0 & 0 & 1 \\
 1 & 2 & 5 \\
 3 & 0 & 12
 \end{vmatrix}
-= -6$$
+= -6 $$
 >
 >2. Se é uma matriz quadrada $B$ é uma matriz obtida de $A$ através da permutação entre linhas ou entre colunas, então o determinante de $B$ é $(-1)^n$ vezes o determinante de $A$, em que $n$ é o número de permutações necessárias para que $A$ se torne $B$ ($det(B)=(-1)^n \cdot det(A)$). Ex:
 >
