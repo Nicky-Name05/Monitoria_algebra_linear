@@ -18,7 +18,7 @@ A^{-1} \cdot I_n\Rightarrow$$
 
 $$\Rightarrow I_n \cdot adj(A) \cdot \frac 1{det(A)}=A^{-1}$$
 
->[!waarning] Para existir inversa de $A$, o determinante de $A$ deve ser diferente de $0$. 
+>[!warning] Para existir inversa de $A$, o determinante de $A$ deve ser diferente de $0$. 
 
 Formula geral:
 
