@@ -11,7 +11,7 @@ $$A_{2X3}=
 \end{pmatrix}$$
 
 2. **Matriz Coluna**
-	É uma matriz cujo o numero de colunas é 1, ou seja, $A_{iX1}$. É normalmente usada para representar um [Vetor](<Vetor.md>), as Variáveis de um Sistema Linear e os Resultado de um Sistema Linear quando um [Sistema Linear](<Sistema Linear>) é escrito na forma matricial.
+	É uma matriz cujo o numero de colunas é 1, ou seja, $A_{iX1}$. É normalmente usada para representar um [Vetor](<Vetor.md>), as Variáveis de um Sistema Linear e os Resultado de um Sistema Linear quando um [Sistema Linear](<Sistema Linear.md>) é escrito na forma matricial.
 	Exemplo de matriz coluna:
 
 $$ A_{3x1} = 
