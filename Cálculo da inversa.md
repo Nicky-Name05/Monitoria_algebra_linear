@@ -18,7 +18,8 @@ A^{-1} \cdot I_n\Rightarrow$$
 
 $$\Rightarrow I_n \cdot adj(A) \cdot \frac 1{det(A)}=A^{-1}$$
 
->[!warning] Para existir inversa de $A$, o determinante de $A$ deve ser diferente de $0$. 
+>[!warning]
+>Para existir inversa de $A$, o determinante de $A$ deve ser diferente de $0$. 
 
 Formula geral:
 
@@ -54,7 +55,8 @@ $$[A|I_n]\sim[I_n|A^{-1}],$$
 
 Em que $\sim$ indica que $[A|I_n]$ e $[I_n|A^{-1}]$ são linha semelhantes e | é uma linha tracejada. Essa forma consiste em fazer diversas operações elementares semelhantes as operações elementares feitas no método de resolução de sistemas lineares de [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>) com o objetivo de transformar a matriz esquerda na matriz identidade.
 
->[!note] Exemplo
+>[!note]
+>**Exemplo**
 >
 >$$Seja\ A_{2X2} = 
 \begin {bmatrix}
