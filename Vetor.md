@@ -13,7 +13,7 @@ z \end{bmatrix},\
 v = \begin{pmatrix} x\\ 
 y\\ 
 z \end{pmatrix}\
-e\; \ v = (x,\ y,\ z), $$
+e\  \ v = (x,\ y,\ z), $$
 
 Ainda que vetores possam ter mais de 3 componentes dependendo do espaço vetorial que estão contidos, nesse caso apenas aumenta-se a enúpla ("n-úpla") ou a matriz para caber todas elas.
 
@@ -22,7 +22,7 @@ Ainda que vetores possam ter mais de 3 componentes dependendo do espaço vetoria
 >Vetor nulo é o vetor com todas as suas componentes iguais a $0$ ($(0,0)$ para $\mathbb R^2$, por exemplo)
 >
 ## Espaço Vetorial
-Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele deve ser um conjunto não vazio ($\mathbb {V} \ne Ø$), com duas operações (uma operação de soma $\set{\mathbb V \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\oplus$; e uma de multiplicação por escalar $\set{\mathbb R \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\otimes$) que respeite as seguintes propriedades para $v,\;u\;e\;w\; \in\; \mathbb V$ ($v,\;u\;e\;w$ existem em $\mathbb V$) e $a\;e\;b\; \in\; \mathbb R$ ($a\;e\;b$ existem em $\mathbb R$):
+Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele deve ser um conjunto não vazio ($\mathbb {V} \ne Ø$), com duas operações (uma operação de soma $\set{\mathbb V \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\oplus$; e uma de multiplicação por escalar $\set{\mathbb R \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\otimes$) que respeite as seguintes propriedades para $v,\ u\ e\ w\  \in\  \mathbb V$ ($v,\ u\ e\ w$ existem em $\mathbb V$) e $a\ e\ b\  \in\  \mathbb R$ ($a\ e\ b$ existem em $\mathbb R$):
 
 1.  $(u \oplus v) \oplus w = u \oplus (v \oplus w)$
 2. $u \oplus v=v \oplus u$
@@ -48,7 +48,7 @@ Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele dev
 >**Exemplo**\
 >Suponha um conjunto $\mathbb V = (0,+\infty)$, com as operações $x\oplus y= x\cdot y$ e $\lambda \otimes x= x^\lambda$, é possível considerá-lo um Espaço Vetorial, pois:  
 >
->$$Seja\; v \ e \ u \in \mathbb V \ e\ \lambda,\lambda_2 \in \mathbb R,$$ 
+>$$Seja\  v \ e \ u \in \mathbb V \ e\ \lambda,\lambda_2 \in \mathbb R,$$ 
 >
 >$u \oplus v = u\cdot v = v \cdot u = v \oplus u$ (Segunda condição é atendida. Por indução a Primeira também é).
 >
@@ -66,7 +66,7 @@ Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele dev
 
 ## Subespaço Vetorial
 Subespaços vetoriais são subconjuntos dos Espaços Vetoriais que, além de atenderem as condições de um Espaço Vetorial, também têm que atender as seguintes condições:
-$$Seja\ \mathbb V\ um\ Espaço\ Vetorial \; e\ \mathbb W \subset \mathbb V,$$
+$$Seja\ \mathbb V\ um\ Espaço\ Vetorial \  e\ \mathbb W \subset \mathbb V,$$
 1. Se $v$ e $u$ $\in\ \mathbb W$, $v+u \in \mathbb W$ (Diz-se que "W é fechado para soma", ou seja, a soma de qualquer vetor de $\mathbb W$ com outro vetor de $\mathbb W$ está contida em $\mathbb W$).
 2. Se $v\ \in\ \mathbb W$ e $\lambda \ \in \ \mathbb R$, $\lambda \cdot v\ \in \ \mathbb W$ (Diz-se que "W é fechado para produto por escalar", ou seja, o produto de qualquer vetor de $\mathbb W$ com com um escalar está contido em $\mathbb W$).
 
@@ -81,9 +81,10 @@ $$Seja\ \mathbb V\ um\ Espaço\ Vetorial \; e\ \mathbb W \subset \mathbb V,$$
 >[!note]
 >**Exemplo**
 > 1. Sejam $\mathbb V= \mathbb R^4$ e $\mathbb W=(0,\ x_1,\ x_2, ,\ x_3)$, pode se dizer que é um Subespaço Vetorial, pois:
+> 
 > $$I.\mathbb W \subset \mathbb V.$$
 >
-> $$II.\ Sejam\ u\; e\; v \in \mathbb W,$$
+> $$II.\ Sejam\ u\  e\  v \in \mathbb W,$$
 >
 > $$ u+v=(0,\ u_1,\ u_2,\ u_3)+(0,\ v_1,\ v_2,\ v_3)=(0,\ u_1+v_1,\ u_2+v_2,\ u_3+v_3),\ que\ está\ em\ \mathbb W.$$
 >
