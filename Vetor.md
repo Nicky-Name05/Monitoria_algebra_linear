@@ -7,7 +7,13 @@ Vetores são comumente representados por segmentos direcionados (o vetor velocid
 
 As formas mais comuns de se representar um vetor $v$ na Álgebra linear são:
 
-$$ v = \begin{bmatrix} x\\ y\\ z \end{bmatrix},\ v = \begin{pmatrix} x\\ y\\ z \end{pmatrix}\ e\; \ v = (x,\ y,\ z), $$
+$$ v = \begin{bmatrix} x\\
+y\\ 
+z \end{bmatrix},\
+v = \begin{pmatrix} x\\ 
+y\\ 
+z \end{pmatrix}\
+e\; \ v = (x,\ y,\ z), $$
 
 Ainda que vetores possam ter mais de 3 componentes dependendo do espaço vetorial que estão contidos, nesse caso apenas aumenta-se a enúpla ("n-úpla") ou a matriz para caber todas elas.
 
@@ -20,7 +26,7 @@ Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele dev
 
 1.  $(u \oplus v) \oplus w = u \oplus (v \oplus w)$
 2. $u \oplus v=v \oplus u$
-3. Existe um $\require{physics} \overrightarrow 0$, tal que $\overrightarrow 0 \oplus v = v$ é uma afirmação verdadeira (Elemento Neutro da Adição)
+3. Existe um $ \overrightarrow 0$, tal que $\overrightarrow 0 \oplus v = v$ é uma afirmação verdadeira (Elemento Neutro da Adição)
 4. Existe um $-v$, tal que $v \oplus (-v) = \overrightarrow 0$ é uma afirmação verdadeira e $\overrightarrow 0$ é o Elemento Neutro da Adição
 5. $a\otimes(u\oplus v)=a\otimes u \oplus a\otimes v$
 6. $(a+b)\otimes v= (a\otimes v) \oplus (b\otimes v)$
