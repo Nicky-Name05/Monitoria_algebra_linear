@@ -14,10 +14,11 @@ Em que $A$ é a matriz dos coeficientes, $X$ é a matriz das incógnitas e $B$ �
 >[!note]
 >**Exemplo:**
 >
->$$\begin{numcase}
+>$$\begin{numcases}
+\dot
 x + y = 3 \\
 x + 2y = 5
-\end{numcase}
+\end{numcases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -58,10 +59,11 @@ Após achar o $det(A)$, acha-se os valores de cada uma variáveis dividindo $det
 >[!note]
 >**Exemplo:**
 >
->$$\begin{numcase}
+>$$\begin{numcases}
+\dot
 x + y = 3 \\
 x + 2y = 5
-\end{numcase}
+\end{numcases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -83,7 +85,8 @@ y
 \end {vmatrix} = 1 \Rightarrow$$
 >
 >$$\Rightarrow
-\begin{numcase}
+\begin{numcases}
+\dot
 x = \frac {
 \begin {vmatrix} 
 3 & 1\\
@@ -94,7 +97,7 @@ y = \frac {
 1 & 3\\
 1 & 5
 \end {vmatrix} } {det(A)} = \frac 2 1 = 2
-\end {numcase}
+\end {numcases}
 \Rightarrow$$
 >
 >$$ \Rightarrow 
@@ -158,12 +161,11 @@ Para tornar uma matriz em sua forma escalonada, são feitas operações elementa
 >[!note]
 >**Exemplo:**\
 >
->$$\Newextarrow{\xsim}{5,10}{0x223D}
- [A] =
+>$$ [A] =
 \begin {bmatrix} 
 1 & 1\\
 1 & 2
-\end {bmatrix} \xsim {L_2 
+\end {bmatrix} \xrightarrow {L_2 
 \rightarrow \ L_2\ -\ L_1} 
 \begin {bmatrix} 
 1 & 1\\
@@ -179,7 +181,7 @@ Para tornar uma matriz em sua forma escalonada, são feitas operações elementa
 Após achar a forma escalonada da matriz , são feitas mais operações elementares para achar a matriz linha reduzida da forma escalonada de $[A|B]$. A matriz linha reduzida é definida como uma matriz escalonada  cujos pivôs são todos iguais a $1$ e todos os elementos acima de um pivô são $0$.
 
 >[!note]
->**Exemplo de Matrizes linha reduzida:**\
+>**Exemplo de Matrizes linha reduzida:**
 >
 >$$ \begin {bmatrix} 
 1 & 0\\
@@ -226,12 +228,11 @@ Resumindo, o método de Gauss-Jordan usa operações elementares para reduzir a 
 >[!note]
 >**Exemplo:**
 >
->$$ \require{extpfeil}
->\Newextarrow{\xsim}{5,10}{0x223D}
-\begin{numcase}
+>$$ \begin{numcases}
+\dot
 x + y = 3 \\
 x + 2y = 5
-\end{numcase}
+\end{numcases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -253,7 +254,7 @@ y
 1 & 1 \shortmid & 3\\
 1 & 2\shortmid & 5
 \end {vmatrix} 
-\xsim {L_2 \rightarrow L_2-L_1} 
+\xrightarrow {L_2 \rightarrow L_2-L_1} 
 \begin {vmatrix} 
 1 & 1 \shortmid & 3\\
 0 & 1\shortmid & 2
@@ -265,7 +266,7 @@ y
 1 & 1 \shortmid & 3\\
 0 & 1\shortmid & 2
 \end {vmatrix}
-\xsim {L_1 \rightarrow L_1-L_2} 
+\xrightarrow {L_1 \rightarrow L_1-L_2} 
 \begin {vmatrix} 
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
@@ -277,10 +278,11 @@ y
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
 \end {vmatrix} 
-\begin{numcase}
+\begin{numcases}
+\dot
 x + 0y = 1 \\
 0x + y = 2
-\end{numcase} \Rightarrow x=1;y=2 \Rightarrow$$
+\end{numcases} \Rightarrow x=1;y=2 \Rightarrow$$
 >
 >$$ \Rightarrow
 S= (1,2) $$
