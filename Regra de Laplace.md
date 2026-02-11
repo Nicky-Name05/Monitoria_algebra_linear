@@ -1,20 +1,20 @@
 A Regra de Laplace, também chamada de Expansão em Cofatores, é definida como o somatório do produto dos elementos de uma linha ou de uma coluna pelos seus respectivos Cofatores associados, sendo representado matematicamente da seguinte forma:
 
-$$\sum_{k=1}^n\  = a_{ik}*\Delta_{ik},\  para\  o\  desenvolvimento\  em\  uma\  linha.$$
+$$\sum_{k=1}^n\  = a_{ik}*\Delta_{ik},\text {para\  o\  desenvolvimento\  em\  uma\  linha.} $$
 
 ou
 
-$$\sum_{k=1}^n\  = a_{kj}*\Delta_{kj},\  para\  o\  desenvolvimento\  em\  uma\  coluna. $$
+$$\sum_{k=1}^n\  = a_{kj}*\Delta_{kj},\text {para\  o\  desenvolvimento\  em\  uma\  coluna.} $$
 
 Pode-se usar as [Propriedades do Determinante](<Operações de Matrizes.md>) 1 e 2 para facilitar as contas, diminuindo o número de elementos dentro do somatório ao tornar os elementos da linha ou coluna analisada em 0s.
 
 ## Cofator
-Cofator de um elemento $a_{ij}$ de uma matriz $A\  =\  (a_{ij})_{mXn}$ é definido como o número real que resulta da seguinte equação:
+Cofator de um elemento $a_{ij}$ de uma matriz $`A\  =\  (a_{ij})_{mXn}`$ é definido como o número real que resulta da seguinte equação:
 	$\Delta_{ij} = (-1)^{i+j}.M_{ij}$, em que $M_{ij}$ é o menor associado ao elemento $a_{ij}$.
 
 > [!important]
 > **Menor**\
-> O menor associado ao elemento $a_{ij}$ de uma matriz $A\\=\\ (a_{ij})_{mXn}$  é definido como o determinante da matriz obtida de A ao se retirar a linha $i$ e a coluna $j$ de A e é denotado por $M_{ij}$.
+> O menor associado ao elemento $a_{ij}$ de uma matriz $`A\\=\\ (a_{ij})_{mXn}`$  é definido como o determinante da matriz obtida de A ao se retirar a linha $i$ e a coluna $j$ de A e é denotado por $M_{ij}$.
 
 >[!note]
 >**Exemplo:**
