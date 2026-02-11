@@ -1,4 +1,4 @@
-Além das operações de soma e de multiplicação, - que precisam existir em um Espaço Vetorial- existem algumas outras operações que podem ser feitas com vetores e a maioria delas são parecidas com as [operações matriciais](<Operações de Matrizes.md>) que foram vistas antes ou vão usar as operações matriciais para resolvê-las. As operações vetoriais são feitas entre elementos pertencentes a um espaço vetorial.
+Além das operações de soma e de multiplicação, - que precisam existir em um [Espaço Vetorial](<Vetor.md>)  - existem algumas outras operações que podem ser feitas com vetores e a maioria delas são parecidas com as [operações matriciais](<Operações de Matrizes.md>) que foram vistas antes ou vão usar as operações matriciais para resolvê-las. As operações vetoriais são feitas entre elementos pertencentes a um espaço vetorial.
 
 ## 1. Soma de Vetores (caso não seja definido na questão)
 A soma de vetores é feita da mesma forma que a soma de matrizes, ou seja  
