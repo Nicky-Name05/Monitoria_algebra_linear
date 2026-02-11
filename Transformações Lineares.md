@@ -11,6 +11,7 @@ Normalmente, isso é feito através de uma multiplicação matricial de um vetor
 >[!example] Exemplo
 > 1. Por multiplicação de matriz
 > Sendo $T(x,\ y,\ z)= (x+z,\ y)$ e $v=(v_1,\ v_2,\ v_3) \in \mathbb R^3$
+>
 > $$T(v)=
 \begin{bmatrix}
 1&0&1\\
@@ -29,14 +30,17 @@ v_3
 v_1+v_3\\
 v_2\\
 \end{bmatrix}\Rightarrow$$
+>
 >$$\Rightarrow \boxed {T(v)=
 \begin {bmatrix}
 v_1+v_3\\
 v_2\\
 \end{bmatrix}= (v_1+v_3, v_2)} $$
+>
 > A matriz da transformação pode ser escrita como $[T]$ (e a equação inteira ficaria: $[T]\cdot [v]= [w]$) e é chamada de **Matriz canônica da Transformação** ou apenas de **Matriz Transformação**
 > 1. Por substituição na transformação
 > Sendo $T(x,\ y,\ z)= (x+z,\ y)$ e $v=(v_1,\ v_2,\ v_3) \in \mathbb R^3$
+>
 > $$ T(v)=T(v_1,\ v_2,\ v_3)\Rightarrow
 T(v_1,\ v_2,\ v_3)= (v_1+v_3,\ v_2)\Rightarrow \boxed {T(v)=(v_1+v_3,\ v_2)}$$
 
@@ -54,89 +58,97 @@ Nesse caso, será necessário "destrinchar" o vetor final em função do vetor i
 
 >[!example] Exemplo
 Sendo $v=(x,\ y,\ z)$, $w= (x+z,\ y)$ e  $T(v)=w$, $[T]$ é:
+>
 > $$T(v)=w\Rightarrow T(v)=(x+z,\ y)\Rightarrow T(v)= (x,\ 0)+(0,\ y)+(z,\ 0)\Rightarrow$$ $$ \Rightarrow T(v)= x\cdot(1,\ 0)+y\cdot(0,\ 1)+z\cdot(1,\ 0)$$
 > Agora, a matriz $[T]$ será montada com cada um dos vetores achados como colunas na ordem em que $v$ esta originalmente escrito (o $x$ é a primeira componente de $v$, então o vetor multiplicado por $x$ é a primeira coluna; o $y$ é a segunda componente de $v$, então o vetor multiplicado por $y$ é a segunda coluna e assim por diante):
-> $$
-[T]=
+> $$ [T]=
 \begin{bmatrix}
 1&0&1\\
 0&1&0
 \end{bmatrix}$$
 
 ## Dimensão e Base nas Transformações Lineares
-Diferente dos [espaços vetoriais e subespaços vetoriais](<Vetor>), as Transformações não tem Dimensão ou Base. Porém [suas imagem e seus núcleos](<Núcleo e Imagem de uma Transformação Linear>) têm tanto dimensão quanto bases.
+Diferente dos [espaços vetoriais e subespaços vetoriais](<Vetor.md>), as Transformações não tem Dimensão ou Base. Porém [suas imagem e seus núcleos](<Núcleo e Imagem de uma Transformação Linear.md>) têm tanto dimensão quanto bases.
 #### Base do Núcleo e da Imagem
 Ao achar o forma que o $Ker(T)$ ou a $Im(T)$ tem deve-se "destrinchá-los" -  da mesma forma que foi feito para achar a Matriz Transformação, exceto que queremos apenas os vetores que formam a imagem ou o núcleo e não formar uma matriz. Esses vetores são a base do que estamos analisando.
 
 >[!example] Exemplo
 >1. Núcleo
 >Seja $T(x,y,z)=(x+z,y)$, $Ker(T)$ será:
->$$
-(0,0) = T(v) = T(v_1,v_2,v_3) \Rightarrow (0,0)=(v_1+v_3,v_2)\Rightarrow (0,0)=(v_1,0)+(0,v_2)+(v_3,0)\Rightarrow $$
->$$
-\Rightarrow (0,0)= v_1 \cdot (1,0)+v_2\cdot (0,1)+v_3\cdot(1,0)\Rightarrow $$
+>
+>$$ (0,0) = T(v) = T(v_1,v_2,v_3) \Rightarrow (0,0)=(v_1+v_3,v_2)\Rightarrow (0,0)=(v_1,0)+(0,v_2)+(v_3,0)\Rightarrow $$
+>
+>$$\Rightarrow (0,0)= v_1 \cdot (1,0)+v_2\cdot (0,1)+v_3\cdot(1,0)\Rightarrow $$
+>
 >$$ \Rightarrow
 \begin {bmatrix}
 1&0&1& \shortmid & 0\\
 0&1&0& \shortmid & 0
 \end {bmatrix} \Rightarrow 
-\begin{empheq}[left=\empheqlbrace]{align}
+\begin{cases}
 v_1+v_3=0\\
 v_2=0
-\end {empheq} 
+\end {cases} 
 \Rightarrow $$
 >$$ \Rightarrow
-\begin{empheq}[left=\empheqlbrace]{align}
+\begin{cases}
 v_3=-v_1\\
 v_2=0
-\end {empheq} \Rightarrow 
+\end {cases} \Rightarrow 
 Ker(T) = (v_1, 0, -v_1) $$
 > "Destrinchando" o $Ker(T)$, temos que:
-> $$
-(v_1,\; 0,\; -v_1)=v_1\cdot(1,\; 0,\;-1) \Rightarrow $$
->$$ Base\; de \; Ker(T) = \braket {(1,\;0,\;-1) } $$
+>
+> $$ (v_1,\  0,\  -v_1)=v_1\cdot(1,\  0,\ -1) \Rightarrow $$
+>
+>$$ Base\  de \  Ker(T) = \braket {(1,\ 0,\ -1) } $$
 >
 >---
 >2. Imagem
 >Seja $T(x,y,z)=(x+z,y)$, $Im(T)$ será:
->$$
-(a,b) = T(v) = T(v_1,v_2,v_3) \Rightarrow (a,b)=(v_1+v_3,v_2)\Rightarrow (a,b)=(v_1,0)+(0,v_2)+(v_3,0)\Rightarrow$$
->$$
-\Rightarrow (a,b)= v_1 \cdot (1,0)+v_2\cdot (0,1)+v_3\cdot(1,0)\Rightarrow $$
+>
+>$$ (a,b) = T(v) = T(v_1,v_2,v_3) \Rightarrow (a,b)=(v_1+v_3,v_2)\Rightarrow (a,b)=(v_1,0)+(0,v_2)+(v_3,0)\Rightarrow$$
+>
+>$$ \Rightarrow (a,b)= v_1 \cdot (1,0)+v_2\cdot (0,1)+v_3\cdot(1,0)\Rightarrow $$
+>
 >$$ \Rightarrow
 \begin {bmatrix}
 1&0&1& \shortmid & a\\
 0&1&0& \shortmid & b
 \end {bmatrix} \Rightarrow  
-\begin{empheq}[left=\empheqlbrace]{align}
+\begin{cases}
 v_1+v_3=a\\
 v_2=b
-\end {empheq}
+\end {cases}
 \Rightarrow Im(T) = \mathbb R^2$$
 >Como na matriz ampliada, o posto da matriz característica é igual ao posto da matriz resultado, o sistema é um SPI e por isso gera o espaço $\mathbb R^2$.
->Como $Im(T)=\mathbb R^2$, a base de $Im(T)$ será a base canônica de $\mathbb R^2$, $\braket {(1,\;0),(0,\;1)}$.
+>Como $Im(T)=\mathbb R^2$, a base de $Im(T)$ será a base canônica de $\mathbb R^2$, $\braket {(1,\ 0),(0,\ 1)}$.
 
 #### Dimensão do Núcleo e da Imagem
-Assim como a [Dimensão do Espaço](<Bases>), a dimensão do $Ker(T)$ e da $Im(T)$ é igual a quantidade de vetores de suas respectivas bases e é escrita da mesma forma, $\boxed{dim\; Ker(T)}$ para a dimensão do Núcleo e $\boxed{dim\;Im(T)}$ para a dimensão da Imagem. 
+Assim como a [Dimensão do Espaço](<Bases.md>), a dimensão do $Ker(T)$ e da $Im(T)$ é igual a quantidade de vetores de suas respectivas bases e é escrita da mesma forma, $\boxed{dim\  Ker(T)}$ para a dimensão do Núcleo e $\boxed{dim\ Im(T)}$ para a dimensão da Imagem. 
 
 >[!example] Exemplo
 >Seja $T(x,y,z)=(x+z,y)$, achamos primeiro a base de $Ker (T)$:
->$$ T(\mathbb x, \mathbb y, \mathbb z) = (0,\; 0) \Rightarrow
-\begin{empheq} [left=\empheqlbrace]{align}
+>
+>$$ T(\mathbb x, \mathbb y, \mathbb z) = (0,\  0) \Rightarrow
+\begin{cases} 
 \mathbb x+\mathbb z=0\\
 \mathbb y=0
-\end{empheq} \Rightarrow $$
->$$\begin{empheq} [left=\empheqlbrace]{align}
+\end{cases} \Rightarrow $$
+>
+>$$\begin{cases} 
 \mathbb x = - \mathbb z\\
 \mathbb y=0
-\end{empheq} \Rightarrow(\mathbb x, \; 0,\; - \mathbb x),\; \mathbb x\; é\; variável\; livre!$$
->Então, a base de $Ker(T)$ será $\braket {(1,\;0,\;-1)}$ e a $dim\;Ker(T)=1$!
+\end{cases} \Rightarrow(\mathbb x, \  0,\  - \mathbb x),\  \mathbb x\  é\  variável\  livre!$$
+>
+>Então, a base de $Ker(T)$ será $\braket {(1,\ 0,\ -1)}$ e a $dim\ Ker(T)=1$!
 >Em seguida, achamos a $Im (T)$:
->$$T(\mathbb x_\shortmid, \mathbb y_\shortmid, \mathbb z_\shortmid) = (a,\; b) \Rightarrow
-\begin{empheq} [left=\empheqlbrace]{align}
+>
+>$$T(\mathbb x_\shortmid, \mathbb y_\shortmid, \mathbb z_\shortmid) = (a,\  b) \Rightarrow
+\begin{cases} 
 \mathbb x_\shortmid+\mathbb z_\shortmid = a\\
 \mathbb y_\shortmid = b
-\end{empheq} \Rightarrow $$
+\end{cases} \Rightarrow $$
+>
 >$$\begin{bmatrix}
 1&0&1\\
 0&1&0
@@ -154,10 +166,11 @@ b
 1&0&1&\shortmid&a\\
 0&1&0&\shortmid&b
 \end{bmatrix}$$
+>
 >Como esse sistema é SPI, essa transformação consegue gerar todo o espaço vetorial de $\mathbb R^2$, que é o contradomínio da transformação, e por isso qualquer base de $\mathbb R^2$ é base de $Im (T)$ e sua dimensão é a mesma de $\mathbb R^2$ que é $2$.
 
 Existem algumas características importantes associadas à dimensão do Núcleo e à dimensão da Imagem. Mais notoriamente temos:
 
-1. Se e somente se $dim\;Ker(T)=0$, $T$ será injetora. Ou seja, se $Ker(T)=\set 0$ (só contém o vetor nulo e por tanto tem $dim=0$), então $T$ é injetora e se $T$ for injetora, então $Ker(T)=\set{0}$ .
-2. Para uma transformação $T:\mathbb V \ xxx \mathbb W$, se e somente se $dim\;Im(T)= dim\;\mathbb W$,  $T$ será sobrejetora. Ou seja, se $dim\;Im(T)= dim\;\mathbb W$, então $T$ é sobrejetora e se $T$ for sobrejetora, então $dim\;Im(T)= dim\;\mathbb W$.
-3. Para uma transformação $T:\mathbb V \ xxx \mathbb W$, sempre vale a soma $dim\;\mathbb V=dim\;Ker(T)+dim\;Im(T)$.
+1. Se e somente se $dim\ Ker(T)=0$, $T$ será injetora. Ou seja, se $Ker(T)=\set 0$ (só contém o vetor nulo e por tanto tem $dim=0$), então $T$ é injetora e se $T$ for injetora, então $Ker(T)=\set{0}$ .
+2. Para uma transformação $T:\mathbb V \ xxx \mathbb W$, se e somente se $dim\ Im(T)= dim\ \mathbb W$,  $T$ será sobrejetora. Ou seja, se $dim\ Im(T)= dim\ \mathbb W$, então $T$ é sobrejetora e se $T$ for sobrejetora, então $dim\ Im(T)= dim\ \mathbb W$.
+3. Para uma transformação $T:\mathbb V \ xxx \mathbb W$, sempre vale a soma $dim\ \mathbb V=dim\ Ker(T)+dim\ Im(T)$.
