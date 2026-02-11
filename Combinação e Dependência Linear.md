@@ -3,7 +3,7 @@ Combinação Linear é o vetor que resulta da soma de do produto de outros vetor
 
 $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n$$
 
-Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor>) existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor>) pode ser gerado por um Subespaço (veremos mais sobre isso em [[Bases]]).
+Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor>) existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor>) pode ser gerado por um Subespaço (veremos mais sobre isso em [Bases](<Bases.md>)).
 
 > [!example] Exemplo 
 >  1. O vetor $v=(2,4)$ é uma combinação linear dos vetores $v_1 = (1,\ 1)$ e $v_2=(0,\ 2)$, pois:
