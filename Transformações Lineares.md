@@ -1,12 +1,12 @@
 Transformações lineares são um tipo "especial" de função que descreve uma relação entre dois espaço vetoriais. Algebricamente, isso pode ser escrito como:
-$$
-T: \mathbb R^n \ xxx \mathbb R^m\ ou\  T(v)=w,\ em\ que\ v\in \mathbb R^n \ e\ w\in \mathbb R^m
-$$
+
+$$T: \mathbb R^n \ xxx \mathbb R^m\ ou\  T(v)=w,\ em\ que\ v\in \mathbb R^n \ e\ w\in \mathbb R^m $$
+
 Normalmente, isso é feito através de uma multiplicação matricial de um vetor pela matriz da transformação linear mas pode ser feito também através da substituição direta na transformação. 
 
 >[!important] Nomes
 >Esse processo é chamado de **Aplicação de $\mathbb V$ em $\mathbb W$** ou de **Transformação de $\mathbb V$ em $\mathbb W$**.
->Caso $\mathbb V=\mathbb W$, a transformação pode ser chamada de [Operador Linear](<Operadores Lineares>).
+>Caso $\mathbb V=\mathbb W$, a transformação pode ser chamada de [Operador Linear](<Operadores Lineares.md>).
 
 >[!example] Exemplo
 > 1. Por multiplicação de matriz
@@ -45,7 +45,7 @@ Existem algumas condições para uma transformação qualquer poder ser consider
 2. $T(u+v)=T(u)+T(v)$
 3. $T(\lambda v)=\lambda \cdot T(v)$
 
->[!attention] A primeira condição não é suficiente para poder dizer se uma Transfomação é linear.
+>[!warning] A primeira condição não é suficiente para poder dizer se uma Transfomação é linear.
 >A condição 1 é normalmente usada caso já se desconfie que a transformação não é linear, pois em muitos casos, ela é suficiente para afirmar a não linearidade da Transformação.
 
 ## Como achar uma transformação
