@@ -14,11 +14,10 @@ Em que $A$ é a matriz dos coeficientes, $X$ é a matriz das incógnitas e $B$ �
 >[!note]
 >**Exemplo:**
 >
->$$\begin{numcases}
-\dot
+>$$\begin{cases}
 x + y = 3 \\
 x + 2y = 5
-\end{numcases}
+\end{cases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -59,11 +58,10 @@ Após achar o $det(A)$, acha-se os valores de cada uma variáveis dividindo $det
 >[!note]
 >**Exemplo:**
 >
->$$\begin{numcases}
-\dot
+>$$\begin{cases}
 x + y = 3 \\
 x + 2y = 5
-\end{numcases}
+\end{cases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -85,8 +83,7 @@ y
 \end {vmatrix} = 1 \Rightarrow$$
 >
 >$$\Rightarrow
-\begin{numcases}
-\dot
+\begin{cases}
 x = \frac {
 \begin {vmatrix} 
 3 & 1\\
@@ -97,16 +94,16 @@ y = \frac {
 1 & 3\\
 1 & 5
 \end {vmatrix} } {det(A)} = \frac 2 1 = 2
-\end {numcases}
+\end {cases}
 \Rightarrow$$
 >
 >$$ \Rightarrow 
 S= (1,2) $$
 
 ## 2. Método de Gauss-Jordan
-Primeiramente, é formada a matriz ampliada $[A|B]$, em que $A$ é a matriz dos coeficientes, | é uma linha tracejada e $B$ é a matriz dos resultados, ou apenas matriz resultado.
+Primeiramente, é formada a matriz ampliada $[A|B]$, em que $`A`$ é a matriz dos coeficientes, | é uma linha tracejada e $`B`$ é a matriz dos resultados, ou apenas matriz resultado.
 
-Em seguida, é achado a matriz escalonada da matriz ampliada $[A|B]$. A matriz na forma escada, ou matriz escalonada, é definida como uma matriz que todos os elementos abaixo de seus pivôs ou são $0$ ou não existem (caso seja a última linha da matriz).
+Em seguida, é achado a matriz escalonada da matriz ampliada $[A|B]$. A matriz na forma escada, ou matriz escalonada, é definida como uma matriz que todos os elementos abaixo de seus pivôs ou são $`0`$ ou não existem (caso seja a última linha da matriz).
 
 >[!tip]
 >**Pivôs da matriz**\
@@ -153,27 +150,30 @@ Para tornar uma matriz em sua forma escalonada, são feitas operações elementa
 >**Operações Elementares**\
 >As operações elementares são operações feitas **somente** entre linhas, semelhantes as operações feitas para calcular um determinante pelas propriedades 1 (Teorema de Jacob) e 2 (Permutação entre linhas ou colunas). 
 >Elas são as seguintes:
-> 1. Uma linha pode ser multiplicada por um escalar ($L_i \rightarrow k*L_i$, em que $k$ é um escalar qualquer) 
-> 2. Uma linha pode ser somada ou subtraída por um múltiplo de outra linha  ($L_i \rightarrow L_i + k*L_j$, em que $k$ é um escalar qualquer) 
+> 1. Uma linha pode ser multiplicada por um escalar ($L_i \rightarrow k \cdot L_i$, em que $`k`$ é um escalar qualquer) 
+> 2. Uma linha pode ser somada ou subtraída por um múltiplo de outra linha  ($L_i \rightarrow L_i + k \cdot L_j$, em que $`k`$ é um escalar qualquer) 
 > 3. Uma linha pode trocar de lugar com outra - permutar entre si ($L_i\leftrightarrow L_j$) 
-> 4. Se $B$ é a matriz que resulta de $A$ após uma série de operações elementares, diz-se que $A$ e $B$ são linhas semelhantes (matematicamente: $A \sim B$).
+> 4. Se $B$ é a matriz que resulta de $`A`$ após uma série de operações elementares, diz-se que $`A`$ e $`B`$ são linhas semelhantes (matematicamente: $A \sim B$).
 
 >[!note]
->**Exemplo:**\
+>**Exemplo:**
 >
 >$$ [A] =
 \begin {bmatrix} 
 1 & 1\\
 1 & 2
-\end {bmatrix} \xrightarrow {L_2 
-\rightarrow \ L_2\ -\ L_1} 
-\begin {bmatrix} 
+\end {bmatrix}$$
+>
+>$$\xrightarrow {L_2 
+\rightarrow \ L_2\ -\ L_1} $$
+>
+>$$ \begin {bmatrix} 
 1 & 1\\
 0 & 1
 \end {bmatrix} = [B] \Rightarrow
 [A]\sim [B] $$
 >
->Diz-se que $B$ é a matriz linha semelhante forma escalonada de $A$, ou simplesmente $B$ é a forma escalonada de $A$.
+>Diz-se que $B$ é a matriz linha semelhante forma escalonada de $`A`$, ou simplesmente $`B`$ é a forma escalonada de $`A`$.
 
 >[!warning]
 >Toda matriz é linha semelhante à **APENAS UMA** matriz escalonada.
@@ -215,24 +215,23 @@ Essa nova matriz é chamada de **Matriz escalonada linha reduzida** (ou forma es
 
 >[!important]
 >**Posto e Nulidade**\
->Ao tornar uma matriz dos coeficientes $[A]$ em sua forma escada linha reduzida $[A_\shortmid]$ , a quantidade de linhas não nulas, ou seja, não compostas apenas por $0s$ é chamada de **POSTO** ($P$) e a **NULIDADE** ($N$) é a diferença do posto pela quantidade de variáveis do sistemas.
+>Ao tornar uma matriz dos coeficientes $[A]$ em sua forma escada linha reduzida $`[A_\shortmid]`$ , a quantidade de linhas não nulas, ou seja, não compostas apenas por $`0s`$ é chamada de **POSTO** ($`P`$) e a **NULIDADE** ($`N`$) é a diferença do posto pela quantidade de variáveis do sistemas.
 >Caso a nulidade seja $0$, o sistema é SPD.\
 >\
 > **Nulidade diferente de $0$ na matriz ampliada linha reduzida $[A_\shortmid |B_\shortmid]$**\
 >Quando a nulidade é diferente de $0$, o sistema é ou SI ou SPI
->Se na matriz linha reduzida $[A_\shortmid |B_\shortmid]$, a matriz $A_\shortmid$ tenha mais linhas nulas que a matriz $B_\shortmid$, o sistema é um **SI**.
->Se na matriz  $[A_\shortmid |B_\shortmid]$,  $[A_\shortmid]$ e $[B_\shortmid]$ tenham a mesma quantidade de linhas nulas, o sistema é um SPI e, portanto, é solucionável.
+>Se na matriz linha reduzida $[A_\shortmid |B_\shortmid]$, a matriz $`A_\shortmid`$ tenha mais linhas nulas que a matriz $`B_\shortmid`$, o sistema é um **SI**.
+>Se na matriz  $[A_\shortmid |B_\shortmid]$,  $`[A_\shortmid]`$ e $`[B_\shortmid]`$ tenham a mesma quantidade de linhas nulas, o sistema é um SPI e, portanto, é solucionável.
 
 Resumindo, o método de Gauss-Jordan usa operações elementares para reduzir a matriz ampliada $[A|B]$ à sua forma escada e, em seguida, usa ainda mais operações elementares para torná-la em sua forma escalonada linha reduzida.
 
 >[!note]
 >**Exemplo:**
 >
->$$ \begin{numcases}
-\dot
+>$$ \begin{cases}
 x + y = 3 \\
 x + 2y = 5
-\end{numcases}
+\end{cases}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -265,24 +264,25 @@ y
 >$$ \begin {vmatrix} 
 1 & 1 \shortmid & 3\\
 0 & 1\shortmid & 2
-\end {vmatrix}
-\xrightarrow {L_1 \rightarrow L_1-L_2} 
-\begin {vmatrix} 
+\end {vmatrix}$$
+>
+>$$\xrightarrow {L_1 \rightarrow L_1-L_2} $$
+>
+>$$\begin {vmatrix} 
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
 \end {vmatrix}$$
 >
->O posto é $2$ (são duas linas não nulas), e a nulidade é $0$ ($p-2=2-2=0$), o sistema é um SPD.
+>O posto é $2$ (são duas linas não nulas), e a nulidade é $0 (p-2=2-2=0)$, o sistema é um SPD.
 >
 >$$ \begin {vmatrix} 
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
 \end {vmatrix} 
-\begin{numcases}
-\dot
+\begin{cases}
 x + 0y = 1 \\
 0x + y = 2
-\end{numcases} \Rightarrow x=1;y=2 \Rightarrow$$
+\end{cases} \Rightarrow x=1;y=2 \Rightarrow$$
 >
 >$$ \Rightarrow
 S= (1,2) $$
