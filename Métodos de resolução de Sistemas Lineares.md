@@ -14,10 +14,10 @@ Em que $A$ é a matriz dos coeficientes, $X$ é a matriz das incógnitas e $B$ �
 >[!note]
 >**Exemplo:**
 >
->$$\begin{empheq}[left=\empheqlbrace]{align}
+>$$\begin{numcase}
 x + y = 3 \\
 x + 2y = 5
-\end{empheq}
+\end{numcase}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -58,10 +58,10 @@ Após achar o $det(A)$, acha-se os valores de cada uma variáveis dividindo $det
 >[!note]
 >**Exemplo:**
 >
->$$\begin{empheq}[left=\empheqlbrace]{align}
+>$$\begin{numcase}
 x + y = 3 \\
 x + 2y = 5
-\end{empheq}
+\end{numcase}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -83,7 +83,7 @@ y
 \end {vmatrix} = 1 \Rightarrow$$
 >
 >$$\Rightarrow
-\begin{empheq}[left=\empheqlbrace]{align}
+\begin{numcase}
 x = \frac {
 \begin {vmatrix} 
 3 & 1\\
@@ -94,7 +94,7 @@ y = \frac {
 1 & 3\\
 1 & 5
 \end {vmatrix} } {det(A)} = \frac 2 1 = 2
-\end {empheq}
+\end {numcase}
 \Rightarrow$$
 >
 >$$ \Rightarrow 
@@ -228,10 +228,10 @@ Resumindo, o método de Gauss-Jordan usa operações elementares para reduzir a 
 >
 >$$ \require{extpfeil}
 >\Newextarrow{\xsim}{5,10}{0x223D}
-\begin{empheq}[left=\empheqlbrace]{align}
+\begin{numcase}
 x + y = 3 \\
 x + 2y = 5
-\end{empheq}
+\end{numcase}
 \Rightarrow 
 \begin {bmatrix} 
 1 & 1\\
@@ -277,10 +277,10 @@ y
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
 \end {vmatrix} 
-\begin{empheq}[left=\empheqrbrace]{align}
+\begin{numcase}
 x + 0y = 1 \\
 0x + y = 2
-\end{empheq} \Rightarrow x=1;y=2 \Rightarrow$$
+\end{numcase} \Rightarrow x=1;y=2 \Rightarrow$$
 >
 >$$ \Rightarrow
 S= (1,2) $$
