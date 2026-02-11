@@ -1,4 +1,4 @@
-Operadores Lineares são [Transformações Lineares](<Transformações Lineares>)[^1] $T: \mathbb V\rightarrow \mathbb W$ [^2] em que $\mathbb V = \mathbb W= \mathbb R^n$ [^3] ou simplesmente $T: \mathbb V \rightarrow \mathbb V$ [^4] em que $\mathbb V = \mathbb R^n$. Vale citar também que, como muitas vezes esses operadores são usados para manipular objetos que conseguimos ver (que tem no máximo 3 dimensões), $n$ costuma ser ou 2 ou 3, o que significa que neste curso serão tratados apenas operadores de ordem 2 ou 3.
+Operadores Lineares são [Transformações Lineares](<Transformações Lineares.md>)[^1] $T: \mathbb V\rightarrow \mathbb W$ [^2] em que $\mathbb V = \mathbb W= \mathbb R^n$ [^3] ou simplesmente $T: \mathbb V \rightarrow \mathbb V$ [^4] em que $\mathbb V = \mathbb R^n$. Vale citar também que, como muitas vezes esses operadores são usados para manipular objetos que conseguimos ver (que tem no máximo 3 dimensões), $n$ costuma ser ou 2 ou 3, o que significa que neste curso serão tratados apenas operadores de ordem 2 ou 3.
 
 [^1]: [Operadores Lineares.pdf](<Operadores Lineares.pdf>)
 [^2]:Transformação do espaço vetorial $\mathbb V$ no espaço vetorial $\mathbb W$
