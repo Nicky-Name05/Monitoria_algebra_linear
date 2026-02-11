@@ -82,14 +82,19 @@ $$Seja\ \mathbb V\ um\ Espaço\ Vetorial \; e\ \mathbb W \subset \mathbb V,$$
 >**Exemplo**
 > 1. Sejam $\mathbb V= \mathbb R^4$ e $\mathbb W=(0,\ x_1,\ x_2, ,\ x_3)$, pode se dizer que é um Subespaço Vetorial, pois:
 > $$I.\mathbb W \subset \mathbb V.$$
+>
 > $$II.\ Sejam\ u\; e\; v \in \mathbb W,$$
-> $$
- u+v=(0,\ u_1,\ u_2,\ u_3)+(0,\ v_1,\ v_2,\ v_3)=(0,\ u_1+v_1,\ u_2+v_2,\ u_3+v_3),\ que\ está\ em\ \mathbb W.$$
- >$$
- III. Seja\ v \in \mathbb W\ e\ \lambda \in \mathbb R,$$
- >$$\lambda \cdot v= \lambda \cdot (0,\ v_1,\ v_2,\ v_3)= (0,\ \lambda v_1,\ \lambda v_2,\ \lambda v_3),\ que\ está\ em\ \mathbb W.$$
- >---
+>
+> $$ u+v=(0,\ u_1,\ u_2,\ u_3)+(0,\ v_1,\ v_2,\ v_3)=(0,\ u_1+v_1,\ u_2+v_2,\ u_3+v_3),\ que\ está\ em\ \mathbb W.$$
+>
+>$$ III. Seja\ v \in \mathbb W\ e\ \lambda \in \mathbb R,$$
+>
+>$$\lambda \cdot v= \lambda \cdot (0,\ v_1,\ v_2,\ v_3)= (0,\ \lambda v_1,\ \lambda v_2,\ \lambda v_3),\ que\ está\ em\ \mathbb W.$$
+>
+>---
 > 2. Sejam $\mathbb V = \mathbb R^2$ e $\mathbb W=(x, x^2)$, não se pode dizer que $\mathbb W$ é um Subespaço vetorial, pois:
+> 
 > $$I. Apesar\ que\ \mathbb W \subset \mathbb V.$$
+>
 > $$II. u+v= (u_1, u_1^2)+(v_1, v_1^2)=(u_1+v_1, u_1^2+v_1^2),\ que\ NÃO\ está\ em\ \mathbb W.$$
 
