@@ -7,7 +7,8 @@ $$ B=P \cdot A \cdot P^{-1} $$
 
 Consequência disso é que $det(A)=det(B)$
 
-> [!example] Exemplo
+> [!note]
+> **Exemplo:**
 > 1. Seja $`A= \begin {bmatrix} 1&-1\\2&3 \end{bmatrix}`$ e $`B= \begin {bmatrix} 1&1\\2&3 \end{bmatrix}`$, vejamos se são semelhantes:
 > 
 >$$ A= \begin {vmatrix} 
@@ -48,7 +49,8 @@ $$ D=
 \end {bmatrix} $$
 
 Esse Teorema permite que se descubra mais facilmente se  uma matriz é diagonalizável e que se diagonalize mais facilmente transformações lineares.
->[!example] Exemplo 
+>[!note]
+>**Exemplo:** 
 >Conferindo se a matriz $`A =\begin{bmatrix}1&3\\2&4\end{bmatrix}`$ é diagonalizável:
 >
 >$$ P(A-\lambda \cdot I) =det(
@@ -75,7 +77,7 @@ Esse Teorema permite que se descubra mais facilmente se  uma matriz é diagonali
 >$A$ é diagonalizável e tem dois autovetores
 
 ## 3. Potência de matrizes
-Caso uma matriz $A$ seja diagonalizável, ou seja, caso $A$ tenha $n$ autovetores L.I. associados a $n$ autovalores, temos que a matriz que diagonaliza $A$ é $P= [v_1\  \  v_2\  \ v_3\  \  ...\  \  v_n]$ e a matriz diagonalizada de $A$ é $D$ tal que $D$ é:
+Caso uma matriz $A$ seja diagonalizável, ou seja, caso $A$ tenha $n$ autovetores L.I. associados a $n$ autovalores, temos que a matriz que diagonaliza $A$ é $`P= [v_1\  \  v_2\  \ v_3\  \  ...\  \  v_n]`$ e a matriz diagonalizada de $A$ é $D$ tal que $D$ é:
 
 $$ D= P^{-1} \cdot A \cdot P = \begin {bmatrix}
 \lambda_1&0&0&...&0\\
