@@ -40,7 +40,8 @@ x_2
 \end{bmatrix} \Rightarrow $$
 >
 >$$ \Rightarrow
-det(A)= 1\cdot 0-2\cdot 4= -8 \ne 0 $$
+det(A)= 1\cdot 0-2\cdot 4 =
+ -8 \ne 0 $$
 >
 >O conjunto gera o espaço $\mathbb V$!
 >
@@ -59,6 +60,7 @@ x_2 & 0
 \lambda_1= \frac {x_2} 4,\lambda_2= \frac {4x_1-x_2} 8 $$
 >
 >É possível achar os coeficiente de $(1,4)$ e $(2,0)$ que geram um vetor $v$ ao substituir $x_1$ e $x_2$ pelas componentes vetor em questão.
+>
 >---
 > 2.  Seja $\mathbb V = \mathbb R^2$, $\alpha = \set {(1,3),\ (2,6)}$ e $\alpha \subset \mathbb V$, temos que:
 > 
@@ -154,7 +156,8 @@ x_2 & 0
 >$$ \begin{cases}
 \lambda_1= \frac {0} 4 \\
 \lambda_2= \frac {4\cdot0-0} 8
-\end{cases}\Rightarrow \lambda_1 = 0, \lambda_2 = 0$$
+\end{cases}\Rightarrow \lambda_1 = 0, \lambda_2 = 0 $$
+>
 >O conjunto $\alpha$ é base de $\mathbb V$!
 
 >[!info] Bases canônicas
