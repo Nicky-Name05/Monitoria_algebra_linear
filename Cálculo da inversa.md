@@ -53,7 +53,7 @@ d&-b\\
 
 $$[A|I_n]\sim[I_n|A^{-1}],$$
 
-Em que $\sim$ indica que $[A|I_n]$ e $[I_n|A^{-1}]$ são linha semelhantes e | é uma linha tracejada. Essa forma consiste em fazer diversas operações elementares semelhantes as operações elementares feitas no método de resolução de sistemas lineares de [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>) com o objetivo de transformar a matriz esquerda na matriz identidade.
+Em que $\sim$ indica que $[A|I_n]$ e $[I_n|A^{-1}]$ são linha semelhantes e | é uma linha tracejada. Essa forma consiste em fazer diversas operações elementares semelhantes as operações elementares feitas no método de resolução de sistemas lineares de [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>)[^1] com o objetivo de transformar a matriz esquerda na matriz identidade.
 
 >[!note]
 >**Exemplo**
@@ -89,3 +89,5 @@ c&d& \shortmid & 0&1\\
 0&1& \shortmid & -\frac c{a \cdot d-c \cdot b}&\frac a{a \cdot d-c \cdot b}\\
 \end {bmatrix}
 = [I_2|A^{-1}]$$
+
+[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.md>)
