@@ -1,5 +1,7 @@
 ## 1. Autovetor
-Um **Autovetor**, também chamado de **Vetor Característico** é um vetor que ao se aplicar um [Operador Linear](<Operadores Lineares.md>) gera um vetor na mesma direção que ele (ou seja, gera um vetor na mesma reta de suporte) e é diferente do vetor nulo. Algebricamente, isso é escrito como:
+Um **Autovetor**, também chamado de **Vetor Característico** é um vetor que ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1] gera um vetor na mesma direção que ele (ou seja, gera um vetor na mesma reta de suporte) e é diferente do vetor nulo. Algebricamente, isso é escrito como:
+
+[^1]:[Operador Linear.pdf](<Operadores Lineares.pdf>)
 
 $$ T(v)= \lambda \cdot v,v \ne 0 $$
 
@@ -20,7 +22,9 @@ Autovalores são escalares aos quais os vetores característicos são associados
 ## 3. Como achar autovetores e autovalores de uma Matriz
 Agora que sabemos o que são autovetores e autovalores, é preciso saber como achá-los.
 
-O primeiro passo para fazer isso é achando o chamado **Polinômio Característico** da [Matriz](<Matriz.md>) $A$, que é escrito como:
+O primeiro passo para fazer isso é achando o chamado **Polinômio Característico** da [Matriz](<Matriz.md>[^2]) $A$, que é escrito como:
+
+[^2]:[Matriz.pdf](<Matriz.pdf>)
 
 $$ P(\lambda)=det(A-\lambda \cdot I) $$
 
@@ -40,4 +44,6 @@ Agora com os autovalores em mãos, podemos achar a "forma" que os autovetores te
 
 $$A_{\shortmid} = [A-\lambda_i\cdot I_n]$$
 
-Após isso, fazemos o [mesmo processo que fariamos para achar os vetores da Ker(T)](<Núcleo e Imagem de uma Transformação Linear.md>), ou seja, montamos uma matriz ampliada $[A_\shortmid|0]$ e usamos as operações elementares  para achar os vetores que gerariam o espaço vetorial. Os vetores resultante desse processo é o autovetor associado ao $\lambda_i$.
+Após isso, fazemos o [mesmo processo que fariamos para achar os vetores da Ker(T)](<Núcleo e Imagem de uma Transformação Linear.md>)[^3], ou seja, montamos uma matriz ampliada $[A_\shortmid|0]$ e usamos as operações elementares  para achar os vetores que gerariam o espaço vetorial. Os vetores resultante desse processo é o autovetor associado ao $\lambda_i$.
+
+[^3]:[Núcleo e Imagem de uma Transformação Linear.pdf](<Núcleo e Imagem de uma Transformação Linear.pdf>)
