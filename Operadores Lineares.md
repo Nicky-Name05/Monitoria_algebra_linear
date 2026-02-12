@@ -23,7 +23,7 @@ $$ \begin{cases} {[T_{dil/contr}]=}
 k&0&0\\
 0&k&0\\
 0&0&k
-\end {bmatrix}, & para $n=3$ \\
+\end {bmatrix}, & para n=3 \\
 \\
 k \cdot [I_2]= 
 k \cdot
@@ -34,7 +34,7 @@ k \cdot
 \begin {bmatrix}
 k&0\\
 0&k
-\end {bmatrix} , & para $n=2$
+\end {bmatrix} , & para n=2
 \end{cases} $$
 
 Em que se $|k|>1$, $[T]$ é um operador de dilatação, e se $1>|k|$, $[T]$ é um operador de contração.
@@ -80,6 +80,7 @@ Em que se $|k|>1$, $[T]$ é um operador de dilatação, e se $1>|k|$, $[T]$ é u
 \frac 4 3\\
 1
 \end{bmatrix} $$
+>
 ## 2. Operador de Reflexão em espaços bidimensionais
 O operador de reflexão em bidimensional é um operador que reflete o vetor $v$ em torno de um eixo de um espaço vetorial de duas dimensões ($n=2$), ou seja ele age como um "espelho". Isso faz esse operador linear muito interessante para fazer previsões de imagens em um espelho plano
 
@@ -143,19 +144,19 @@ $$ \begin{cases} {[T_{r^3}]}
 -1&0&0\\
 0&1&0\\
 0&0&1
-\end {bmatrix}, & para reflexão em $yz$ \\
+\end {bmatrix}, & \ para reflexão em yz \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&-1&0\\
 0&0&1
-\end {bmatrix}, & para reflexão em $xz$ \\
+\end {bmatrix}, & para reflexão em xz \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&-1
-\end {bmatrix}, & para para reflexão em $xy$ 
+\end {bmatrix}, & para para reflexão em xy
 \end{cases} $$
 
 >[!example] Exemplos
@@ -232,37 +233,37 @@ $$ \begin{cases} {[T_{exp/comp}]=}
 k&0&0\\
 0&1&0\\
 0&0&1
-\end {bmatrix}, & para $n=3$ e mudança na coordena $x$ \\
+\end {bmatrix}, & para n=3 e mudança na coordena x \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&k&0\\
 0&0&1
-\end {bmatrix}, & para $n=3$ e mudança na coordena $y$ \\
+\end {bmatrix}, & para n=3$ e mudança na coordena y \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&k
-\end {bmatrix}, & para $n=3$ e mudança na coordena $z$ \\
+\end {bmatrix}, & para n=3 e mudança na coordena z \\
 \\
 \begin {bmatrix}
 k&0\\
 0&1
-\end {bmatrix} , & para $n=2$ e mudança na coordenada $x$ \\
+\end {bmatrix} , & para n=2 e mudança na coordenada x \\
 \\
 \begin {bmatrix}
 1&0\\
 0&k
-\end {bmatrix} , & para $n=2$ e mudança na coordenada $y$
+\end {bmatrix} , & para n=2 e mudança na coordenada y
 \end{cases} $$
 
 Em que se $|k|>1$, $[T]$ é um operador de expansão, e se $1>|k|$, $[T]$ é um operador de compressão.
 
 >[!example] Exemplos
 >1. Seja $[T]$ um operador linear de expansão em $x$ que aumenta em 4 a coordenada e $v=(2,4,3)$, acha-se $T(v)$:
->$$
-T(v)= [T]\cdot v=
+>
+>$$ T(v)= [T]\cdot v=
 \begin{bmatrix}
 4&0&0\\
 0&1&0\\
@@ -279,9 +280,10 @@ T(v)= [T]\cdot v=
 4\\
 3
 \end{bmatrix} $$
+>
 >2. Seja $[T]$ um operador linear de expansão em $y$ que aumenta em 4 a coordenada e $v=(2,4,3)$, acha-se $T(v)$:
->$$
-T(v)= [T]\cdot v=
+>
+>$$ T(v)= [T]\cdot v=
 \begin{bmatrix}
 1&0&0\\
 0&4&0\\
@@ -298,6 +300,7 @@ T(v)= [T]\cdot v=
 16\\
 3
 \end{bmatrix} $$
+>
 >3. Seja $[T]$ um operador linear de expansão em $z$ que aumenta em 4 a coordenada e $v=(2,4,3)$, acha-se $T(v)$:
 >
 >$$ T(v)= [T]\cdot v=
@@ -356,23 +359,24 @@ T(v)= [T]\cdot v=
  O operador de rotação em $\theta$, também chamado de **rotação em** $\theta$ é um operador que gira o vetor em $\theta$ graus no sentido anti-horário. No caso de 2 dimensões, essa rotação é feita em torno da origem ou, no caso de 3 dimensões, em torno de um dos eixos.
 
 Esse operador é escrito como:
+
 $$ \begin{cases} {[T_{R_{\theta}}]}
 \begin {bmatrix}
 \cos(\theta)&-\sin(\theta)\\
 \sin(\theta)&\cos(\theta)
-\end {bmatrix} , & para $n=2$ \\
+\end {bmatrix} , & para n=2 \\
 \\
 \begin {bmatrix}
 \cos(\theta)& -\sin(\theta)&0\\
 \sin(\theta)&\cos(\theta)&0\\
 0&0&1
-\end {bmatrix}, & para $n=3$, rotacionando em torno de $z$\\
+\end {bmatrix}, & para $n=3$, rotacionando em torno de z \\
 \\
 \begin {bmatrix}
 \cos(\theta)&0&\sin(\theta)\\
 0&1&0\\
 -\sin(\theta)&0&\cos(\theta)
-\end {bmatrix}, & para $n=3$, rotacionando em torno de $y $\\
+\end {bmatrix}, & para $n=3$, rotacionando em torno de y \\
 \\
 \begin {bmatrix}
 1&0&0\\
@@ -390,12 +394,12 @@ $$ \begin{cases} {[T_{c}]=}
 \begin {bmatrix}
 1&k\\
 0&1
-\end {bmatrix} , & para um cisalhamento em $x$ (ou horizontal) \\
+\end {bmatrix} , & para um cisalhamento em x (ou horizontal) \\
 \\
 \begin {bmatrix}
 1&0\\
 k&1
-\end {bmatrix} , & para um cisalhamento em $y$ (ou vertical)
+\end {bmatrix} , & para um cisalhamento em y (ou vertical)
 \end{cases} $$
 
 >[!example] Exemplos
