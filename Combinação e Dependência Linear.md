@@ -3,7 +3,7 @@ Combinação Linear é o vetor que resulta da soma de do produto de outros vetor
 
 $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n$$
 
-Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor.md>) existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor.md>) pode ser gerado por um Subespaço (veremos mais sobre isso em [Bases](<Bases.md>)).
+Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor.md>)[^1] existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor.md>)[^2] pode ser gerado por um Subespaço (veremos mais sobre isso em [Bases](<Bases.md>)[^3]).
 
 > [!note]
 > **Exemplo:**
@@ -29,7 +29,7 @@ $$ \lambda_1  \cdot v_1 + \lambda_2  \cdot v_2 + \lambda_3  \cdot v_3 + ... + \l
 >\
 >Se um conjunto de vetores contém $3$ vetores e o espaço vetorial é $\mathbb R^2$, por exemplo, o conjunto é LD, pois a dimensão de $\mathbb R^2$ é menor que $3$.
 
-Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>) ($(0,0)$, para $\mathbb {R} ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
+Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>)[^4] ($(0,0)$, para $\mathbb {R} ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
 
 $$\begin{cases}
 \lambda_1a_1 + \lambda_2a_2 +.... + \lambda_na_n = 0 \\
@@ -114,3 +114,11 @@ Caso esse sistema seja SPD, o conjunto é $LI$. Isso significa que, se o sistema
 \end {bmatrix} \Rightarrow $$
 >
 >$$\Rightarrow P_A = P_B = 2 \  (SPD!) \Rightarrow S= (0,0) \  (\text {Solução  \  única}) $$
+
+[^1]: [Vetor.pdf](<VEtor.pdf>)
+
+[^2]: [Vetor.pdf](<Vetor.pdf>)
+
+[^3]: [Bases.pdf](<Bases.md>)
+
+[^4]: [Vetor.pdf](<Vetor.md>)
