@@ -1,5 +1,5 @@
 ## Gerando um Espaço Vetorial
-Alguns conjuntos vetoriais são gerar [Espaços Vetoriais](<Vetor.md>) através da combinação linear de seus vetores. Isso pode ser verificado de uma forma parecida com a usada para verificar a [dependência linear](<Combinação e Dependência Linear.md>) de um conjunto de vetores, exceto que ao invés de se igualar as equações $0$, as equações são igualadas a uma variável $x_i$. Algebricamente, temos que a partir dessa equação:
+Alguns conjuntos vetoriais são gerar [Espaços Vetoriais](<Vetor.md>)[^1] através da combinação linear de seus vetores. Isso pode ser verificado de uma forma parecida com a usada para verificar a [dependência linear](<Combinação e Dependência Linear.md>)[^2] de um conjunto de vetores, exceto que ao invés de se igualar as equações $0$, as equações são igualadas a uma variável $x_i$. Algebricamente, temos que a partir dessa equação:
 
 $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n,$$
 
@@ -357,8 +357,8 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 > [!note]
 > **Exemplo:**
 >  1. $\mathbb V = \set {(x_1,\ x_2); x_i \in R^2}$ (lê-se "V é um conjunto de duplas "x1" e "x2", com "x1" e "x2" pertencentes ao conjunto dos reais") tem dimensão 2 $(dim\ \mathbb V =2)$.
->  2. $\mathbb V = \set {(x_1,\ x_2,\ x_3); x_i \in R^2}$ (lê-se "V é um conjunto de trios "x1", "x2" e "x3", todos pertencentes ao conjunto dos reais") tem dimensão 3$(dim\ \mathbb V =3)$.
->  3. $\mathbb V = \set {(x_1,\ x_2,\ ...,\ x_n); x_i \in R^2}$ (lê-se "V é um conjunto de enúplas "x1", "x2" até "x $n$", todos pertencentes ao conjunto dos reais") tem dimensão "$n$"$(dim\ \mathbb V =n)$.
+>  2. $\mathbb V = \set {(x_1,\ x_2,\ x_3); x_i \in R^2}$ (lê-se "V é um conjunto de trios "x1", "x2" e "x3", todos pertencentes ao conjunto dos reais") tem dimensão 3 $(dim\ \mathbb V =3)$.
+>  3. $\mathbb V = \set {(x_1,\ x_2,\ ...,\ x_n); x_i \in R^2}$ (lê-se "V é um conjunto de enúplas "x1", "x2" até "x $n$", todos pertencentes ao conjunto dos reais") tem dimensão " $n$ " $(dim\ \mathbb V =n)$.
 >  4. $V = M(2, 2)$ (lê-se " V é um conjunto de matrizes 2 por 2") tem base
 > 
 >  $$\set {\
@@ -383,3 +383,7 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 
 >[!Warning]
 >A dimensão de um espaço que contém apenas o vetor nulo é igual a $0$!
+
+[^1]: [Vetor.pdf](<Vetor.pdf>)
+
+[^2]: [Combinação e Dependência Linear.pdf](<Combinação e Dependência Linear.pdf>)
