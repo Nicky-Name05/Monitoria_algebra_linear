@@ -1,5 +1,5 @@
 ## 1. Matrizes semelhantes
-Assim como em Geometria Plana alguns elementos podem ser chamados de semelhantes entre si, como triângulos com pelo menos dois ângulos iguais, em Álgebra Linear as [matrizes](<Matriz.md>) também podem ser semelhantes entre si se certas condições forem atendidas.
+Assim como em Geometria Plana alguns elementos podem ser chamados de semelhantes entre si, como triângulos com pelo menos dois ângulos iguais, em Álgebra Linear as [matrizes](<Matriz.md>)[^1] também podem ser semelhantes entre si se certas condições forem atendidas.
 
 Para que duas matrizes $A$ e $B$ sejam semelhantes entre si, deve existir uma matriz $P$, tal que $B$ seja igual a $P$ multiplicado por $A$ multiplicado pela inversa de $P$. Algebricamente, isso é escrito como:
 
@@ -35,9 +35,9 @@ B= \begin {vmatrix}
 >$A$ e $B$ são semelhantes 
 
 ## 2. Diagonalização de Matrizes
-Uma matriz $A$ é diagonalizável quando ela for semelhante a uma [matriz diagonal](<Tipos Especiais de Matrizes.md>), ou seja, quando existir uma matriz $P$ tal que $P \cdot A \cdot P^{-1}$ resulta numa matriz diagonal (diz-se que " 'P' diagonaliza 'A' ").
+Uma matriz $A$ é diagonalizável quando ela for semelhante a uma [matriz diagonal](<Tipos Especiais de Matrizes.md>)[^2], ou seja, quando existir uma matriz $P$ tal que $P \cdot A \cdot P^{-1}$ resulta numa matriz diagonal (diz-se que " 'P' diagonaliza 'A' ").
 
-Além disso, se a matriz de uma [transformação](<Transformações Lineares.md>) $T: \mathbb R^n \rightarrow \mathbb R^n$ for diagonalizável, então o número de autovalores distintos entre si que ela possui é igual a dimensão do seu domínio. Isso significa que se $[T]$ tiver $n$ autovalores diferentes, então $`[T]`$ será diagonalizável. Caso isso ocorra, $D$ tem a forma:
+Além disso, se a matriz de uma [transformação](<Transformações Lineares.md>)[^3] $T: \mathbb R^n \rightarrow \mathbb R^n$ for diagonalizável, então o número de autovalores distintos entre si que ela possui é igual a dimensão do seu domínio. Isso significa que se $[T]$ tiver $n$ autovalores diferentes, então $`[T]`$ será diagonalizável. Caso isso ocorra, $D$ tem a forma:
 
 $$ D=
 \begin {bmatrix}
@@ -106,3 +106,9 @@ $$ \Rightarrow A^3=P \cdot D \cdot I \cdot D \cdot I \cdot D\cdot P^{-1} = \boxe
 Como chegamos a uma "função recursiva", ou seja, uma função que a partir de um resultado anterior consegue-se achar o próximo resultado dela (a exemplo temos $f(x)=3^x$, pois $f(x)=3^{x-1}\cdot 3= f(x-1)\cdot 3$), então conseguimos estrapolar que:
 
 $$ \boxed {A^k =P \cdot D^k \cdot P^{-1}} $$
+
+[^1]: [Matriz.md](<Matriz.md>)
+
+[^2]: [Tipos Especiais de Matrizes.pdf](<Tipos Especiais de Matrizes.pdf>)
+
+[^3]: [(<Transformações Lineares.pdf>)](<Transformações Lineares.pdf>)
