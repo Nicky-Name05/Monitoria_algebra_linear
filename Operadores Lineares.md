@@ -8,9 +8,10 @@ O Operador de Dilatação e o Operador de Contração são operadores que altera
 
 Esses dois operadores também tem a mesma matriz transformação $[T]$, que é:
 
-$$ \begin{cases} {[T_{dil/contr}]=}
-  k \cdot [I_3]= 
-  k \cdot
+$$ [T_{dil/contr}] = 
+\begin{cases} 
+k \cdot [I_3]= 
+k \cdot
 \begin {bmatrix}
 1&0&0\\
 0&1&0\\
@@ -20,7 +21,7 @@ $$ \begin{cases} {[T_{dil/contr}]=}
 k&0&0\\
 0&k&0\\
 0&0&k
-\end {bmatrix}, & para n=3 \\
+\end {bmatrix}, & \text {para} \ n=3 \\
 \\
 k \cdot [I_2]= 
 k \cdot
@@ -31,7 +32,7 @@ k \cdot
 \begin {bmatrix}
 k&0\\
 0&k
-\end {bmatrix} , & para n=2
+\end {bmatrix} , & \text {para} \ n=2
 \end{cases} $$
 
 Em que se $|k|>1$, $[T]$ é um operador de dilatação, e se $1>|k|$, $[T]$ é um operador de contração.
@@ -77,22 +78,23 @@ Em que se $|k|>1$, $[T]$ é um operador de dilatação, e se $1>|k|$, $[T]$ é u
 \frac 4 3\\
 1
 \end{bmatrix} $$
->
+
 ## 2. Operador de Reflexão em espaços bidimensionais
 O operador de reflexão em bidimensional é um operador que reflete o vetor $v$ em torno de um eixo de um espaço vetorial de duas dimensões ($n=2$), ou seja ele age como um "espelho". Isso faz esse operador linear muito interessante para fazer previsões de imagens em um espelho plano
 
 Esse operador é escrito como:
 
-$$ \begin{cases} {[T_{r^2}]=}
+$$ [T_{r^2}]=
+\begin{cases} 
 \begin {bmatrix}
 -1&0\\
 0&1
-\end {bmatrix} , & para reflexão em $x$\\
+\end {bmatrix} , & \text {para reflexão em} \ x \\
 \\
 \begin {bmatrix}
 1&0\\
 0&-1
-\end {bmatrix} , & para reflexão em $y$
+\end {bmatrix} , & \text {para reflexão em} \ y
 \end{cases} $$
 
 >[!note]
@@ -136,24 +138,25 @@ O operador de reflexão em em espaços tridimensionais é um operador usado prin
 
 Para planos agindo como "espelhos", esse operador é escrito como:
 
-$$ \begin{cases} {[T_{r^3}]}
+$$ [T_{r^3}]= 
+\begin{cases} 
 \begin {bmatrix}
 -1&0&0\\
 0&1&0\\
 0&0&1
-\end {bmatrix}, & \ para reflexão em yz \\
+\end {bmatrix}, & \text {para reflexão em} \ yz \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&-1&0\\
 0&0&1
-\end {bmatrix}, & para reflexão em xz \\
+\end {bmatrix}, & \text {para reflexão em} \ xz \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&-1
-\end {bmatrix}, & para para reflexão em xy
+\end {bmatrix}, & \text {para reflexão em} \ xy
 \end{cases} $$
 
 >[!note]
@@ -227,34 +230,35 @@ Os operadores de expansão e de compressão é semelhante aos operadores de cont
 
 Esses dois operadores tem a mesma matriz transformação $[T]$, que é:
 
-$$ \begin{cases} {[T_{exp/comp}]=}
+$$ [T_{exp/comp}]=
+\begin{cases} 
 \begin {bmatrix}
 k&0&0\\
 0&1&0\\
 0&0&1
-\end {bmatrix}, & para n=3 e mudança na coordena x \\
+\end {bmatrix}, & \text {para} n=3 \text { e mudança na coordena } x \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&k&0\\
 0&0&1
-\end {bmatrix}, & para n=3$ e mudança na coordena y \\
+\end {bmatrix}, & \text {para} n=3 \text { e mudança na coordena } y \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&1&0\\
 0&0&k
-\end {bmatrix}, & para n=3 e mudança na coordena z \\
+\end {bmatrix}, & \text {para} n=3 \text { e mudança na coordena } z \\
 \\
 \begin {bmatrix}
 k&0\\
 0&1
-\end {bmatrix} , & para n=2 e mudança na coordenada x \\
+\end {bmatrix} , & \text {para} n=2 \text { e mudança na coordena } x \\
 \\
 \begin {bmatrix}
 1&0\\
 0&k
-\end {bmatrix} , & para n=2 e mudança na coordenada y
+\end {bmatrix} , & \text {para} n=2 \text { e mudança na coordena } y
 \end{cases} $$
 
 Em que se $|k|>1$, $[T]$ é um operador de expansão, e se $1>|k|$, $[T]$ é um operador de compressão.
@@ -354,35 +358,36 @@ Em que se $|k|>1$, $[T]$ é um operador de expansão, e se $1>|k|$, $[T]$ é um 
 8\\
 12
 \end{bmatrix} $$
->
+
 ## 5. Operador de Rotação em $\theta$ ($R_{\theta}$)
  O operador de rotação em $\theta$, também chamado de **rotação em** $\theta$ é um operador que gira o vetor em $\theta$ graus no sentido anti-horário. No caso de 2 dimensões, essa rotação é feita em torno da origem ou, no caso de 3 dimensões, em torno de um dos eixos.
 
 Esse operador é escrito como:
 
-$$ \begin{cases} {[T_{R_{\theta}}]}
+$$ [T_{R_{\theta}}]= 
+\begin{cases} 
 \begin {bmatrix}
 \cos(\theta)&-\sin(\theta)\\
 \sin(\theta)&\cos(\theta)
-\end {bmatrix} , & para n=2 \\
+\end {bmatrix} , & \text {para}  n=2 \\
 \\
 \begin {bmatrix}
 \cos(\theta)& -\sin(\theta)&0\\
 \sin(\theta)&\cos(\theta)&0\\
 0&0&1
-\end {bmatrix}, & para $n=3$, rotacionando em torno de z \\
+\end {bmatrix}, & \text {para} n=3, \text { rotacionando em torno de }z \\
 \\
 \begin {bmatrix}
 \cos(\theta)&0&\sin(\theta)\\
 0&1&0\\
 -\sin(\theta)&0&\cos(\theta)
-\end {bmatrix}, & para $n=3$, rotacionando em torno de y \\
+\end {bmatrix}, & \text {para} n=3, \text { rotacionando em torno de } y \\
 \\
 \begin {bmatrix}
 1&0&0\\
 0&\cos(\theta)&-\sin(\theta)\\
 0&\sin(\theta)&\cos(\theta)
-\end {bmatrix}, & para $n=3$, rotacionando em torno de $x$
+\end {bmatrix}, & \text {para} n=3, \text { rotacionando em torno de } x
 \end{cases} $$
 
 ## 6. Operador de Cisalhamento
@@ -390,16 +395,17 @@ O operador de cisalhamento é um operador que altera uma coordenada do vetor em 
 
 Esse operador é escrito como:
 
-$$ \begin{cases} {[T_{c}]=}
+$$ [T_{c}]= 
+\begin{cases} 
 \begin {bmatrix}
 1&k\\
 0&1
-\end {bmatrix} , & para um cisalhamento em x (ou horizontal) \\
+\end {bmatrix} , & \text {para um cisalhamento em } x \text { (ou horizontal)} \\
 \\
 \begin {bmatrix}
 1&0\\
 k&1
-\end {bmatrix} , & para um cisalhamento em y (ou vertical)
+\end {bmatrix} , & \text {para um cisalhamento em } y \text { (ou vertical)}
 \end{cases} $$
 
 >[!note]
