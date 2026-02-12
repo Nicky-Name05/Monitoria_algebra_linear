@@ -1,5 +1,5 @@
 ## 1. Núcleo
-O Núcleo de uma [transformação linear](<Transformações Lineares.md>) $T:\ \mathbb {R}^n \rightarrow \mathbb R^n$ é o conjunto de vetores $v \in \mathbb R^n$ que, após aplicar $T$ neles, o vetor resultante é o vetor nulo ($T(v)=0$). 
+O Núcleo de uma [transformação linear](<Transformações Lineares.md>)[^1] $T:\ \mathbb {R}^n \rightarrow \mathbb R^n$ é o conjunto de vetores $v \in \mathbb R^n$ que, após aplicar $T$ neles, o vetor resultante é o vetor nulo ($T(v)=0$). 
 
 O núcleo costuma ser escrito das  seguintes formas:
 
@@ -16,7 +16,7 @@ Para achar o $N(T)$, é igualado o vetor resultado da transformação linear ao 
 >[!tip]
 >**Relação de $Ker(T)$ com funções**\
 >Como muitas funções podem ser escritas como transformações lineares, ao achar o $Ker(T)$ dessas funções, pode-se chegar a algumas conclusões.\
->Uma das mais importantes é caso $Ker(T)=\set0$, pois isso implica que $T$ é injetora. Isso será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>).
+>Uma das mais importantes é caso $Ker(T)=\set0$, pois isso implica que $T$ é injetora. Isso será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^2].
 
 >[!important]
 >**Como escrever o $Ker(T)$ nas respostas**\
@@ -29,7 +29,7 @@ Para achar o $N(T)$, é igualado o vetor resultado da transformação linear ao 
 
 >[!note]
 >**Exemplo**\
->Seja a Transformação $T$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Ker(T)$:\ 
+>Seja a Transformação $T$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Ker(T)$: \
 >Sabe-se que, para  $Ker(T)$, vale:
 >
 >$$T(x,\ y,\ z) = (0,\ 0) \Rightarrow \begin{cases}
@@ -77,13 +77,13 @@ $$ Im(T)$$
 
 Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e em seguida é resolvido o sistema. É necessário tomar cuidado ao solucionar o sistema, pois, para o vetor pertencer a imagem, o sistema tem que ser possível, então:
 
-1. Normalmente é usado [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>) para resolver sistema, visto que é necessário achar a condição em que o sistema é possível (condição para que o vetor pertença a imagem).
+1. Normalmente é usado [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>)[^3] para resolver sistema, visto que é necessário achar a condição em que o sistema é possível (condição para que o vetor pertença a imagem).
 2. Não é necessário achar todas as soluções do sistema, apenas as condições para que tornam o sistema consistente.
 
 >[!tip]
 >**Relação de $Im(T)$ com funções**\
 >Como muitas funções podem ser escritas como transformações lineares, ao achar o $Im(T)$ dessas funções, pode-se chegar a algumas conclusões.\
->Uma das mais importantes é caso $dim\ Im(T) = dim\ \mathbb W$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>).
+>Uma das mais importantes é caso $dim\ Im(T) = dim\ \mathbb W$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^4].
 
 >[!important]
 >**Como escrever o $Im(T)$ nas respostas**\
@@ -234,3 +234,11 @@ c
 >[!important]
 >**Sistemas SPD também podem gerar $\mathbb W$ ($T: \mathbb V \Rightarrow \boxed{\mathbb W}$)**\
 >Se os vetores da $Im (T)$ conseguirem gerar $\mathbb W$, o conjunto $Im(T)$ será igual a $\mathbb W$ (algebricamente: $Im(T) = \mathbb W$).
+
+[^1]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
+
+[^2]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
+
+[^3]: [<Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.pdf>)
+
+[^4]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
