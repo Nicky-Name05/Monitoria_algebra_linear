@@ -1,9 +1,6 @@
-Operadores Lineares são [Transformações Lineares](<Transformações Lineares.md>)[^1] $T: \mathbb V\rightarrow \mathbb W$ [^2] em que $\mathbb V = \mathbb W= \mathbb R^n$ [^3] ou simplesmente $T: \mathbb V \rightarrow \mathbb V$ [^4] em que $\mathbb V = \mathbb R^n$. Vale citar também que, como muitas vezes esses operadores são usados para manipular objetos que conseguimos ver (que tem no máximo 3 dimensões), $n$ costuma ser ou 2 ou 3, o que significa que neste curso serão tratados apenas operadores de ordem 2 ou 3.
+Operadores Lineares são [Transformações Lineares](<Transformações Lineares.md>)[^1] $T: \mathbb V\rightarrow \mathbb W$ em que $\mathbb V = \mathbb W= \mathbb R^n$ ou simplesmente $T: \mathbb V \rightarrow \mathbb V$  em que $\mathbb V = \mathbb R^n$. Vale citar também que, como muitas vezes esses operadores são usados para manipular objetos que conseguimos ver (que tem no máximo 3 dimensões), $n$ costuma ser ou 2 ou 3, o que significa que neste curso serão tratados apenas operadores de ordem 2 ou 3.
 
 [^1]: [Operadores Lineares.pdf](<Operadores Lineares.pdf>)
-[^2]:Transformação do espaço vetorial $\mathbb V$ no espaço vetorial $\mathbb W$
-[^3]: O espaço vetorial $\mathbb V$ é igual ao espaço vetorial $\mathbb W$ que é igual ao espaço vetorial dos números reais com "n dimensões" 
-[^4]: Transformação do espaço vetorial $\mathbb V$ no espaço vetorial $\mathbb V$ 
 
 Alguns operadores lineares notáveis são:
 ## 1. Operador de Dilatação/ Operador de Contração
@@ -40,7 +37,7 @@ k&0\\
 Em que se $|k|>1$, $[T]$ é um operador de dilatação, e se $1>|k|$, $[T]$ é um operador de contração.
 
 >[!note]
->**Exemplos**
+>**Exemplos:**
 >1. Para $[T]=3\cdot [I_3]$ e $v=(0,4,3)$, acha-se $T(v)$:
 >
 >$$T(v)= [T]\cdot v=
@@ -99,7 +96,7 @@ $$ \begin{cases} {[T_{r^2}]=}
 \end{cases} $$
 
 >[!note]
->**Exemplos**\
+>**Exemplos:**
 >1. Seja $[T]$ um operador linear de reflexão em $x$ e $v=(8,3)$, acha-se $T(v)$:
 >
 >$$ T(v)= [T]\cdot v=
@@ -159,7 +156,8 @@ $$ \begin{cases} {[T_{r^3}]}
 \end {bmatrix}, & para para reflexão em xy
 \end{cases} $$
 
->[!example] Exemplos
+>[!note]
+>**Exemplos:**
 >1. Seja $[T]$ um operador linear de reflexão em $xz$ e $v=(2,4,3)$, acha-se $T(v)$:
 >
 >$$ T(v)= [T]\cdot v=
@@ -220,7 +218,8 @@ $$ \begin{cases} {[T_{r^3}]}
 -3
 \end{bmatrix} $$
 
-> [!tip] Reflexão em torno do eixo ou da origem em espaços tridimensionais
+> [!tip]
+> **Reflexão em torno do eixo ou da origem em espaços tridimensionais**\
 > É possível usar eixos ou até a própria origem como "ponto de reflexão", mas isso não será usado neste curso.
 
 ## 4. Operador de Expansão/ Operador de Compressão
@@ -260,7 +259,8 @@ k&0\\
 
 Em que se $|k|>1$, $[T]$ é um operador de expansão, e se $1>|k|$, $[T]$ é um operador de compressão.
 
->[!example] Exemplos
+>[!note]
+>**Exemplos:**
 >1. Seja $[T]$ um operador linear de expansão em $x$ que aumenta em 4 a coordenada e $v=(2,4,3)$, acha-se $T(v)$:
 >
 >$$ T(v)= [T]\cdot v=
@@ -402,7 +402,8 @@ k&1
 \end {bmatrix} , & para um cisalhamento em y (ou vertical)
 \end{cases} $$
 
->[!example] Exemplos
+>[!note]
+>**Exemplos:**
 >1. Seja $[T]$ um operador linear de cisalhamento horizontal em 3 e $v=(8,3)$, acha-se $T(v)$:
 >
 >$$ T(v)= [T]\cdot v=
