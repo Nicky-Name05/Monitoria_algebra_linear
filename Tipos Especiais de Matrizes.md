@@ -40,7 +40,7 @@ $$ A_{3X3}=
 0 & 2 & 2 \\
 3 & 8 & 11
 \end{pmatrix}
-\; e \; B_{1X1}=
+\  e \  B_{1X1}=
 \begin{pmatrix}
 12
 \end{pmatrix}$$
@@ -55,7 +55,7 @@ $$A_{3x3} =
 0&7&0\\
 0&0&5
 \end{pmatrix}
-\; e\; 
+\  e\  
 A_{4X4} = 
 \begin{pmatrix}
 7&0&0&0\\
@@ -74,7 +74,7 @@ $$ I_3=
 0&1&0\\
 0&0&1
 \end {pmatrix}
-\; e\; I_2=
+\  e\  I_2=
 \begin{pmatrix}
 1&0\\
 0&1
