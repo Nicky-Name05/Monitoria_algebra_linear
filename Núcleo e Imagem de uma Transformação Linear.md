@@ -25,10 +25,10 @@ Para achar o $N(T)$, é igualado o vetor resultado da transformação linear ao 
 >Em que $v$ é a forma que ele tem.
 
 >[!example] Exemplo
->Seja a Transformação $T$ da seguinte forma: $T (x, y, z) = (x - z,\; y)$, vamos achar o $Ker(T)$:
+>Seja a Transformação $T$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Ker(T)$:\ 
 >Sabe-se que, para  $Ker(T)$, vale:
 >
->$$T(x,\;y,\;z) = (0,\;0) \Rightarrow \begin{cases}
+>$$T(x,\ y,\ z) = (0,\ 0) \Rightarrow \begin{cases}
 x - z = 0 \\
 y = 0
 \end{cases}$$
@@ -52,15 +52,16 @@ z
 1&0&-1&\shortmid&0\\
 0&1&0&\shortmid&0
 \end{bmatrix}$$
+>
 >Como essa matriz já está linha-reduzida podemos concluir que
 >
 >$$ \begin{cases} 
 x=z\\
 y=0
-\end{empheq} \Rightarrow (z,0,z),com\;z\in\mathbb R\;é\;solução\;única \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
+\end{cases} \Rightarrow (z,0,z),com\ z\in\mathbb R\ é\ solução\ única \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
 >
 ## 2. Imagem
-A Imagem de uma transformação linear $T:\ \mathbb V \ xxx \mathbb W$, em que $\mathbb V\ = \mathbb R^n$ e $\mathbb W = \mathbb R^m$, é um conjunto de vetores $w \in \mathbb W$ que resultam da aplicação de $T$ em um vetor $v \in \mathbb V$ qualquer ($w \in \mathbb W$ tal que $T(v) = w$ para algum $v \in \mathbb V$)
+A Imagem de uma transformação linear $T:\ \mathbb V \rightarrow \mathbb W$, em que $\mathbb V\ = \mathbb R^n$ e $\mathbb W = \mathbb R^m$, é um conjunto de vetores $w \in \mathbb W$ que resultam da aplicação de $T$ em um vetor $v \in \mathbb V$ qualquer ($w \in \mathbb W$ tal que $T(v) = w$ para algum $v \in \mathbb V$)
 
 A Imagem de $T$ é escrita como:
 
@@ -81,14 +82,16 @@ Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e
 >[!important] Como escrever o $Im(T)$ nas respostas
 >O $Im(T)$, assim como $Ker(T)$, também pode ser escrito de diversas formas.
 >Do mesmo jeito que o $Ker(T)$, muitas vezes o $Im(T)$ tem infinitos vetores que apresentam a mesma forma - $\set{(1,\ 0,\ 0),(0,\ 1, \ 0) }$ por exemplo - e por isso também o escreve assim nas respostas:
+>
 >$$Im(T)=[v], $$
+>
 >Em que $v$ é a forma que ele tem.
 
 >[!example] Exemplo
->1. Seja a Transformação $T: \mathbb R^3 \Rightarrow \mathbb R^2$ da seguinte forma: $T (x, y, z) = (x - z,\; y)$, vamos achar o $Im(T)$:
+>1. Seja a Transformação $T: \mathbb R^3 \Rightarrow \mathbb R^2$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Im(T)$:\ 
 >Sabe-se que vale
-
->$$T(x,\;y,\;z) = (a,\;b) \Rightarrow \begin{cases}
+>
+>$$T(x,\ y,\ z) = (a,\ b) \Rightarrow \begin{cases}
 x - z = a\\
 y = b
 \end{cases}\Rightarrow$$
@@ -113,11 +116,12 @@ b
 \end{bmatrix}$$
 >
 >Como a nulidade dessa matriz é diferente de $0$ e o $P_{ampliada} \ne P_{coeficientes}$ (o que significa que o sistema é um SPI), essa transformação consegue gerar todo o espaço vetorial de $\mathbb R^2$, ou seja, $\boxed{Im(T)=\mathbb R^2}$.
+>
 >---
->2. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\; y, -x+y+z)$, vamos achar o $Im(T)$:
+>2. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, -x+y+z)$, vamos achar o $Im(T)$: \
 >Sabe-se que vale
-
->$$T(x,\;y,\;z) = (a,\;b,\; c) \Rightarrow \begin{cases}
+>
+>$$T(x,\ y,\ z) = (a,\ b,\  c) \Rightarrow \begin{cases}
 x - z = a\\
 y = b\\
 x+z = c
@@ -148,32 +152,32 @@ c
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&1&0&\shortmid&c + a
-\end{bmatrix} \xsim {L_3 \ xxx L_3-L_2}$$
+\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3-L_2}$$
 >
 >$$\sim
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&0&0&\shortmid&c + a - b
-\end{bmatrix} \ xxx Nulidade \ne 0\; e \; P_{ampliada} \ne P_{coeficientes} \ xxx \boxed{SI!}$$
+\end{bmatrix} \Rightarrow Nulidade \ne 0\  e \  P_{ampliada} \ne P_{coeficientes} \Rightarrow \boxed{SI!}$$
 >
 >Como o sistema é SI, a imagem é o conjunto de  vetores que tornam esse sistema possível:
 >
->$$ c+a-b=0 \ xxx c+a=b\ xxx (a,\ b,\ c)=(a,\ c+a,\ c)= (a,\ a, \ 0) + (0,\ c,\ c) = a(1,\ 1, \ 0) + c(0, \ 1, \ 1) \ xxx $$
+>$$ c+a-b=0 \Rightarrow c+a=b\Rightarrow (a,\ b,\ c)=(a,\ c+a,\ c)= (a,\ a, \ 0) + (0,\ c,\ c) = a(1,\ 1, \ 0) + c(0, \ 1, \ 1) \Rightarrow $$
 >
 >$$\boxed{Im (T)= [(1, \ 1,\ 0),\ (0,\ 1,\ 1)] } $$
 >
 >---
->3. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\; y, x+z)$, vamos achar o $Im(T)$:
+>3. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, x+z)$, vamos achar o $Im(T)$:\ 
 >Sabe-se que vale
-
->$$T(x,\;y,\;z) = (a,\;b,\; c) \ xxx \begin{cases}
+>
+>$$T(x,\ y,\ z) = (a,\ b,\  c) \Rightarrow \begin{cases}
 x - z = a\\
 y = b\\
 x+z = c
-\end{cases} \ xxx$$
+\end{cases} \Rightarrow$$
 >
->$$ \ xxx
+>$$ \Rightarrow
 \begin{bmatrix}
 1&0&-1\\
 0&1&0\\
@@ -188,35 +192,35 @@ z
 a\\
 b\\
 c
-\end{bmatrix} \ xxx 
+\end{bmatrix} \Rightarrow
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 1&0&1&\shortmid&c
-\end{bmatrix} \xsim {L_3 \ xxx L_3-L_1}
+\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3-L_1}
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&0&2&\shortmid&c - a
-\end{bmatrix} \xsim {L_3 \ xxx \frac 1 2 L_3}$$
+\end{bmatrix} \xrightarrow {L_3 \rightarrow \frac 1 2 L_3}$$
 >
 >$$\sim
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&0&1&\shortmid& \frac {c - a} 2
-\end{bmatrix} \xsim {L_1 \ xxx L_1+L_3}
+\end{bmatrix} \xrightarrow {L_1 \rightarrow L_1+L_3}
 \begin{bmatrix}
 1&0&0&\shortmid&\frac {c + a} 2\\
 0&1&0&\shortmid&b\\
 0&0&1&\shortmid& \frac {c - a} 2
-\end{bmatrix}\ xxx Nulidade=0\ xxx \boxed{SPD!}$$
+\end{bmatrix}\Rightarrow Nulidade=0\Rightarrow \boxed{SPD!}$$
 >Como o sistema é SPD, a imagem é o próprio conjunto de vetores $w$ dado pela equação vetorial de $T$:
 >
->$$ Im(T) = (x-z,y,x+z) = (x,\ 0,\ x) + (0,\ y,\ 0) + (-z,\ 0,\ z) = x(1,\ 0,\ 1) + y(0,\ 1,\ 0) + z(-1,\ 0,\ 1) \ xxx $$
+>$$ Im(T) = (x-z,y,x+z) = (x,\ 0,\ x) + (0,\ y,\ 0) + (-z,\ 0,\ z) = x(1,\ 0,\ 1) + y(0,\ 1,\ 0) + z(-1,\ 0,\ 1) \Rightarrow $$
 >
 >$$\boxed {Im(T) = [(1,\ 0,\ 1), \ (0,\ 1,\ 0),\ (-1,\ 0,\ 1)]}$$
 >
 >
->[!important] Sistemas SPD também podem gerar $\mathbb W$ ($T: \mathbb V \ xxx \boxed{\mathbb W}$)
+>[!important] Sistemas SPD também podem gerar $\mathbb W$ ($T: \mathbb V \Rightarrow \boxed{\mathbb W}$)
 >Se os vetores da $Im (T)$ conseguirem gerar $\mathbb W$, o conjunto $Im(T)$ será igual a $\mathbb W$ (algebricamente: $Im(T) = \mathbb W$).
