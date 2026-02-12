@@ -104,7 +104,9 @@ Um dos jeitos mais fáceis de descobrir se um conjunto $\beta$ é base de $\math
 
 >[!example] Exemplo
 > 1. Seja $\mathbb V = \mathbb R^2$, $\alpha = \set {(1,4),\ (2,0)}$ e $\alpha \subset \mathbb V$, temos que:
+> 
 > $$v=\lambda_1 \cdot v_1(1,4) + \lambda_2(2,0) \Rightarrow$$
+>
 >$$\Rightarrow
 \begin{cases}
 \lambda_1 \cdot 1+\lambda_2 \cdot 2 = x_1\\
@@ -141,14 +143,15 @@ x_2 & 0
 \end{vmatrix} } {det(A)} = \frac {1\cdot x_2 - x_1\cdot 4} {-8}= \frac {4x_1-x_2} 8
 \end{cases} \Rightarrow 
 \lambda_1= \frac {x_2} 4,\lambda_2= \frac {4x_1-x_2} 8 $$
+>
 >Substituindo $x_1$ e $x_2$ por $0$, temos que:
->$$
-\begin{cases}
+>
+>$$\begin{cases}
 \lambda_1= \frac {x_2} 4 \\
 \lambda_2= \frac {4x_1-x_2} 8
-\end{cases} \Rightarrow$$ 
->$$
-\begin{cases}
+\end{cases} \Rightarrow$$
+>
+>$$ \begin{cases}
 \lambda_1= \frac {0} 4 \\
 \lambda_2= \frac {4\cdot0-0} 8
 \end{cases}\Rightarrow \lambda_1 = 0, \lambda_2 = 0$$
@@ -156,15 +159,23 @@ x_2 & 0
 
 >[!info] Bases canônicas
 >Os conjuntos  $\mathbb V= \mathbb R^n$ tem as chamadas **bases canônicas** que tem a seguinte forma:
+>
 >$$\beta = \set {(1,0,0,...,0),(0,1,0,...,0),(0,0,1,...,0),..., (0,0,0,...,1)},$$
+>
 >Em que $\beta$ contém $n$ vetores.
 
 ## Mudança de base 
-Os coeficientes  $\lambda_i's$ dos vetores de  que aparecem na equação $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n$$ são as **Coordenadas do Vetor na Base $\beta$** e representam como vetor é escrito na base $\beta$. Ou seja, um vetor $v$ escrito como $(x_1,\ x_2,\ ...,\ x_n)$ na base canônica, será escrito como $(\lambda_1,\ \lambda_2,\ ...,\ \lambda_n)$ na base $\beta$.  Isso é escrito como $[v]_{\beta} =(\lambda_1,\ \lambda_2,\ ...,\ \lambda_n)= (x_1,\ x_2,\ ...,\ x_n)_{\beta}$ 
+Os coeficientes  $\lambda_i's$ dos vetores de  que aparecem na equação 
+
+$$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n$$
+
+são as **Coordenadas do Vetor na Base $\beta$** e representam como vetor é escrito na base $\beta$. Ou seja, um vetor $v$ escrito como $(x_1,\ x_2,\ ...,\ x_n)$ na base canônica, será escrito como $(\lambda_1,\ \lambda_2,\ ...,\ \lambda_n)$ na base $\beta$.  Isso é escrito como $[v]_{\beta} =(\lambda_1,\ \lambda_2,\ ...,\ \lambda_n)= (x_1,\ x_2,\ ...,\ x_n)_{\beta}$ 
 
 >[!example] Exemplo
 > 1. Seja $\mathbb V = \mathbb R^2$, um vetor $v(2,4) \in \mathbb V$ e a base $\beta = \set {(1,4),\ (2,0)}$, temos que:
+> 
 > $$v=\lambda_1 \cdot v_1(1,4) + \lambda_2(2,0) \Rightarrow$$
+>
 >$$\Rightarrow
 \begin{cases}
 \lambda_1 \cdot 1+\lambda_2 \cdot 2 = x_1\\
@@ -182,9 +193,12 @@ Os coeficientes  $\lambda_i's$ dos vetores de  que aparecem na equação $$v=\la
 x_1\\
 x_2
 \end{bmatrix} \Rightarrow$$
+>
 >$$ \Rightarrow
 det(A)= 1\cdot 0-2\cdot 4= -8 \ne 0$$
+>
  Agora vamos achar a forma que $\lambda_1$ e $\lambda_2$ tem:
+ 
 >$$ \begin{cases}
 \lambda_1 = \frac {
 \begin{vmatrix}
@@ -198,7 +212,9 @@ x_2 & 0
 \end{vmatrix} } {det(A)} = \frac {1\cdot x_2 - x_1\cdot 4} {-8}= \frac {4x_1-x_2} 8
 \end{cases} \Rightarrow 
 \lambda_1= \frac {x_2} 4,\lambda_2= \frac {4x_1-x_2} 8 $$
+>
 >Logo:
+>
 >$$\begin{cases}
 \lambda_1= \frac {4} 4\\ \lambda_2= \frac {4\cdot 2-4} 8
 \end{cases} \Rightarrow
@@ -206,36 +222,38 @@ x_2 & 0
 
 Alternativamente, quaisquer vetor $v =(x_1,\ x_2,\ ...,\ x_n)$ em uma base $\alpha$ qualquer pode ser passado para uma outra base $\beta$ qualquer usando o mesmo procedimento, porém muitas vezes é necessário primeiro mudar o vetor da base canônica para a base $\alpha$ e, em seguida, mudar o "novo" vetor para a base $\beta$.
 Essa operação de mudança de uma base $\alpha$ para uma base $\beta$ é escrita dessa forma:
-$$
-[v]_{\beta}^{\alpha} = (\lambda_1,\ \lambda_2,\ ...,\ \lambda_n),$$
+
+$$ [v]_{\beta}^{\alpha} = (\lambda_1,\ \lambda_2,\ ...,\ \lambda_n),$$
 
 Em que $\lambda_i$ é solução de:
-$$
-\begin{cases}
+
+$$ \begin{cases}
 \lambda_1A_1 + \lambda_2A_2 +.... + \lambda_nA_n = \theta_1 \\
 \lambda_1B_1 + \lambda_2B_2 +.... + \lambda_nB_n = \theta_2 \\
 .\\
 .\\
 .\\
 \lambda_1M_1 + \lambda_2M_2 +... + \lambda_nM_n = \theta_n
-\end{cases},
-$$
+\end{cases}, $$
+
 Em que as variáveis $A_i$ a $M_i$ são as componentes dos vetores de $\beta$ e  $\theta_i$ vem de:
-$$
-\begin{cases}
+
+$$ \begin{cases}
 \theta_1a_1 + \theta_2a_2 +.... + \theta_na_n = x_1 \\
 \theta_1b_1 + \theta_2b_2 +.... + \theta_nb_n = x_2 \\
 .\\
 .\\
 .\\
 \theta_1m_1 + \theta_2m_2 +... + \theta_nm_n = x_n
-\end{cases}
-$$
+\end{cases} $$
+
 Em que as variáveis $a_i$ a $m_i$ são as componentes dos vetores de $\alpha$.
 
 >[!example] Exemplo
 > 1. Seja $\mathbb V = \mathbb R^2$, um vetor $v(2,4) \in \mathbb V$, a base $\alpha =\set{(1,\ 1),\ (1,\ -2) }$ e a base $\beta = \set {(1,\ 4),\ (2,\ 0)}$, temos que para $\alpha$:
+> 
 > $$v=\theta_1 \cdot v_1(1,\ 1) + \theta_2(1,\ -2) \Rightarrow$$
+>
 >$$\Rightarrow
 \begin{cases}
 \theta_1 \cdot 1+\theta_2 \cdot 1 = x_1\\
@@ -252,7 +270,7 @@ Em que as variáveis $a_i$ a $m_i$ são as componentes dos vetores de $\alpha$.
 \begin{bmatrix}
 x_1\\
 x_2
-\end{bmatrix} \Rightarrow$$
+\end{bmatrix} \Rightarrow $$
 
 >$$ \Rightarrow
 det(A)= 1\cdot (-2) -1\cdot 1 = -3 \ne 0$$
@@ -297,7 +315,8 @@ x_2 & -2
 \begin{bmatrix}
 x_1\\
 x_2
-\end{bmatrix} \Rightarrow$$
+\end{bmatrix} \Rightarrow $$
+>
 >$$ \Rightarrow
 det(A)= 1\cdot 0-2\cdot 4= -8 \ne 0$$
 >
@@ -330,7 +349,8 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 >  1. $\mathbb V = \set {(x_1,\ x_2); x_i \in R^2}$ (lê-se "V é um conjunto de duplas "x1" e "x2", com "x1" e "x2" pertencentes ao conjunto dos reais") tem dimensão 2 $(dim\ \mathbb V =2)$.
 >  2. $\mathbb V = \set {(x_1,\ x_2,\ x_3); x_i \in R^2}$ (lê-se "V é um conjunto de trios "x1", "x2" e "x3", todos pertencentes ao conjunto dos reais") tem dimensão 3$(dim\ \mathbb V =3)$.
 >  3. $\mathbb V = \set {(x_1,\ x_2,\ ...,\ x_n); x_i \in R^2}$ (lê-se "V é um conjunto de enúplas "x1", "x2" até "x $n$", todos pertencentes ao conjunto dos reais") tem dimensão "$n$"$(dim\ \mathbb V =n)$.
->  4. $V = M(2, 2)$ (lê-se " V é um conjunto de matrizes 2 por 2") tem base 
+>  4. $V = M(2, 2)$ (lê-se " V é um conjunto de matrizes 2 por 2") tem base
+> 
 >  $$\set {\
 \begin{bmatrix}
 1 & 0\\
@@ -348,6 +368,7 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 0 & 0\\
 0 & 1
 \end{bmatrix}},$$
+> 
 > Ou seja, $dim\ \mathbb V = 4.$
 
 >[!attention] A dimensão de um espaço que contém apenas o vetor nulo é igual a $0$!
