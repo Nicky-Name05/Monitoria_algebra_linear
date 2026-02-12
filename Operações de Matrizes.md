@@ -142,7 +142,7 @@ AB=
 \end{pmatrix}=
 \begin{pmatrix}
 1 \cdot 10+5 \cdot 3&1\cdot (-5)+5 \cdot8\\
-4\ cdot 10+9 \cdot 3&4 \cdot (-5)+9 \cdot8
+4\cdot 10+9 \cdot 3&4 \cdot (-5)+9 \cdot8
 \end{pmatrix}=
 \begin{pmatrix}
 25&35\\
@@ -230,9 +230,11 @@ Existem diversas formas de se calcular o determinante, mas a forma mais usada é
 2 & 4 & 11 \\
 1 & 2 & 5 \\
 3 & 0 & 12
-\end{vmatrix}\xlongequal
-{L_1\leftarrow L_1-2 \cdot L_2}
-\begin{vmatrix}
+\end{vmatrix}$$
+>
+>$$ \xlongequal {L_1\leftarrow L_1-2 \cdot L_2} $$
+>
+>$$ \begin{vmatrix}
 0 & 0 & 1 \\
 1 & 2 & 5 \\
 3 & 0 & 12
@@ -252,9 +254,10 @@ Existem diversas formas de se calcular o determinante, mas a forma mais usada é
 1 & 2 & 5 \\
 3 & 0 & 12
 \end{bmatrix},$$
+>
 >$$A\xlongequal {L_1\leftrightarrow L_2}B$$
 >
->$$det(A)=
+>$$=det(A)=
 \begin{vmatrix}
 2 & 4 & 11 \\
 1 & 2 & 5 \\
