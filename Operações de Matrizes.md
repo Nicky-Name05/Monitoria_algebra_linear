@@ -4,7 +4,7 @@ A soma de matrizes é uma operação matricial na qual se subtrai, termo a termo
 >[!note]
 >**Exemplo:**
 >
->$$Seja\ A_{2X2}=
+>$$ \text {Seja} \ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
@@ -46,7 +46,7 @@ A soma de matrizes é uma operação matricial na qual se subtrai, termo a termo
 > [!note]
 > **Exemplo:**
 >
-> $$ Seja\ A_{2X2}=
+> $$\text {Seja} \ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
@@ -88,7 +88,7 @@ O produto escalar é uma operação matricial em que se multiplica um escalar $k
 > [!note]
 > **Exemplo:**
 >
->$$ Seja\ A= 
+>$$\text {Seja} \ A= 
 \begin{pmatrix}
 10&-5\\
 3&8
@@ -118,9 +118,9 @@ $$ p_{ij}=\sum_{k=1}^m a_{ik} \cdot b_{kj},$$
 Em que $p_{ij}$ é elemento de $P$, $a_{ik}$ é elemento de $A$ e $b_{kj}$ é elemento de $B$.
 
 > [!note]
->** Exemplo:**
+>**Exemplo:**
 >
->$$Seja\ A_{2X2}=
+>$$ \text {Seja} \ A_{2X2}=
 \begin{pmatrix}
 1&5\\
 4&9
@@ -165,7 +165,7 @@ O traço de uma matriz  é a soma da diagonal principal de uma matriz quadrada e
 > [!note]
 >**Exemplo**
 >
->$$Seja\ A_{2X2}=
+>$$ \text {Seja} \ A_{2X2}=
 \begin{pmatrix}
 11&67\\
 47&39
@@ -182,7 +182,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 > [!note]
 > **Exemplo:**
 >
->$$Seja\ A_{2X2}=
+>$$ \text {Seja} \ A_{2X2}=
 \begin{pmatrix}
 11&50\\
 47&39
@@ -202,7 +202,7 @@ A transposição de uma matriz é uma operação de matriz na qual, a partir de 
 ## 7. Determinante
 É uma operação matricial na qual transforma-se a matriz em um número escalar representada da seguinte forma:
 
-$$ Sendo\  a\  matriz\   
+$$ \text {Seja a matriz A} =  
 A = \begin{pmatrix}
 a & b & c \\
 d & e & f \\
@@ -219,7 +219,7 @@ g & h & i
 >[!warning]
 >Só existe determinante de matrizes quadradas. 
 
-Existem diversas formas de se calcular o determinante, mas a forma mais usada é a [Regra de Laplace](<Regra de Laplace.md>), e um dos principais motivos para se fazer esse cálculo é para achar a solução de um [Sistema Linear](<Sistema Linear.md>).
+Existem diversas formas de se calcular o determinante, mas a forma mais usada é a [Regra de Laplace](<Regra de Laplace.md>)[^1], e um dos principais motivos para se fazer esse cálculo é para achar a solução de um [Sistema Linear](<Sistema Linear.md>)[^2].
 
 >[!tip]
 >Propriedades do Determinante
@@ -329,7 +329,7 @@ Em que $B$ é uma matriz única, ou seja, **se $A$ é inversível,  existe apena
 >Nem toda matriz tem inversa
 >A inversa de uma matriz $A$ só existe **se** $det(A)\ne0$, da mesma forma, se $A^{-1}$ existe, $det(A)\ne 0$. O determinante ser diferente de $0$ é condição suficiente para afirmar que $A^{-1}$ existe.
 
-Existe duas formas principais de se [calcular a inversa](<Cálculo da inversa.md>):
+Existe duas formas principais de se [calcular a inversa](<Cálculo da inversa.md>)[^3]:
 1.  Método da adjunta, cuja fórmula geral é:
 
 $$A^{-1}= \frac1{det(A)} \cdot {adj(A)}$$
@@ -346,3 +346,8 @@ Em que $\sim$ indica que $[A|I_n]$ e $[I_n|A^{-1}]$ são linha semelhantes e "|"
 >2. Se $A$ e $B$ são inversíveis e da mesma ordem, então $(AB)^{-1} = B^{-1}A^{-1}$.
 >3. $det(A^{-1})=\frac1{det(A)}$
 
+[^1]: [Regra de Laplace.pdf](<Regra de Laplace.pdf>)
+
+[^2]: [Sistema Linear.pdf](<Sistema Linear.pdf>)
+
+[^3]: [Cálculo da inversa.pdf](<Cálculo da inversa.pdf>)
