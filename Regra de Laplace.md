@@ -6,7 +6,7 @@ ou
 
 $$\sum_{k=1}^n\  = a_{kj}*\Delta_{kj},\text {para\  o\  desenvolvimento\  em\  uma\  coluna.} $$
 
-Pode-se usar as [Propriedades do Determinante](<Operações de Matrizes.md>) 1 e 2 para facilitar as contas, diminuindo o número de elementos dentro do somatório ao tornar os elementos da linha ou coluna analisada em 0s.
+Pode-se usar as [Propriedades do Determinante](<Operações de Matrizes.md>)[^1] 1 e 2 para facilitar as contas, diminuindo o número de elementos dentro do somatório ao tornar os elementos da linha ou coluna analisada em 0s.
 
 ## Cofator
 Cofator de um elemento $a_{ij}$ de uma matriz $`A\  =\  (a_{ij})_{mXn}`$ é definido como o número real que resulta da seguinte equação:
@@ -19,12 +19,12 @@ Cofator de um elemento $a_{ij}$ de uma matriz $`A\  =\  (a_{ij})_{mXn}`$ é defi
 >[!note]
 >**Exemplo:**
 >
->$$Seja \  A =
+>$$ \text {Seja} \  A =
 \begin{pmatrix}
 3 & -1 & 0\\
 2 & 1 & -1\\
 0 & 1 & 4
-\end{pmatrix},\ os\  menores\  M_{11},\  M_{12}\  e\  M_{23}\  são:$$
+\end{pmatrix},\ \text {os  menores }  M_{11},\  M_{12}\  \text e \  M_{23}\  \text{são} :$$
 >
 >$$M_{11} = 
 \begin{vmatrix}
@@ -42,3 +42,5 @@ M_{23} =
 3 & -1\\
 0 & 1
 \end{vmatrix}$$
+
+[^1]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
