@@ -1,7 +1,7 @@
-Vetores são comumente representados por segmentos direcionados (o vetor velocidade é escrito como $\overrightarrow V = x \cdot\hat i + y \cdot \hat j + z \cdot\hat k$, por exemplo) na Física e na Engenharia com sentido, direção e módulo e são escritos com letra maiúscula (ou seja, são uma "seta" e seu nome é uma letra maiúscula). Na Álgebra Linear, eles são geralmente tratados como [matrizes linhas](<Tipos Especiais de Matrizes.md>) ($`v = \begin{bmatrix} x& y& z \end{bmatrix}`$) ou [matrizes colunas](<Tipos Especiais de Matrizes.md>) ($`u = \begin{bmatrix} x\\ y\end{bmatrix}`$) ou ainda como enúplas ordenadas ($`v = (x,\ y,\ z)`$) e são escritos com letra minúscula.
+Vetores são comumente representados por segmentos direcionados (o vetor velocidade é escrito como $\overrightarrow V = x \cdot\hat i + y \cdot \hat j + z \cdot\hat k$, por exemplo) na Física e na Engenharia com sentido, direção e módulo e são escritos com letra maiúscula (ou seja, são uma "seta" e seu nome é uma letra maiúscula). Na Álgebra Linear, eles são geralmente tratados como [matrizes linhas](<Tipos Especiais de Matrizes.md>)[^1] ($`v = \begin{bmatrix} x& y& z \end{bmatrix}`$) ou [matrizes colunas](<Tipos Especiais de Matrizes.md>)[^1] ($`u = \begin{bmatrix} x\\ y\end{bmatrix}`$) ou ainda como enúplas ordenadas ($`v = (x,\ y,\ z)`$) e são escritos com letra minúscula.
 
 >[!important]
->**De forma mais geral, um vetor $v$  é um elemento que esta contido em um espaço vetorial $\mathbb V$.**\
+>**De forma mais geral, um vetor $v$  é um elemento que esta contido em um espaço vetorial $𝕍$.**\
 >Nessa matéria, alguns conjuntos serão tratados como vetores, ainda que não sejam da mesma natureza, por se comportam de maneira semelhante aos vetores no espaço.
 >Esses conjuntos são chamados de **Espaços Vetoriais**
 
@@ -19,10 +19,10 @@ Ainda que vetores possam ter mais de 3 componentes dependendo do espaço vetoria
 
 >[!important]
 >**Vetor Nulo**\
->Vetor nulo é o vetor com todas as suas componentes iguais a $0$ ($(0,0)$ para $\mathbb R^2$, por exemplo)
+>Vetor nulo é o vetor com todas as suas componentes iguais a $0$ ($(0,0)$ para $ℝ^2$, por exemplo)
 >
 ## Espaço Vetorial
-Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele deve ser um conjunto não vazio ($\mathbb {V} \ne Ø$), com duas operações (uma operação de soma $\set{\mathbb V \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\oplus$; e uma de multiplicação por escalar $\set{\mathbb R \times \mathbb V \rightarrow \mathbb V}$, muitas vezes representada por $\otimes$) que respeite as seguintes propriedades para $v,\ u\ e\ w\  \in\  \mathbb V$ ($v,\ u\ e\ w$ existem em $\mathbb V$) e $a\ e\ b\  \in\  \mathbb R$ ($a\ e\ b$ existem em $\mathbb R$):
+Para um conjunto $𝕍$  poder ser considerado um Espaço Vetorial, ele deve ser um conjunto não vazio ($\mathbb {V} \ne Ø$), com duas operações (uma operação de soma $\set{𝕍 \times 𝕍 \rightarrow 𝕍}$, muitas vezes representada por $\oplus$; e uma de multiplicação por escalar $\set{ℝ \times 𝕍 \rightarrow 𝕍}$, muitas vezes representada por $\otimes$) que respeite as seguintes propriedades para $v,\ u\ e\ w\  \in\  𝕍$ ($v,\ u\ e\ w$ existem em $𝕍$) e $a\ e\ b\  \in\  ℝ$ ($a\ e\ b$ existem em $ℝ$):
 
 1.  $(u \oplus v) \oplus w = u \oplus (v \oplus w)$
 2. $u \oplus v=v \oplus u$
@@ -46,9 +46,9 @@ Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele dev
 
 >[!note]
 >**Exemplo**\
->Suponha um conjunto $\mathbb V = (0,+\infty)$, com as operações $x\oplus y= x\cdot y$ e $\lambda \otimes x= x^\lambda$, é possível considerá-lo um Espaço Vetorial, pois:  
+>Suponha um conjunto $𝕍 = (0,+\infty)$, com as operações $x\oplus y= x\cdot y$ e $\lambda \otimes x= x^\lambda$, é possível considerá-lo um Espaço Vetorial, pois:  
 >
->$$Seja\  v \ e \ u \in \mathbb V \ e\ \lambda,\lambda_2 \in \mathbb R,$$ 
+>$$Seja\  v \ e \ u \in 𝕍 \ e\ \lambda,\lambda_2 \in ℝ,$$ 
 >
 >$u \oplus v = u\cdot v = v \cdot u = v \oplus u$ (Segunda condição é atendida. Por indução a Primeira também é).
 >
@@ -62,17 +62,17 @@ Para um conjunto $\mathbb V$  poder ser considerado um Espaço Vetorial, ele dev
 >
 >$(\lambda \cdot \lambda_2)\otimes v= v^{\lambda\cdot\lambda_2}=(v^{\lambda_2})^{\lambda}=(\lambda_2\otimes v)^{\lambda}=\lambda\otimes(\lambda_2\otimes v)$ (Sétima condição é atendida)
 >
-> $\overrightarrow  1 \otimes v=v\Rightarrow  v^{\overrightarrow  1}=v\Rightarrow \overrightarrow  1= 1\Rightarrow \overrightarrow  1\in \mathbb R$ (Oitava condição é atendida).
+> $\overrightarrow  1 \otimes v=v\Rightarrow  v^{\overrightarrow  1}=v\Rightarrow \overrightarrow  1= 1\Rightarrow \overrightarrow  1\in ℝ$ (Oitava condição é atendida).
 
 ## Subespaço Vetorial
 Subespaços vetoriais são subconjuntos dos Espaços Vetoriais que, além de atenderem as condições de um Espaço Vetorial, também têm que atender as seguintes condições:
-$$Seja\ \mathbb V\ um\ Espaço\ Vetorial \  e\ \mathbb W \subset \mathbb V,$$
-1. Se $v$ e $u$ $\in\ \mathbb W$, $v+u \in \mathbb W$ (Diz-se que "W é fechado para soma", ou seja, a soma de qualquer vetor de $\mathbb W$ com outro vetor de $\mathbb W$ está contida em $\mathbb W$).
-2. Se $v\ \in\ \mathbb W$ e $\lambda \ \in \ \mathbb R$, $\lambda \cdot v\ \in \ \mathbb W$ (Diz-se que "W é fechado para produto por escalar", ou seja, o produto de qualquer vetor de $\mathbb W$ com com um escalar está contido em $\mathbb W$).
+$$Seja\ 𝕍\ um\ Espaço\ Vetorial \  e\ 𝕎 \subset 𝕍,$$
+1. Se $v$ e $u$ $\in\ 𝕎$, $v+u \in 𝕎$ (Diz-se que "W é fechado para soma", ou seja, a soma de qualquer vetor de $𝕎$ com outro vetor de $𝕎$ está contida em $𝕎$).
+2. Se $v\ \in\ 𝕎$ e $\lambda \ \in \ ℝ$, $\lambda \cdot v\ \in \ 𝕎$ (Diz-se que "W é fechado para produto por escalar", ou seja, o produto de qualquer vetor de $𝕎$ com com um escalar está contido em $𝕎$).
 
 >[!important]
 >**Subespaços triviais**\
->Existem dois Subespaços Vetoriais triviais para um Espaço Vetorial $\mathbb V$ qualquer: o conjunto $\set{0}$ - que contém apenas o vetor nulo - e o próprio conjunto $\mathbb V$ 
+>Existem dois Subespaços Vetoriais triviais para um Espaço Vetorial $𝕍$ qualquer: o conjunto $\set{0}$ - que contém apenas o vetor nulo - e o próprio conjunto $𝕍$ 
 
 > [!tip]
 > **Não é necessário conferir as condições de Espaço Vetorial em um Subespaço Vetorial**\
@@ -80,22 +80,24 @@ $$Seja\ \mathbb V\ um\ Espaço\ Vetorial \  e\ \mathbb W \subset \mathbb V,$$
 
 >[!note]
 >**Exemplo**
-> 1. Sejam $\mathbb V= \mathbb R^4$ e $\mathbb W=(0,\ x_1,\ x_2, ,\ x_3)$, pode se dizer que é um Subespaço Vetorial, pois:
+> 1. Sejam $𝕍= ℝ^4$ e $𝕎=(0,\ x_1,\ x_2, ,\ x_3)$, pode se dizer que é um Subespaço Vetorial, pois:
 > 
-> $$I.\mathbb W \subset \mathbb V.$$
+> $$I.𝕎 \subset 𝕍.$$
 >
-> $$II.\ Sejam\ u\  e\  v \in \mathbb W,$$
+> $$II.\ Sejam\ u\  e\  v \in 𝕎,$$
 >
-> $$ u+v=(0,\ u_1,\ u_2,\ u_3)+(0,\ v_1,\ v_2,\ v_3)=(0,\ u_1+v_1,\ u_2+v_2,\ u_3+v_3),\ que\ está\ em\ \mathbb W.$$
+> $$ u+v=(0,\ u_1,\ u_2,\ u_3)+(0,\ v_1,\ v_2,\ v_3)=(0,\ u_1+v_1,\ u_2+v_2,\ u_3+v_3),\ que\ está\ em\ 𝕎.$$
 >
->$$ III. Seja\ v \in \mathbb W\ e\ \lambda \in \mathbb R,$$
+>$$ III. Seja\ v \in 𝕎\ e\ \lambda \in ℝ,$$
 >
->$$\lambda \cdot v= \lambda \cdot (0,\ v_1,\ v_2,\ v_3)= (0,\ \lambda v_1,\ \lambda v_2,\ \lambda v_3),\ que\ está\ em\ \mathbb W.$$
+>$$\lambda \cdot v= \lambda \cdot (0,\ v_1,\ v_2,\ v_3)= (0,\ \lambda v_1,\ \lambda v_2,\ \lambda v_3),\ que\ está\ em\ 𝕎.$$
 >
 >---
-> 2. Sejam $\mathbb V = \mathbb R^2$ e $\mathbb W=(x, x^2)$, não se pode dizer que $\mathbb W$ é um Subespaço vetorial, pois:
+> 2. Sejam $𝕍 = ℝ^2$ e $𝕎=(x, x^2)$, não se pode dizer que $𝕎$ é um Subespaço vetorial, pois:
 > 
-> $$I. Apesar\ que\ \mathbb W \subset \mathbb V.$$
+> $$I. Apesar\ que\ 𝕎 \subset 𝕍.$$
 >
-> $$II. u+v= (u_1, u_1^2)+(v_1, v_1^2)=(u_1+v_1, u_1^2+v_1^2),\ que\ NÃO\ está\ em\ \mathbb W.$$
+> $$II. u+v= (u_1, u_1^2)+(v_1, v_1^2)=(u_1+v_1, u_1^2+v_1^2),\ que\ NÃO\ está\ em\ 𝕎.$$
+
+[^1]: [Tipos Especiais de Matrizes.pdf](<Tipos Especiais de Matrizes.pdf>)
 
