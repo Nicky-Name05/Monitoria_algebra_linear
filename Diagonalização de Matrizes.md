@@ -14,30 +14,31 @@ Consequência disso é que $det(A)=det(B)$
 >$$ A= \begin {vmatrix} 
 1&-1\\
 2&3
-\end{vmatrix}= 5
+\end{vmatrix}= 5;\
 B= \begin {vmatrix} 
 1&-1\\
 2&3
 \end{vmatrix}= 1$$
 > 
->$A$ e $B$ não são semelhantes
+>$A$ e $B$ não são semelhantes.
+> 
 > 2. Seja $`A= \begin {bmatrix} 5&7\\2&3 \end{bmatrix}`$ e $`B= \begin {bmatrix} 1&1\\2&3 \end{bmatrix}`$, vejamos se são semelhantes:
 >
 > $$ A= \begin {vmatrix} 
 5&7\\
 2&3
-\end{vmatrix}= 1
+\end{vmatrix}= 1;\
 B= \begin {vmatrix} 
 1&-1\\
 2&3
 \end{vmatrix}= 1$$
 > 
->$A$ e $B$ são semelhantes 
+>$A$ e $B$ são semelhantes.
 
 ## 2. Diagonalização de Matrizes
 Uma matriz $A$ é diagonalizável quando ela for semelhante a uma [matriz diagonal](<Tipos Especiais de Matrizes.md>)[^2], ou seja, quando existir uma matriz $P$ tal que $P \cdot A \cdot P^{-1}$ resulta numa matriz diagonal (diz-se que " 'P' diagonaliza 'A' ").
 
-Além disso, se a matriz de uma [transformação](<Transformações Lineares.md>)[^3] $T: \mathbb R^n \rightarrow \mathbb R^n$ for diagonalizável, então o número de autovalores distintos entre si que ela possui é igual a dimensão do seu domínio. Isso significa que se $[T]$ tiver $n$ autovalores diferentes, então $`[T]`$ será diagonalizável. Caso isso ocorra, $D$ tem a forma:
+Além disso, se a matriz de uma [transformação](<Transformações Lineares.md>)[^3] $T: ℝ^n \rightarrow ℝ^n$ for diagonalizável, então o número de autovalores distintos entre si que ela possui é igual a dimensão do seu domínio. Isso significa que se $[T]$ tiver $n$ autovalores diferentes, então $`[T]`$ será diagonalizável. Caso isso ocorra, $D$ tem a forma:
 
 $$ D=
 \begin {bmatrix}
