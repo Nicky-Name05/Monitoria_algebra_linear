@@ -21,10 +21,10 @@ Os sistemas lineares podem ser classificados em relação à quantidade de solu�
 >[!note]
 >**Exemplo**
 >
->$$\begin{empheq}[left=\empheqlbrace]{align}
+>$$\begin{cases}
 x + y = 3 \\
 x + y = 5
-\end{empheq}
+\end{cases}
 \Rightarrow x - x + y - y = 5- 3 \Rightarrow 0=2\; (Absurdo!)$$
 >
 > $S=\Set Ø$.
@@ -34,10 +34,10 @@ x + y = 5
 >[!note]
 >**Exemplo**
 >
->$$ \begin{empheq}[left=\empheqlbrace]{align}
+>$$ \begin{cases}
 x + y = 2 \\
 2x + 2y = 4
-\end{empheq}
+\end{cases}
 \Rightarrow x + y = 2 \Rightarrow x = 2 - y$$
 >
 > $S=\Set {(2,0), (1,1), (0,2), (-1,3), ...}$.
@@ -47,10 +47,10 @@ x + y = 2 \\
 >[!note]
 >**Exemplo**
 >
->$$ \begin{empheq}[left=\empheqlbrace]{align}
+>$$ \begin{cases}
 x + y = 3 \\
 x + 2y = 5
-\end{empheq}
+\end{cases}
 \Rightarrow x - x + 2y - y = 5 - 3 \Rightarrow y=2 \Rightarrow x = 1$$
 >
 > $S=\Set {(1, 2)}$.
@@ -70,7 +70,7 @@ Em que $A$ é a chamada **Matriz dos Coeficientes** (ou **Matriz Característica
 >**Exemplo**:
 >$Sendo\ o\ sistema\ original:$
 >
->$$ \begin{empheq}[left=\empheqlbrace]{align}
+>$$ \begin{cases}
  a_1x_1+ a_2x_2+ a_3x_3+ ... + a_nx_n=r_1 \\
  b_1x_1+ b_2x_2+ b_3x_3+ ... + b_nx_n=r_2\\
  c_1x_1+ c_2x_2+ c_3x_3+ ... + c_nx_n=r_3 \\
@@ -78,7 +78,7 @@ Em que $A$ é a chamada **Matriz dos Coeficientes** (ou **Matriz Característica
  .\\
  .\\
 m_1x_1+ m_2x_2+m_3x_3+ ... + m_nx_n=r_m
-\end{empheq}$$
+\end{cases}$$
 >
 >$Sua\ forma\ matricial\ é:$
 >
@@ -110,7 +110,7 @@ r_3\\
 r_m
 \end{bmatrix}$$
 >
->Em que a primeira matriz "$A$" é uma matriz de ordem $mxn$  (tem $m$ linhas e $n$ colunas), a segunda matriz "$B$" é de ordem $nx1$ (tem $n$ linhas e $1$ coluna) e, por fim, a matriz dos resultado "$R$" é uma matriz de ordem $mx1$ (tem $m$ linhas e $1$ coluna).
+>Em que a primeira matriz " $A$ " é uma matriz de ordem $mxn$  (tem $m$ linhas e $n$ colunas), a segunda matriz " $B$ " é de ordem $nx1$ (tem $n$ linhas e $1$ coluna) e, por fim, a matriz dos resultado " $R$ " é uma matriz de ordem $mx1$ (tem $m$ linhas e $1$ coluna).
 
 Existem duas formas principais de se [solucionar um sistema linear usando matrizes](<Métodos de resolução de Sistemas Lineares.md>)[^1]:
 
@@ -122,11 +122,11 @@ Existem duas formas principais de se [solucionar um sistema linear usando matriz
 
 2. Método de Gauss-Jordan, que usa uma matriz ampliada $[A|B]$, em que | é uma linha tracejada, $A$ é matriz dos coeficientes e $B$ é a matriz resultados; e as chamadas operações elementares.
 
->[!tip]
+>[!important]
 >**Operações Elementares**\
 >As operações elementares são operações feitas **SOMENTE ENTRE LINHAS**, semelhantes as operações feitas para calcular um determinante pelas propriedades 1 (Teorema de Jacob) e 2 (Permutação entre linhas ou entre colunas).
 
->[!important]
+>[!tip]
 >**Gauss-Jordan consegue classificar todos os sistemas**\
 >Gauss-Jordan consegue afirmar se um sistema é SI, SPI ou SPD, além de achar forma geral das soluções de um SPI e a solução única de um SPD
 
