@@ -241,7 +241,7 @@ Existem diversas formas de se calcular o determinante, mas a forma mais usada é
 \end{vmatrix}
 = -6 $$
 >
->2. Se é uma matriz quadrada $B$ é uma matriz obtida de $A$ através da permutação entre linhas ou entre colunas, então o determinante de $B$ é $(-1)^n$ vezes o determinante de $A$, em que $n$ é o número de permutações necessárias para que $A$ se torne $B$ ($det(B)=(-1)^n \cdot det(A)$). Ex:
+>2. Se é uma matriz quadrada $B$ é uma matriz obtida de $A$ através da permutação entre linhas ou entre colunas, então o determinante de $B$ é $(-1)^n$ vezes o determinante de $A$, em que $n$ é o número de permutações necessárias para que $A$ se torne $B$ ( $det(B)=(-1)^n \cdot det(A)$ ). Ex:
 >
 >$$Seja\ A=
 \begin{bmatrix}
@@ -255,7 +255,7 @@ Existem diversas formas de se calcular o determinante, mas a forma mais usada é
 3 & 0 & 12
 \end{bmatrix},$$
 >
->$$A\xlongequal {L_1\leftrightarrow L_2}B$$
+>$$A \xlongequal {L_1\leftrightarrow L_2} \ \ \ \ \ \ \ \ \ \ \ B$$
 >
 >$$=det(A)=
 \begin{vmatrix}
