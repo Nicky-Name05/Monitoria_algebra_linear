@@ -3,7 +3,7 @@ Alguns conjuntos vetoriais são gerar [Espaços Vetoriais](<Vetor.md>)[^1] atrav
 
 $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n,$$
 
-Ao invés de igualar o vetor $v$ ao vetor nulo (como seria feito caso estivesse sendo analisado a dependência linear), $v$ é igualado a um vetor qualquer de $\mathbb V$ (muitas vezes escrito como $`(x_1,\ x_2,\ ...,\ x_n)`$) e, assim, o sistema formado é o seguinte:
+Ao invés de igualar o vetor $v$ ao vetor nulo (como seria feito caso estivesse sendo analisado a dependência linear), $v$ é igualado a um vetor qualquer de $𝕍$ (muitas vezes escrito como $`(x_1,\ x_2,\ ...,\ x_n)`$) e, assim, o sistema formado é o seguinte:
 
 $$ \begin{cases}
 \lambda_1a_1 + \lambda_2a_2 +.... + \lambda_na_n = x_1 \\
@@ -18,7 +18,7 @@ Para saber se o conjunto gera ou não o espaço, o sistema tem que ser SPD.
 
 >[!note]
 >**Exemplo:**
-> 1. Seja $\mathbb V = \mathbb R^2$, $\alpha = \set {(1,4),\ (2,0)}$ e $\alpha \subset \mathbb V$, temos que:
+> 1. Seja $𝕍 = ℝ^2$, $\alpha = \set {(1,4),\ (2,0)}$ e $\alpha \subset 𝕍$, temos que:
 > 
 > $$v=\lambda_1 \cdot v_1(1,4) + \lambda_2(2,0) \Rightarrow $$
 >
@@ -44,7 +44,7 @@ x_2
 det(A)= 1\cdot 0-2\cdot 4 =
  -8 \ne 0 $$
 >
->O conjunto gera o espaço $\mathbb V$!
+>O conjunto gera o espaço $𝕍$!
 >
 >$$ \Rightarrow \begin{cases}
 \lambda_1 = \frac {
@@ -63,7 +63,7 @@ x_2 & 0
 >É possível achar os coeficiente de $(1,4)$ e $(2,0)$ que geram um vetor $v$ ao substituir $x_1$ e $x_2$ pelas componentes vetor em questão.
 >
 >---
-> 2.  Seja $\mathbb V = \mathbb R^2$, $\alpha = \set {(1,3),\ (2,6)}$ e $\alpha \subset \mathbb V$, temos que:
+> 2.  Seja $𝕍 = ℝ^2$, $\alpha = \set {(1,3),\ (2,6)}$ e $\alpha \subset 𝕍$, temos que:
 > 
 > $$v=\lambda_1 \cdot v_1(1,3) + \lambda_2(2,6) \Rightarrow$$
 >
@@ -88,7 +88,9 @@ x_2
 \begin{bmatrix}
 1 & 2 \shortmid & x_1\\
 3 & 6 \shortmid & x_2
-\end{bmatrix} \xrightarrow {L_2\rightarrow L_2-3L_1} 
+\end{bmatrix} \xrightarrow {L_2\rightarrow L_2-3L_1} $$
+>
+>$$ \rightarrow
 \begin{bmatrix}
 1 & 2 \shortmid & x_1\\
 0 & 0 \shortmid & x_2 - 3x_1
@@ -98,16 +100,16 @@ x_2
 0  = x_2-3x_1 
 \end{cases} \Rightarrow x_2=3x_1 $$
 > 
->O conjunto $\alpha$ **NÃO** gera o conjunto $\mathbb V$, consegue apenas gerar  o sub conjunto $\mathbb W = \set {(x_1,\ 3x_1)}$.
+>O conjunto $\alpha$ **NÃO** gera o conjunto $𝕍$, consegue apenas gerar  o sub conjunto $𝕎 = \set {(x_1,\ 3x_1)}$.
 
 ## Base
-Uma base é um conjunto de vetores $LI$ que consegue gerar um Espaço Vetorial $\mathbb V$ definido. Isso significa que todos os vetores de $\mathbb V$ podem ser gerados com os vetores da base $\beta$ e que essa base tem o número mínimo de vetores necessários para conseguir gerar $\mathbb V$. 
+Uma base é um conjunto de vetores $LI$ que consegue gerar um Espaço Vetorial $𝕍$ definido. Isso significa que todos os vetores de $𝕍$ podem ser gerados com os vetores da base $\beta$ e que essa base tem o número mínimo de vetores necessários para conseguir gerar $𝕍$. 
 
-Um dos jeitos mais fáceis de descobrir se um conjunto $\beta$ é base de $\mathbb V$ é primeiramente testar se ele gera o espaço e em seguida substituir os "$`x_i's`$" que apareceram no final por $`0's`$. 
+Um dos jeitos mais fáceis de descobrir se um conjunto $\beta$ é base de $𝕍$ é primeiramente testar se ele gera o espaço e em seguida substituir os "$`x_i's`$" que apareceram no final por $`0's`$. 
 
 >[!note]
 >**Exemplo:**
-> 1. Seja $\mathbb V = \mathbb R^2$, $\alpha = \set {(1,4),\ (2,0)}$ e $\alpha \subset \mathbb V$, temos que:
+> 1. Seja $𝕍 = ℝ^2$, $\alpha = \set {(1,4),\ (2,0)}$ e $\alpha \subset 𝕍$, temos que:
 > 
 > $$v=\lambda_1 \cdot v_1(1,4) + \lambda_2(2,0) \Rightarrow$$
 >
@@ -132,7 +134,7 @@ x_2
 >$$ \Rightarrow
 det(A)= 1\cdot 0-2\cdot 4= -8 \ne 0$$
 >
->O conjunto gera o espaço $\mathbb V$! Agora vamos achar a forma que $\lambda_1$ e $\lambda_2$ tem:
+>O conjunto gera o espaço $𝕍$! Agora vamos achar a forma que $\lambda_1$ e $\lambda_2$ tem:
 >
 >$$\Rightarrow \begin{cases}
 \lambda_1 = \frac {
@@ -160,11 +162,11 @@ x_2 & 0
 \lambda_2= \frac {4\cdot0-0} 8
 \end{cases}\Rightarrow \lambda_1 = 0, \lambda_2 = 0 $$
 >
->O conjunto $\alpha$ é base de $\mathbb V$!
+>O conjunto $\alpha$ é base de $𝕍$!
 
 >[!important]
 >**Bases canônicas**\
->Os conjuntos  $\mathbb V= \mathbb R^n$ tem as chamadas **bases canônicas** que tem a seguinte forma:
+>Os conjuntos  $𝕍= ℝ^n$ tem as chamadas **bases canônicas** que tem a seguinte forma:
 >
 >$$\beta = \set {(1,0,0,...,0),(0,1,0,...,0),(0,0,1,...,0),..., (0,0,0,...,1)},$$
 >
@@ -179,7 +181,7 @@ são as **Coordenadas do Vetor na Base $\beta$** e representam como vetor é esc
 
 >[!note]
 >**Exemplo:**
-> 1. Seja $\mathbb V = \mathbb R^2$, um vetor $v(2,4) \in \mathbb V$ e a base $\beta = \set {(1,4),\ (2,0)}$, temos que:
+> 1. Seja $𝕍 = ℝ^2$, um vetor $v(2,4) \in 𝕍$ e a base $\beta = \set {(1,4),\ (2,0)}$, temos que:
 > 
 > $$v=\lambda_1 \cdot v_1(1,4) + \lambda_2(2,0) \Rightarrow$$
 >
@@ -258,7 +260,7 @@ Em que as variáveis $a_i$ a $m_i$ são as componentes dos vetores de $\alpha$.
 
 >[!note]
 >**Exemplo:**
-> 1. Seja $\mathbb V = \mathbb R^2$, um vetor $v(2,4) \in \mathbb V$, a base $\alpha =\set{(1,\ 1),\ (1,\ -2) }$ e a base $\beta = \set {(1,\ 4),\ (2,\ 0)}$, temos que para $\alpha$:
+> 1. Seja $𝕍 = ℝ^2$, um vetor $v(2,4) \in 𝕍$, a base $\alpha =\set{(1,\ 1),\ (1,\ -2) }$ e a base $\beta = \set {(1,\ 4),\ (2,\ 0)}$, temos que para $\alpha$:
 > 
 > $$v=\theta_1 \cdot v_1(1,\ 1) + \theta_2(1,\ -2) \Rightarrow$$
 >
@@ -352,13 +354,13 @@ x_2 & 0
 \lambda_1= \frac {-1} 6, \lambda_2= \frac {17} {12} \Rightarrow (2,4) \rightarrow (\frac {-1} 6, \frac {17} {12})_{\beta}^{\alpha}$$
 
 ## Dimensão do Espaço
-A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de suas bases contém e é representado por $dim\ \mathbb V$. 
+A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de suas bases contém e é representado por $dim\ 𝕍$. 
 
 > [!note]
 > **Exemplo:**
->  1. $\mathbb V = \set {(x_1,\ x_2); x_i \in R^2}$ (lê-se "V é um conjunto de duplas "x1" e "x2", com "x1" e "x2" pertencentes ao conjunto dos reais") tem dimensão 2 $(dim\ \mathbb V =2)$.
->  2. $\mathbb V = \set {(x_1,\ x_2,\ x_3); x_i \in R^2}$ (lê-se "V é um conjunto de trios "x1", "x2" e "x3", todos pertencentes ao conjunto dos reais") tem dimensão 3 $(dim\ \mathbb V =3)$.
->  3. $\mathbb V = \set {(x_1,\ x_2,\ ...,\ x_n); x_i \in R^2}$ (lê-se "V é um conjunto de enúplas "x1", "x2" até "x $n$", todos pertencentes ao conjunto dos reais") tem dimensão " $n$ " $(dim\ \mathbb V =n)$.
+>  1. $𝕍 = \set {(x_1,\ x_2); x_i \in ℝ^2}$ (lê-se "V é um conjunto de duplas "x1" e "x2", com "x1" e "x2" pertencentes ao conjunto dos reais") tem dimensão 2 $(dim\ 𝕍 =2)$.
+>  2. $𝕍 = \set {(x_1,\ x_2,\ x_3); x_i \in ℝ^2}$ (lê-se "V é um conjunto de trios "x1", "x2" e "x3", todos pertencentes ao conjunto dos reais") tem dimensão 3 $(dim\ 𝕍 =3)$.
+>  3. $𝕍 = \set {(x_1,\ x_2,\ ...,\ x_n); x_i \in R^2}$ (lê-se "V é um conjunto de enúplas "x1", "x2" até "x $n$", todos pertencentes ao conjunto dos reais") tem dimensão " $n$ " $(dim\ 𝕍 =n)$.
 >  4. $V = M(2, 2)$ (lê-se " V é um conjunto de matrizes 2 por 2") tem base
 > 
 >  $$\set {\
@@ -379,7 +381,7 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 0 & 1
 \end{bmatrix}},$$
 > 
-> Ou seja, $dim\ \mathbb V = 4.$
+> Ou seja, $dim\ 𝕍 = 4.$
 
 >[!Warning]
 >A dimensão de um espaço que contém apenas o vetor nulo é igual a $0$!
