@@ -47,7 +47,7 @@ a\  soma\ v+u\  é:$$
 >1. $v+u=u+v$
 >2. $(u+v)+w=u+(u+w)$
 >3. $v+0=v$; (a existência de um vetor $0$ em um espaço é necessário para considerá-lo um espaço vetorial)
->4. $v-u=v+(-1*u)$; representação da subtração vetorial, visto que um vetor $-u$ é a representação de um vetor $u$ quando ele aponta para a direção contrária
+>4. $v-u=v+(-1 \cdot u)$; representação da subtração vetorial, visto que um vetor $-u$ é a representação de um vetor $u$ quando ele aponta para a direção contrária
 
 Outra representação da soma de vetores Regra do Triângulo e a Regra do Paralelogramo, estudadas no ensino médio para resolução de problemas físicos usando funções trigonométricas (em específico, a Lei dos Cossenos).
 ## 2. Produto por Escalar (caso não seja definido na questão)
@@ -56,7 +56,7 @@ O produto de um vetor por um escalar é igual ao produto de um escalar por uma m
 >[!important]
 >**Significado gráfico**\
 >Graficamente, essa operação representam o aumento ou a redução do tamanho do vetor ou ainda a mudança de direção dele.
->]
+>
 ## 3. Produto Escalar 
 O Produto Escalar é o produto de dois vetores resultando em um escalar. Algebricamente, isso é escrito como:
 
