@@ -1,7 +1,7 @@
 Primeiro, antes de se escolher qual dos métodos usar, o sistema deve ser escrito na sua forma matricial:
 
 $$
-[A]*[X]=[B]
+[A]\cdot[X]=[B]
 $$
 
 Em que $A$ é a matriz dos coeficientes, $X$ é a matriz das incógnitas e $B$ é a matriz dos resultados.
@@ -162,12 +162,10 @@ Para tornar uma matriz em sua forma escalonada, são feitas operações elementa
 \begin {bmatrix} 
 1 & 1\\
 1 & 2
-\end {bmatrix}$$
->
->$$\xrightarrow {L_2 
+\end {bmatrix}\xrightarrow {L_2 
 \rightarrow \ L_2\ -\ L_1} $$
 >
->$$ \begin {bmatrix} 
+>$$\rightarrow \begin {bmatrix} 
 1 & 1\\
 0 & 1
 \end {bmatrix} = [B] \Rightarrow
@@ -253,7 +251,9 @@ y
 1 & 1 \shortmid & 3\\
 1 & 2\shortmid & 5
 \end {vmatrix} 
-\xrightarrow {L_2 \rightarrow L_2-L_1} 
+\xrightarrow {L_2 \rightarrow L_2-L_1} $$
+>
+>$$ \rightarrow
 \begin {vmatrix} 
 1 & 1 \shortmid & 3\\
 0 & 1\shortmid & 2
@@ -264,11 +264,9 @@ y
 >$$ \begin {vmatrix} 
 1 & 1 \shortmid & 3\\
 0 & 1\shortmid & 2
-\end {vmatrix}$$
+\end {vmatrix}\xrightarrow {L_1 \rightarrow L_1-L_2} $$
 >
->$$\xrightarrow {L_1 \rightarrow L_1-L_2} $$
->
->$$\begin {vmatrix} 
+>$$ \rightarrow \begin {vmatrix} 
 1 & 0 \shortmid & 1\\
 0 & 1\shortmid & 2
 \end {vmatrix}$$
