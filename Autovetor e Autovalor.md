@@ -5,7 +5,7 @@ Um **Autovetor**, também chamado de **Vetor Característico** é um vetor que a
 
 $$ T(v)= \lambda \cdot v,v \ne 0 $$
 
-Em que $\lambda \in \mathbb R$, o que significa que $`\lambda`$ é um escalar.
+Em que $\lambda \in ℝ$, o que significa que $`\lambda`$ é um escalar.
 
 >[!important]
 >**Vetor fixo e Autovetor**\
@@ -13,7 +13,7 @@ Em que $\lambda \in \mathbb R$, o que significa que $`\lambda`$ é um escalar.
 >**Autovetores** são vetores fixos não nulos, ou seja, são todos os vetores fixos, exceto o vetor nulo.
 
 ## 2. Autovalor
-Autovalores são escalares aos quais os vetores característicos são associados. Pela definição anterior de autovetor, $T(v)=\lambda \cdot v$, eles seriam o $`\lambda`$ da equação e diz-se que " 'lambda' é um autovalor de 'T' " e que " 'v' é um autovetor de 'T' associado à 'lambda' ". 
+Autovalores são escalares aos quais os vetores característicos são associados. Pela definição anterior de autovetor, $T(v)=\lambda \cdot v$, eles seriam o $`\lambda`$ da equação e diz-se que " _'lambda' é um autovalor de 'T'_ " e que " _'v' é um autovetor de 'T' associado à 'lambda'_ ". 
 
 >[!warning]
 >**$\lambda$ pode ser igual a $0$**\
@@ -22,7 +22,7 @@ Autovalores são escalares aos quais os vetores característicos são associados
 ## 3. Como achar autovetores e autovalores de uma Matriz
 Agora que sabemos o que são autovetores e autovalores, é preciso saber como achá-los.
 
-O primeiro passo para fazer isso é achando o chamado **Polinômio Característico** da [Matriz](<Matriz.md>[^2]) $A$, que é escrito como:
+O primeiro passo para fazer isso é achando o chamado **Polinômio Característico** da [Matriz](<Matriz.md>)[^2] $A$, que é escrito como:
 
 [^2]:[Matriz.pdf](<Matriz.pdf>)
 
