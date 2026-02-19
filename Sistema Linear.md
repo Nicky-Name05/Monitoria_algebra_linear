@@ -61,7 +61,7 @@ Há inúmeras razões para se resolver um sistema linear como para balancear uma
 Para começar a solucionar um sistema linear por matrizes, primeiramente o sistema deve ser escrito em sua forma matricial segue o seguinte  formato:
 
 $$
-[A]*[X]=[B],
+[A] \cdot [X]=[B],
 $$
 
 Em que $A$ é a chamada **Matriz dos Coeficientes** (ou **Matriz Característica**, em soluções por Crammer) , $X$ é a **Matriz das Incógnitas** (também chamada de **Matriz das Variáveis**) e $B$ é a **Matriz Resultado**
@@ -90,7 +90,7 @@ m_1x_1+ m_2x_2+m_3x_3+ ... + m_nx_n=r_m
  . &&.\\
  . & & & .\\
   m_1 & m_2 & m_3 & ... & m_n
-\end{bmatrix} * 
+\end{bmatrix}  \cdot  
 \begin{bmatrix}
 x_1\\
 x_2\\
@@ -112,7 +112,7 @@ r_m
 >
 >Em que a primeira matriz "$A$" é uma matriz de ordem $mxn$  (tem $m$ linhas e $n$ colunas), a segunda matriz "$B$" é de ordem $nx1$ (tem $n$ linhas e $1$ coluna) e, por fim, a matriz dos resultado "$R$" é uma matriz de ordem $mx1$ (tem $m$ linhas e $1$ coluna).
 
-Existem duas formas principais de se [solucionar um sistema linear usando matrizes](<Métodos de resolução de Sistemas Lineares.md>):
+Existem duas formas principais de se [solucionar um sistema linear usando matrizes](<Métodos de resolução de Sistemas Lineares.md>)[^1]:
 
 1. Método de Crammer, que se utiliza de determinantes para chegar na solução do sistema
 
@@ -129,3 +129,5 @@ Existem duas formas principais de se [solucionar um sistema linear usando matriz
 >[!important]
 >**Gauss-Jordan consegue classificar todos os sistemas**\
 >Gauss-Jordan consegue afirmar se um sistema é SI, SPI ou SPD, além de achar forma geral das soluções de um SPI e a solução única de um SPD
+
+[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.pdf>)
