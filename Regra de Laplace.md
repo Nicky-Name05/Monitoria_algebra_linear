@@ -1,10 +1,10 @@
 A Regra de Laplace, também chamada de Expansão em Cofatores, é definida como o somatório do produto dos elementos de uma linha ou de uma coluna pelos seus respectivos Cofatores associados, sendo representado matematicamente da seguinte forma:
 
-$$\sum_{k=1}^n\  = a_{ik}*\Delta_{ik},\text {para\  o\  desenvolvimento\  em\  uma\  linha.} $$
+$$\sum_{k=1}^n\  = a_{ik} \cdot \Delta_{ik},\text {para\  o\  desenvolvimento\  em\  uma\  linha.} $$
 
 ou
 
-$$\sum_{k=1}^n\  = a_{kj}*\Delta_{kj},\text {para\  o\  desenvolvimento\  em\  uma\  coluna.} $$
+$$\sum_{k=1}^n\  = a_{kj} \cdot \Delta_{kj},\text {para\  o\  desenvolvimento\  em\  uma\  coluna.} $$
 
 Pode-se usar as [Propriedades do Determinante](<Operações de Matrizes.md>)[^1] 1 e 2 para facilitar as contas, diminuindo o número de elementos dentro do somatório ao tornar os elementos da linha ou coluna analisada em 0s.
 
@@ -36,7 +36,7 @@ Cofator de um elemento $a_{ij}$ de uma matriz $`A\  =\  (a_{ij})_{mXn}`$ é defi
 2 & -1\\
 0 & 4
 \end{vmatrix}
-\  e\  
+\  e\ \
 M_{23} = 
 \begin{vmatrix}
 3 & -1\\
