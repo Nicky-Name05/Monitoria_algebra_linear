@@ -27,9 +27,9 @@ $$ \lambda_1  \cdot v_1 + \lambda_2  \cdot v_2 + \lambda_3  \cdot v_3 + ... + \l
 >[!warning]
 >**Se a quantidade de vetores contidos no conjunto for maior do que a dimensão do espaço que contém esses vetores, o sistema SEMPRE é Linearmente Dependente.**\
 >\
->Se um conjunto de vetores contém $3$ vetores e o espaço vetorial é $\mathbb R^2$, por exemplo, o conjunto é LD, pois a dimensão de $\mathbb R^2$ é menor que $3$.
+>Se um conjunto de vetores contém $3$ vetores e o espaço vetorial é $ℝ^2$, por exemplo, o conjunto é LD, pois a dimensão de $ℝ^2$ é menor que $3$.
 
-Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>)[^4] ($(0,0)$, para $\mathbb {R} ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
+Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>)[^4] ($(0,0)$, para $ℝ ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
 
 $$\begin{cases}
 \lambda_1a_1 + \lambda_2a_2 +.... + \lambda_na_n = 0 \\
@@ -45,7 +45,7 @@ Em que $m$ é última componente do vetores analisados, ou seja, é um sistema l
 >[!note]
 >**Exemplo:**
 >
->$$\text{Seja} \  \set {(1,3), (2,4)} ⊂ \mathbb {R} ^2,$$
+>$$\text{Seja} \  \set {(1,3), (2,4)} ⊂ ℝ ^2,$$
 >
 >$$\lambda_1 \cdot(1,3) + \lambda_2 \cdot(2,4) = (0,0) 
 \Rightarrow (\lambda_1 \cdot1, \lambda_1 \cdot3) + (\lambda_2 \cdot2, \lambda2 \cdot4) = (0,0) \Rightarrow $$
@@ -69,7 +69,7 @@ Caso esse sistema seja SPD, o conjunto é $LI$. Isso significa que, se o sistema
 >[!note]
 >**Exemplo:**
 >
->$$\text{Seja\ }  \set {(1,\ 3), (2,\ 4)} ⊂ \mathbb {R} ^2,$$
+>$$\text{Seja\ }  \set {(1,\ 3), (2,\ 4)} ⊂ ℝ ^2,$$
 >
 >$$ \lambda_1 \cdot(1,\ 3) + \lambda_2 \cdot(2,\ 4) = (0,\ 0) 
 \Rightarrow (\lambda_1 \cdot1, \  \lambda_1 \cdot3) + (\lambda_2 \cdot2, \  \lambda2 \cdot4) = (0,0) \Rightarrow $$
