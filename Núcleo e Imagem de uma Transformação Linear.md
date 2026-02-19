@@ -1,5 +1,5 @@
 ## 1. Núcleo
-O Núcleo de uma [transformação linear](<Transformações Lineares.md>)[^1] $T:\ \mathbb {R}^n \rightarrow \mathbb R^n$ é o conjunto de vetores $v \in \mathbb R^n$ que, após aplicar $T$ neles, o vetor resultante é o vetor nulo ($T(v)=0$). 
+O Núcleo de uma [transformação linear](<Transformações Lineares.md>)[^1] $T:\ ℝ^n \rightarrow ℝ^n$ é o conjunto de vetores $v \in ℝ^n$ que, após aplicar $T$ neles, o vetor resultante é o vetor nulo ($T(v)=0$). 
 
 O núcleo costuma ser escrito das  seguintes formas:
 
@@ -62,10 +62,10 @@ z
 >$$ \begin{cases} 
 x=z\\
 y=0
-\end{cases} \Rightarrow (z,0,z),\text {como}\ z\in\mathbb R\ \text {é\ solução\ única} \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
+\end{cases} \Rightarrow (z,0,z),\text {como}\ z\inℝ\ \text {é\ solução\ única} \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
 
 ## 2. Imagem
-A Imagem de uma transformação linear $T:\ \mathbb V \rightarrow \mathbb W$, em que $\mathbb V\ = \mathbb R^n$ e $\mathbb W = \mathbb R^m$, é um conjunto de vetores $w \in \mathbb W$ que resultam da aplicação de $T$ em um vetor $v \in \mathbb V$ qualquer ($w \in \mathbb W$ tal que $T(v) = w$ para algum $v \in \mathbb V$)
+A Imagem de uma transformação linear $T:\ 𝕍 \rightarrow 𝕎$, em que $𝕍\ = ℝ^n$ e $𝕎 = ℝ^m$, é um conjunto de vetores $w \in 𝕎$ que resultam da aplicação de $T$ em um vetor $v \in 𝕍$ qualquer ($w \in 𝕎$ tal que $T(v) = w$ para algum $v \in 𝕍$)
 
 A Imagem de $T$ é escrita como:
 
@@ -73,7 +73,7 @@ $$ Im(T)$$
 
 >[!warning]
 >### $Im(T) \ne \emptyset.$
->Como para toda transformação linear $T(0)=0$ e por isso sempre terá um vetor $v \in \mathbb V$ com transformada em $\mathbb W$, toda $Im(T)$ sempre tem pelo menos o vetor nulo. A imagem de $T$ também nunca será vazia!
+>Como para toda transformação linear $T(0)=0$ e por isso sempre terá um vetor $v \in 𝕍$ com transformada em $𝕎$, toda $Im(T)$ sempre tem pelo menos o vetor nulo. A imagem de $T$ também nunca será vazia!
 
 Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e em seguida é resolvido o sistema. É necessário tomar cuidado ao solucionar o sistema, pois, para o vetor pertencer a imagem, o sistema tem que ser possível, então:
 
@@ -83,7 +83,7 @@ Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e
 >[!tip]
 >**Relação de $Im(T)$ com funções**\
 >Como muitas funções podem ser escritas como transformações lineares, ao achar o $Im(T)$ dessas funções, pode-se chegar a algumas conclusões.\
->Uma das mais importantes é caso $dim\ Im(T) = dim\ \mathbb W$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^4].
+>Uma das mais importantes é caso $dim\ Im(T) = dim\ 𝕎$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^4].
 
 >[!important]
 >**Como escrever o $Im(T)$ nas respostas**\
@@ -96,7 +96,7 @@ Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e
 
 >[!note]
 >**Exemplo:**
->1. Seja a Transformação $T: \mathbb R^3 \Rightarrow \mathbb R^2$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Im(T)$:\ 
+>1. Seja a Transformação $T: ℝ^3 \Rightarrow ℝ^2$ da seguinte forma: $T (x, y, z) = (x - z,\  y)$, vamos achar o $Im(T)$:\ 
 >Sabe-se que vale
 >
 >$$T(x,\ y,\ z) = (a,\ b) \Rightarrow \begin{cases}
@@ -123,10 +123,10 @@ b
 0&1&0&\shortmid&b
 \end{bmatrix}$$
 >
->Como a nulidade dessa matriz é diferente de $0$ e o $P_{ampliada} \ne P_{coeficientes}$ (o que significa que o sistema é um SPI), essa transformação consegue gerar todo o espaço vetorial de $\mathbb R^2$, ou seja, $\boxed{Im(T)=\mathbb R^2}$.
+>Como a nulidade dessa matriz é diferente de $0$ e o $P_{ampliada} \ne P_{coeficientes}$ (o que significa que o sistema é um SPI), essa transformação consegue gerar todo o espaço vetorial de $ℝ^2$, ou seja, $\boxed{Im(T)=ℝ^2}$.
 >
 >---
->2. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, -x+y+z)$, vamos achar o $Im(T)$: \
+>2. Seja a Transformação $T: ℝ^3 \rightarrow ℝ^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, -x+y+z)$, vamos achar o $Im(T)$: \
 >Sabe-se que vale
 >
 >$$T(x,\ y,\ z) = (a,\ b,\  c) \Rightarrow \begin{cases}
@@ -176,7 +176,7 @@ c
 >$$\boxed{Im (T)= [(1, \ 1,\ 0),\ (0,\ 1,\ 1)] } $$
 >
 >---
->3. Seja a Transformação $T: \mathbb R^3 \rightarrow \mathbb R^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, x+z)$, vamos achar o $Im(T)$:\ 
+>3. Seja a Transformação $T: ℝ^3 \rightarrow ℝ^3$ da seguinte forma: $T (x, y, z) = (x - z,\  y, x+z)$, vamos achar o $Im(T)$:\ 
 >Sabe-se que vale
 >
 >$$T(x,\ y,\ z) = (a,\ b,\  c) \Rightarrow \begin{cases}
@@ -232,8 +232,8 @@ c
 >
 
 >[!important]
->**Sistemas SPD também podem gerar $\mathbb W$ ($T: \mathbb V \Rightarrow \boxed{\mathbb W}$)**\
->Se os vetores da $Im (T)$ conseguirem gerar $\mathbb W$, o conjunto $Im(T)$ será igual a $\mathbb W$ (algebricamente: $Im(T) = \mathbb W$).
+>**Sistemas SPD também podem gerar $𝕎$ ($T: 𝕍 \Rightarrow \boxed{𝕎}$)**\
+>Se os vetores da $Im (T)$ conseguirem gerar $𝕎$, o conjunto $Im(T)$ será igual a $𝕎$ (algebricamente: $Im(T) = 𝕎$).
 
 [^1]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
 
