@@ -11,7 +11,7 @@ $$A_{2X3}=
 \end{pmatrix}$$
 
 2. **Matriz Coluna**
-	É uma matriz cujo o numero de colunas é 1, ou seja, $A_{iX1}$. É normalmente usada para representar um [Vetor](<Vetor.md>), as Variáveis de um Sistema Linear e os Resultado de um Sistema Linear quando um [Sistema Linear](<Sistema Linear.md>) é escrito na forma matricial.
+	É uma matriz cujo o numero de colunas é 1, ou seja, $A_{iX1}$. É normalmente usada para representar um [Vetor](<Vetor.md>)[^1], as Variáveis de um Sistema Linear e os Resultado de um Sistema Linear quando um [Sistema Linear](<Sistema Linear.md>)[^2] é escrito na forma matricial.
 	Exemplo de matriz coluna:
 
 $$ A_{3x1} = 
@@ -22,7 +22,7 @@ $$ A_{3x1} =
 \end{pmatrix}$$
 
 4. **Matriz linha**
-	É uma matriz cujo o número de linhas é 1, ou seja, $A_{1Xj}$. É normalmente usada para representar um [Vetor](<Vetor.md>) quando é feito o produto escalar ou vetorial entre vetores.
+	É uma matriz cujo o número de linhas é 1, ou seja, $A_{1Xj}$. É normalmente usada para representar um [Vetor](<Vetor.md>)[^1] quando é feito o produto escalar ou vetorial entre vetores.
 	Exemplo de matriz linha:
 
 $$A_{3x1} = 
@@ -31,7 +31,7 @@ $$A_{3x1} =
 \end{pmatrix} $$
 
 5. **Matriz Quadrada**
-	É uma matriz cujo número de linhas é igual ao número de colunas, ou seja, $A_{nxn}$. Um [Determinante](<Operações de Matrizes.md>) só pode ser calculado em matrizes quadradas. A ordem de uma matriz quadrada é chamada simplesmente de ordem $n$, ao invés de ordem $n$ por $n$.
+	É uma matriz cujo número de linhas é igual ao número de colunas, ou seja, $A_{nxn}$. Um [Determinante](<Operações de Matrizes.md>)[^3] só pode ser calculado em matrizes quadradas. A ordem de uma matriz quadrada é chamada simplesmente de ordem $n$, ao invés de ordem $n$ por $n$.
 	Exemplos de matrizes quadradas:
 
 $$ A_{3X3}=
@@ -90,3 +90,9 @@ $$ A_{3x1} =
 4&7&1\\
 6&1&5
 \end{pmatrix} $$
+
+[^1]: [Vetor.pdf](<Vetor.pdf>)
+
+[^2]: [Sistema Linear.pdf](<Sistema Linear.pdf>)
+
+[^3]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
