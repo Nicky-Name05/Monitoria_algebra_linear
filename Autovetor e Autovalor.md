@@ -5,7 +5,7 @@ Um **Autovetor**, também chamado de **Vetor Característico**, é um vetor não
 
 $$ T(v)= \lambda \cdot v,v \ne 0 $$
 
-Em que $\lambda \in ℝ$, o que significa que $`\lambda`$ é um escalar.
+Em que $\lambda \in ℝ$, o que significa que $`\lambda`$ é um escalar. Para quaisquer $\lambda$, existem infinitos autovetores!
 
 ## 2. Autovalor
 Autovalores são escalares aos quais os vetores característicos são associados. Pela definição anterior de autovetor, $T(v)=\lambda \cdot v$, eles seriam o $`\lambda`$ da equação e diz-se que " _'lambda' é um autovalor de 'T'_ " e que " _'v' é um autovetor de 'T' associado à 'lambda'_ ". 
