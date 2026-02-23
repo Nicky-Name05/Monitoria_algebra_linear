@@ -1,5 +1,5 @@
 ## 1. Autovetor
-Um **Autovetor**, também chamado de **Vetor Característico** é um vetor que ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1] gera um vetor na mesma direção que ele (ou seja, gera um vetor na mesma reta de suporte) e é diferente do vetor nulo. Algebricamente, isso é escrito como:
+Um **Autovetor**, também chamado de **Vetor Característico**, é um vetor não nulo que gera um outro vetor na mesma direção que ele (ou seja, gera um vetor na mesma reta de suporte) ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1]. Algebricamente, isso é escrito como:
 
 [^1]:[Operador Linear.pdf](<Operadores Lineares.pdf>)
 
