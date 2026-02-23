@@ -30,7 +30,7 @@ B_{4X1} =
 4 8 \\
 7\\ 
 23
-\end{pmatrix}\  e \ 
+\end{pmatrix}\  e \ \
 C_{3X2} = 
 \begin{pmatrix}
 3 & 4x \\
