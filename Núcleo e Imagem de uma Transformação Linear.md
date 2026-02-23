@@ -219,7 +219,7 @@ c
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&0&1&\shortmid& \frac {c - a} 2
-\end{bmatrix} \xrightarrow {L_1 \rightarrow L_1+L_3}
+\end{bmatrix} \xrightarrow {L_1 \rightarrow L_1+L_3}$$
 >
 >$$\begin{bmatrix}
 1&0&0&\shortmid&\frac {c + a} 2\\
