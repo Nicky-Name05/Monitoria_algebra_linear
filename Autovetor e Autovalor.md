@@ -1,16 +1,11 @@
 ## 1. Autovetor
-Um **Autovetor**, também chamado de **Vetor Característico**, é um vetor não nulo que gera um outro vetor na mesma direção que ele (ou seja, gera um vetor na mesma reta de suporte) ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1]. Algebricamente, isso é escrito como:
+Um **Autovetor**, também chamado de **Vetor Característico**, é um vetor não nulo que gera um outro vetor na mesma direção que ele (ou seja, gera um múltiplo dele mesmo) ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1]. Algebricamente, isso é escrito como:
 
 [^1]:[Operador Linear.pdf](<Operadores Lineares.pdf>)
 
 $$ T(v)= \lambda \cdot v,v \ne 0 $$
 
 Em que $\lambda \in ℝ$, o que significa que $`\lambda`$ é um escalar.
-
->[!important]
->**Vetor fixo e Autovetor**\
->Todo vetor que após ser aplicado um operador linear resulta nele mesmo é chamado de **Vetor Fixo**.
->**Autovetores** são vetores fixos não nulos, ou seja, são todos os vetores fixos, exceto o vetor nulo.
 
 ## 2. Autovalor
 Autovalores são escalares aos quais os vetores característicos são associados. Pela definição anterior de autovetor, $T(v)=\lambda \cdot v$, eles seriam o $`\lambda`$ da equação e diz-se que " _'lambda' é um autovalor de 'T'_ " e que " _'v' é um autovetor de 'T' associado à 'lambda'_ ". 
