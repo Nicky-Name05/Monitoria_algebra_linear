@@ -62,7 +62,7 @@ z
 >$$ \begin{cases} 
 x=z\\
 y=0
-\end{cases} \Rightarrow (z,0,z),\text {como}\ z\inℝ\ \text {é\ solução\ única} \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
+\end{cases} \Rightarrow (z,0,z),\text {como}\ z\in ℝ\ \text {é\ solução\ única} \Rightarrow \boxed {Ker(T)= \set{(1,0,1)}} $$
 
 ## 2. Imagem
 A Imagem de uma transformação linear $T:\ 𝕍 \rightarrow 𝕎$, em que $𝕍\ = ℝ^n$ e $𝕎 = ℝ^m$, é um conjunto de vetores $w \in 𝕎$ que resultam da aplicação de $T$ em um vetor $v \in 𝕍$ qualquer ($w \in 𝕎$ tal que $T(v) = w$ para algum $v \in 𝕍$)
@@ -206,8 +206,9 @@ c
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 1&0&1&\shortmid&c
-\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3-L_1}
-\begin{bmatrix}
+\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3-L_1}$$
+>
+>$$\begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&0&2&\shortmid&c - a
@@ -219,7 +220,8 @@ c
 0&1&0&\shortmid&b\\
 0&0&1&\shortmid& \frac {c - a} 2
 \end{bmatrix} \xrightarrow {L_1 \rightarrow L_1+L_3}
-\begin{bmatrix}
+>
+>$$\begin{bmatrix}
 1&0&0&\shortmid&\frac {c + a} 2\\
 0&1&0&\shortmid&b\\
 0&0&1&\shortmid& \frac {c - a} 2
