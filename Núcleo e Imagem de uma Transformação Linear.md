@@ -155,14 +155,15 @@ c
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 -1&1&1&\shortmid&c
-\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3+L_1}
-\begin{bmatrix}
+\end{bmatrix} \xrightarrow {L_3 \rightarrow L_3+L_1}$$
+>
+>$$ \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
 0&1&0&\shortmid&c + a
 \end{bmatrix} \xrightarrow {L_3 \rightarrow L_3-L_2}$$
 >
->$$\sim
+>$$
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
@@ -212,7 +213,7 @@ c
 0&0&2&\shortmid&c - a
 \end{bmatrix} \xrightarrow {L_3 \rightarrow \frac 1 2 L_3}$$
 >
->$$\sim
+>$$
 \begin{bmatrix}
 1&0&-1&\shortmid&a\\
 0&1&0&\shortmid&b\\
