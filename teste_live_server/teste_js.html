@@ -572,18 +572,19 @@
      <div class="flex items-center gap-4 mb-8">
       <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center glow icon-badge">
        ⚝
-
       </div>
       <h3 class="text-3xl font-bold">Visualização Interativa</h3>
      </div>
-     <div class="flex gap-2 mb-6 flex-wrap">
-      <button onclick="showTab('mudanca-int')" id="tab-mudanca-int" class="tab-btn active px-6 py-3 rounded-xl font-semibold transition">Mudança de Base</button>
+     <div class="flex gap-2 mb-6 flex-wrap"> <!-- Tabs -->
+        <button onclick="showTab('mudanca-int')" id="tab-mudanca-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Mudança de Base</button>
+        <button onclick="showTab('transformacao-int')" id="tab-transformacao-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Transformação Linear</button>
      </div>
-     <div id="panel-mudanca-int" class="glass rounded-2xl p-8">
+     
+     <div id="panel-mudanca-int" class="glass rounded-2xl p-8"> <!-- Mudança de base Interativa -->
       <h4 class="text-xl font-semibold mb-6">Mudança de Base</h4>
       <div class="grid md:grid-cols-3 gap-6 mb-6">
-       <div>
 
+       <div>
         <label class="block text-sm text-gray-400 mb-2">Base - <span class="text-red-400">Vetor b₁</span></label>
         <div class="flex gap-2 mb-4">
          <input type="number" id="b1x" value="1" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-red-500 focus:outline-none mono" oninput="updateMudancaViz()"> 
@@ -610,8 +611,9 @@
          <p>λ₂ = <span id="mudanca-l2-val" class="text-purple-400">0.50</span></p>
         </div>
        </div>
+       
        <div class="vector-canvas rounded-xl overflow-hidden border border-purple-500/30" style="min-height: 280px;">
-        <svg id="mudanca-svg" viewbox="-8 -8 16 16" class="w-full h-full" style="min-height: 280px; display: block; cursor: grab;" preserveaspectratio="xMidYMid meet" onmousedown="startDragging(event)" onmousemove="dragVector(event)" onmouseup="stopDragging()" onmouseleave="stopDragging()">
+        <svg id="mudanca-svg" viewbox="-8 -8 16 16" class="w-full h-full" style="min-height: 280px; display: block; cursor: grab;" preserveaspectratio="xMidYMid meet" onmousedown="startDragging(event, 'mudanca')" onmousemove="dragVector(event, 'vx', 'vy')" onmouseup="stopDragging()" onmouseleave="stopDragging()">
          <defs>
           <pattern id="grid-mudanca" width="1" height="1" patternunits="userSpaceOnUse">
            <line x1="0" y1="0" x2="1" y2="0" stroke="rgba(124,58,237,0.12)" stroke-width="0.02" />
@@ -627,7 +629,7 @@
            <path d="M0,0 L0,6 L9,3 Z" fill="#7c3aed" />
           </marker>
          </defs> 
-         <rect id="grid-background" x="-16" y="-16" width="20" height="20" fill="url(#grid-mudanca)" /> 
+         <rect id="mudanca-grid-background" x="-16" y="-16" width="20" height="20" fill="url(#grid-mudanca)" /> 
          <line x1="-8" y1="0" x2="8" y2="0" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> 
          <line x1="0" y1="-8" x2="0" y2="8" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> 
          <line id="mudanca-base1" x1="0" y1="0" x2="1" y2="-4" stroke="#ec4899" stroke-width="0.2" stroke-dasharray="0.3,0.15" marker-end="url(#arrow-mudancaB1)" /> 
@@ -644,8 +646,37 @@
          </text>
         </svg>
        </div>
-      </div><button onclick="mudancaBase()" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 font-semibold text-lg hover:opacity-90 transition">Calcular Coordenadas</button>
+      </div>
+      <button onclick="mudancaBase()" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 font-semibold text-lg hover:opacity-90 transition">Calcular Coordenadas</button>
       <div id="resultado-mudanca" class="mt-6 hidden"></div>
+     </div>
+
+     <div id="panel-transformacao-int" class="glass rounded-2xl p-8"> <!-- Transformação Linear Interativa -->
+      <h4 class="text-xl font-semibold mb-6 hidden">Transformação Linear</h4>
+      <div class="grid md:grid-cols-3 gap-6 mb-6"> 
+        <div>
+        <label class="block text-sm text-gray-400 mb-2">Transformação - <span class="text-red-400">Matriz T</span></label>
+        <div class="flex gap-2 mb-4">
+         <input type="number" id="t1x" value="1" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-red-500 focus:outline-none mono" oninput="updateTransformacaoViz()"> 
+         <input type="number" id="t1y" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateTransformacaoViz()">
+        </div>
+        <div class="flex gap-2 mb-4">
+         <input type="number" id="t2x" value="1" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-red-500 focus:outline-none mono" oninput="updateTransformacaoViz()"> 
+         <input type="number" id="t2y" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateTransformacaoViz()">
+        </div>
+        <div>
+         <label class="block text-sm text-purple-400 mb-2">Vetor v</label>
+         <div class="flex gap-2 mb-4">
+          <input type="number" id="tvx" value="2" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()"> 
+          <input type="number" id="tvy" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()">
+         </div>
+
+         <div id="transformacao-info" class="p-4 rounded-xl bg-gray-800/50 mono text-sm mt-4">
+          <p>T  <span id="transformacao-w" class="text-cyan-400"> é Transformação Linear</span></p>
+          <p class="mt-2">w = (<span id="wx" class="text-purple-400">1.00</span>, <span id="wy" class="text-purple-400">0.50</span>)</p>
+        </div>
+        </div>
+      </div>
      </div>
     </section>
     
@@ -676,8 +707,9 @@
       </div>
      </div>
     </section>
-   </main><!-- Footer -->
-   <footer class="glass border-t border-purple-500/20 py-8">
+   </main>
+   
+   <footer class="glass border-t border-purple-500/20 py-8"><!-- Footer -->
     <div class="max-w-7xl mx-auto px-6 text-center text-gray-400">
      <p>Álgebra Linear / Combinações Lineares, Dependência e Bases</p>
     </div>
