@@ -37,6 +37,10 @@
             Mudança de <br> Base
         </button>
 
+        <button onclick="scrollToSection('transformacao')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
+            Transformação <br> Linear
+        </button>
+
         <button onclick="scrollToSection('interativo')" class="px-4 py-2 text-sm rounded-lg bg-purple-600/30 hover:bg-purple-500/40 transition">
             Interativo
         </button>
@@ -74,7 +78,6 @@
      <div class="example-card glass rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 bg-pink-600/30 rounded-full text-sm font-semibold">Exemplo 1</span> 
-        <span class="text-gray-400">Combinação simples</span>
       </div>
       <p class="mb-6">
         Obter <span class="mono text-cyan-400">v</span> a partir de <span class="mono text-purple-400">v₁</span> e <span class="mono text-purple-400">v₂</span>:</p>
@@ -88,14 +91,18 @@
       </div>
      </div>
      <div class="example-card glass rounded-2xl p-8 mb-8">
-      <div class="flex items-center gap-3 mb-6"><span class="px-3 py-1 bg-pink-600/30 rounded-full text-sm font-semibold">Exemplo 2</span> <span class="text-gray-400">Combinações diferentes</span>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-pink-600/30 rounded-full text-sm font-semibold">Exemplo 2</span>
       </div>
-      <p class="mb-6">Vetores na base canônica podem ser expressos de múltiplas formas:</p>
-      <div class="math-block rounded-xl p-6">
-       <p class="mono text-center mb-2">Forma 1:</p>
-       <p class="mono text-center">2·(1, 0) + 4·(0, 1) = <span class="text-cyan-400">(2, 4)</span></p>
-       <p class="mono text-center mt-4 mb-2">Forma 2:</p>
-       <p class="mono text-center">5·(1, 0) + 3·(0, 1) = <span class="text-cyan-400">(5, 3)</span></p>
+        <p class="mb-6">Obter <span class="mono text-cyan-400">v₁</span> e <span class="mono text-cyan-400">v₂</span> a partir de <span class="mono text-purple-400">λ₁ = (1, 1)</span> e <span class="mono text-purple-400">λ₂ = (2, 0)</span>:</p>
+      <div class="math-block rounded-xl p-6 mb-4">
+       <p class="mono text-center mb-2">v₁ = (2, 4):</p>
+       <p class="mono text-center">2·(1, 1) + 1·(0, 2) = <span class="text-cyan-400">(2, 4)</span></p>
+       <p class="mono text-center mt-4 mb-2">v₂ = (5, 3):</p>
+       <p class="mono text-center">5·(1, 0) + (-1)·(0, 2) = <span class="text-cyan-400">(5, 3)</span></p>
+      </div>
+      <div class="p-4 rounded-xl bg-pink-500/20 border border-pink-500/30">
+       <p class="text-pink-400 font-semibold text-center">Os vetores (2, 4) e (5, 3) são combinação linear de (1, 1) e (0, 2)</p>
       </div>
      </div><!-- Dependência Linear -->
      <div class="glass rounded-2xl p-8 mb-8">
@@ -122,7 +129,9 @@
       </div>
       <div class="glass rounded-xl p-6 space-y-3">
        <p class="font-semibold text-purple-400">Análise do Sistema:</p>
-       <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-green-600/30 flex items-center justify-center text-sm font-bold">1</span> <span><strong class="text-green-400">SPD</strong> (solução trivial λ = 0) → <strong>LI</strong></span>
+       <div class="flex items-start gap-3">
+        <span class="w-6 h-6 rounded-full bg-green-600/30 flex items-center justify-center text-sm font-bold">1</span> 
+        <span><strong class="text-green-400">SPD</strong> (solução trivial λ = 0) → <strong>LI</strong></span>
        </div>
        <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-red-600/30 flex items-center justify-center text-sm font-bold">2</span> <span><strong class="text-red-400">SPI</strong> (infinitas soluções) → <strong>LD</strong></span>
        </div>
@@ -171,7 +180,9 @@
       </div>
      </div>
      <div class="example-card glass rounded-2xl p-8">
-      <div class="flex items-center gap-3 mb-6"><span class="px-3 py-1 bg-red-600/30 rounded-full text-sm font-semibold">Exemplo 4</span> <span class="text-gray-400">Conjunto LD</span>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-red-600/30 rounded-full text-sm font-semibold">Exemplo 4</span> 
+        <span class="text-gray-400">Conjunto LD</span>
       </div>
       <p class="mb-4">Verificar se <span class="mono text-purple-400">{(1, 2), (2, 4)} ⊂ ℝ²</span> é LI ou LD:</p>
       <div class="math-block rounded-xl p-4 mb-4">
@@ -181,8 +192,10 @@
       </div>
       <div class="math-block rounded-xl p-4 mb-4">
        <p class="mono text-center text-sm text-gray-400 mb-2">Observe: L₂ = 2·L₁ (linhas proporcionais)</p>
-       <p class="mono text-center">λ₁ + 2λ₂ = 0</p>
+       <p class="mono text-center">2λ₁ + 4λ₂ = 2·(λ₁ + 2·λ₂)</p>
+       <p class="mono text-center">2λ₁ + 4λ₂ = 2·λ₁ + 4·λ₂</p>
        <p class="mono text-center mt-2"><span class="text-red-400">0 = 0</span></p>
+       <p class="mono text-center mt-2"><span class="text-red-400">λ₁ = -2λ₂</span></p>
       </div>
       <div class="p-4 rounded-xl bg-red-500/20 border border-red-500/30">
        <p class="text-red-400 font-semibold text-center">SPI (infinitas soluções)</p>
@@ -202,11 +215,17 @@
      </div>
      <div class="glass rounded-2xl p-8 mb-8">
       <h4 class="text-2xl font-semibold mb-4 text-pink-400">Gerando Espaços Vetoriais</h4>
-      <p class="text-lg leading-relaxed mb-6">Alguns conjuntos vetoriais conseguem <strong class="text-cyan-400">gerar Espaços Vetoriais</strong> através da combinação linear de seus vetores. A verificação é semelhante à análise de dependência linear, porém igualamos as equações a variáveis <span class="mono text-purple-400">xᵢ</span> ao invés de zero.</p>
+      <p class="text-lg leading-relaxed mb-6">Alguns conjuntos vetoriais conseguem <strong class="text-cyan-400">gerar Espaços Vetoriais</strong> através da combinação linear de seus vetores. A verificação é semelhante à análise de dependência linear, porém igualamos as equações às coordenadas <span class="mono text-purple-400">xᵢ</span> de um vetor qualquer ao invés de zero.</p>
       <div class="math-block rounded-xl p-6 mb-6">
-       <p class="text-center text-xl mono"><span class="text-cyan-400">v</span> = λ₁·v₁ + λ₂·v₂ + λ₃·v₃ + ... + λₙ·vₙ</p>
+       <p class="text-center text-xl mono">
+        <span class="text-cyan-400">v</span> = λ₁·v₁ + λ₂·v₂ + λ₃·v₃ + ... + λₙ·vₙ
+       </p>
       </div>
-      <p class="text-gray-300 mb-6">O vetor <span class="mono text-cyan-400">v</span> é igualado a um vetor qualquer de V, escrito como <span class="mono text-purple-400">(x₁, x₂, ..., xₙ)</span>. O sistema resultante é:</p>
+      <p class="text-gray-300 mb-6">
+        O vetor <span class="mono text-cyan-400">v</span> é igualado a um vetor qualquer de V, escrito como 
+        <span class="mono text-purple-400">(x₁, x₂, ..., xₙ)</span>. 
+        O sistema resultante é:
+      </p>
       <div class="math-block rounded-xl p-6 mb-6 overflow-x-auto">
        <div class="mono text-center space-y-2">
         <p>λ₁a₁ + λ₂a₂ + ... + λₙaₙ = x₁</p>
@@ -216,7 +235,9 @@
        </div>
       </div>
       <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-4 border border-green-500/30">
-       <p class="text-green-400 font-semibold flex items-center gap-2">Para gerar o espaço, o sistema deve ser SPD (Sistema Possível Determinado)</p>
+       <p class="text-green-400 font-semibold flex items-center gap-2">
+        Para gerar o espaço, o sistema deve ser SPD (Sistema Possível Determinado)
+       </p>
       </div>
      </div>
      <div class="example-card glass rounded-2xl p-8 mb-8">
@@ -263,7 +284,10 @@
       </div>
       <div class="mt-6 math-block rounded-xl p-4"> 
        <p class="mono text-sm mb-2 text-gray-400">Solução:</p>
-       <p class="mono text-center">λ₁ = <span class="text-cyan-400">x₂/4</span> , λ₂ = <span class="text-cyan-400">(4x₁ - x₂)/8</span></p>
+       <p class="mono text-center">
+        λ₁ = (x₁·0 - 2·x₂)/(-8) = <span class="text-cyan-400">x₂/4</span> , 
+        λ₂ = (1·x₂ - x₁·4)/(-8)<span class="text-cyan-400">(4x₁ - x₂)/8</span>
+       </p>
       </div>
      </div>
      <div class="example-card glass rounded-2xl p-8">
@@ -298,20 +322,31 @@
      <div class="glass rounded-2xl p-8 mb-8">
       <h4 class="text-2xl font-semibold mb-4 text-purple-400">Base</h4>
       <div class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-xl p-6 mb-6 border border-purple-500/30">
-       <p class="text-xl font-semibold text-center">Uma <span class="text-cyan-400">base</span> é um conjunto de vetores <span class="text-purple-400">LI</span> que consegue <span class="text-green-400">gerar</span> um Espaço Vetorial V</p>
+       <p class="text-xl font-semibold text-center">
+        Uma <span class="text-cyan-400">base</span> é um conjunto de vetores <span class="text-purple-400">LI</span> que consegue <span class="text-green-400">gerar um Espaço Vetorial V</span>
+       </p>
       </div>
       <p class="text-lg leading-relaxed mb-6">Isso significa que <strong>todos os vetores de V</strong> podem ser gerados com os vetores da base β, e essa base tem o <strong class="text-cyan-400">número mínimo de vetores</strong> necessários para gerar V.</p>
+      <br>
       <div class="glass rounded-xl p-6">
        <p class="text-purple-400 font-semibold mb-3">Método para verificar se β é base de V:</p>
        <ol class="space-y-2 text-gray-300">
-        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">1</span> <span>Testar se o conjunto gera o espaço</span></li>
-        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">2</span> <span>Testar se o conjunto é Linearmente Independente</span></li>
-        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-green-600/30 flex items-center justify-center text-sm font-bold">3</span> <span>Se o conjunto for <strong>LI</strong> e <strong>gerar o espaço</strong>, então ele é base!</span></li>
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">1</span> 
+            <span>Testar se o conjunto gera o espaço</span></li>
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">2</span> 
+            <span>Testar se o conjunto é Linearmente Independente</span></li>
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-green-600/30 flex items-center justify-center text-sm font-bold">3</span> 
+            <span>Se o conjunto for <strong>LI</strong> e <strong>gerar o espaço</strong>, então ele é base!</span></li>
        </ol>
       </div>
      </div>
      <div class="example-card glass rounded-2xl p-8 mb-8">
-      <div class="flex items-center gap-3 mb-6"><span class="px-3 py-1 bg-green-600/30 rounded-full text-sm font-semibold">Exemplo 7</span> <span class="text-gray-400">Verificando se é base</span>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-green-600/30 rounded-full text-sm font-semibold">Exemplo 7</span> 
+        <span class="text-gray-400">Verificando se é base</span>
       </div>
       <p class="mb-4">Usando <span class="mono text-purple-400">α = {(1, 4), (2, 0)}</span> do exemplo anterior:</p>
       <div class="grid md:grid-cols-2 gap-6">
@@ -347,15 +382,19 @@
       </div>
       <div class="mt-6 math-block rounded-xl p-4 mb-4"> 
        <p class="mono text-sm mb-2 text-gray-400">Solução:</p>
-       <p class="mono text-center">det(A) = 1·0 - 2·4 = <span class="text-cyan-400 font-bold">-8 ≠ 0</span> (Gera o espaço!)</p>
-       <p class="mono text-center">λ₁ = 
-        <span class="text-cyan-400">x₂/4</span> , 
-        λ₂ = 
-        <span class="text-cyan-400">(4x₁ - x₂)/8</span>
+       <p class="mono text-center">1. det(A) = 1·0 - 2·4 = <span class="text-cyan-400 font-bold">-8 ≠ 0</span> (Gera o espaço!)</p>
+       <br>
+       <p class="mono text-center">
+        λ₁ = (x₁·0 - 2·x₂)/(-8) = <span class="text-cyan-400">x₂/4</span> , 
+        </p>
+       <p class="mono text-center">
+        λ₂ = (1·x₂ - x₁·4)/(-8) = <span class="text-cyan-400">(4x₁ - x₂)/8</span>
        </p>
-       <p class="mono text-center mb-2">Com x₁ = x₂ = 0:</p>
+       <br>
+       <p class="mono text-center mb-2">2. Com x₁ = x₂ = 0:</p>
        <p class="mono text-center">λ₁ = <span class="text-cyan-400">0/4 = 0</span></p>
        <p class="mono text-center">λ₂ = <span class="text-cyan-400">(4·0 - 0)/8 = 0</span></p>
+       <p class="mono text-center mb-2">O conjunto é <strong> LI</strong>!</p>
       </div>
       <div class="p-4 rounded-xl bg-green-500/20 border border-green-500/30">
        <p class="text-green-400 font-semibold text-center">O conjunto α É BASE de V!</p>
@@ -421,11 +460,119 @@
       </div>
      </div>
     </section>
+
+    <section id="transformacao" class="mb-20">   <!-- Section: Transformação Linear -->
+     <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-xl bg-orange-600/30 flex items-center justify-center icon-badge">
+       #
+      </div>
+      <h3 class="text-3xl font-bold">Transformação Linear</h3>
+     </div>
+     <div class="glass rounded-2xl p-8 mb-8">
+      <div class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-xl p-6 mb-6 border border-purple-500/30">
+       <p class="text-xl font-semibold text-center">
+        <span class="text-purple-400">Transformação Linear</span> é um tipo "especial de função" que descreve uma <span class="text-cyan-400">relação entre dois Espaço Vetoriais</span>
+       </p>
+      </div>
+       <p class="text-lg leading-relaxed mb-6">
+        As formas mais comum de se escrever uma transformação linear são 
+        <span class="text-pink-400">T : ℝⁿ → ℝᵐ</span> e <span class="text-purple-400">T(v) = w</span>
+        e a relação é descrita ou como uma multiplicação de matrizes ou ou como uma substituição direta na transformação.
+       </p>
+      <div class="math-block rounded-xl p-6 mb-6">
+        <p class="mono text-sm mb-2 text-gray-400">Formas de resolver uma transformação linear:</p>
+       <p class="text-center">Forma 1: <br> T(v) = w <span class="text-center text-gray-400">(Substituição na transformação)</span></p>
+       <p class="text-center text-gray-400">ou</p>
+       <p class="text-center">Forma 2: <br>[T]·[v] = [w] <span class="text-center text-gray-400">(Multiplicação de matrizes)</span></p>
+      </div>
+      <div class="glass rounded-xl p-6 mb-6">
+       <p class="text-purple-400 font-semibold mb-3">Método para verificar se T é Transformação Linear:</p>
+       <ol class="space-y-2 text-gray-300">
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">1</span> 
+            <span>Testar se T(0) = 0</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">2</span> 
+            <span>T(u + v) = T(u) + T(v)</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-purple-600/30 flex items-center justify-center text-sm font-bold">3</span> 
+            <span>T(λv) = λ ⋅ T(v)</span>
+        </li>
+       </ol>
+     </div>
+     </div>
+     <div class="example-card glass rounded-2xl p-8 mb-8">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-pink-600/30 rounded-full text-sm font-semibold">Exemplo 9</span> 
+        <span class="text-gray-400">Substituição na transformação</span>
+      </div>
+      <p class="mb-4">Sendo T(x, y, z) = (x + z, y) e v = (v₁, v₂, v₃) ∈ R³:
+      </p>
+      <div class="math-block rounded-xl p-4 mb-4">
+       <p class="mono text-center mb-2">Substituindo T(x, y, z) pelas coordenadas de v: </p>
+       <p class="mono text-center"> T(v) = <span class="text-cyan-400">T(v₁, v₂, v₃)</span></p>
+       <p class="mono text-center">T(v₁, v₂, v₃) = <span class="text-cyan-400">(v₁ + v₂, v₃)</span></p>
+      </div>
+      <div class="p-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30">
+       <p class="text-center text-xl">
+        <span class="mono text-cyan-400">T(v)</span> <span class="mx-4">=</span> <span class="mono text-purple-400">(v₁ + v₂, v₃)</span>
+       </p>
+      </div>
+     </div>
+     <div class="example-card glass rounded-2xl p-8 mb-8">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-pink-600/30 rounded-full text-sm font-semibold">Exemplo 10</span> 
+        <span class="text-gray-400">Multiplicação de matrizes</span>
+      </div>
+      <p class="mb-4">Sendo T(x, y, z) = (x + z, y) e v = (v₁, v₂, v₃) ∈ R³:
+      </p>
+      <div class="math-block rounded-xl p-4 mb-4">
+       <p class="mono text-center mb-2">Montando a matriz [T]:</p>
+        <div class="flex items-center justify-center gap-4 mono">
+         <p class="mono text-center"> [T] =  </p>
+          <div class="matrix">
+            <div class="matrix-row"><span>1</span><span>0</span><span">1</span></div>
+            <div class="matrix-row"><span>0</span><span>1</span><span>0</span></div>
+          </div>
+        </div>
+        <p class="mono text-center mb-2">Aplicando a transformação T em v:</p>
+         <div class="flex items-center justify-center gap-4 mono">
+          <p class="mono text-center"> [T]·[v] = </p>
+           <div class="matrix">
+             <div class="matrix-row"><span>1</span><span>0</span><span">1</span></div>
+             <div class="matrix-row"><span>0</span><span>1</span><span>0</span></div>
+           </div>
+           <span>·</span>
+           <div class="matrix">
+             <div class="matrix-row"><span>v₁</span></div>
+             <div class="matrix-row"><span>v₂</span></div>
+             <div class="matrix-row"><span>v₃</span></div>
+           </div>
+           <span> = </span>
+           <div class="matrix">
+             <div class="matrix-row"><span>v₁ + v₂</span></div>
+             <div class="matrix-row"><span>v₃</span></div>
+           </div>
+         </div>
+      </div>
+      <div class="p-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30">
+         <div class="flex items-center justify-center gap-4 mono">
+          <p class="mono text-center"> [T]·[v] = </p>
+           <div class="matrix">
+             <div class="matrix-row"><span>v₁ + v₂</span></div>
+             <div class="matrix-row"><span>v₃</span></div>
+           </div>
+      </div>
+     </div>
+    </section>
     
     <section id="interativo" class="mb-20"> <!-- Interactive Section -->
      <div class="flex items-center gap-4 mb-8">
       <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center glow icon-badge">
-       ∆
+       ⚝
+
       </div>
       <h3 class="text-3xl font-bold">Visualização Interativa</h3>
      </div>
@@ -436,19 +583,27 @@
       <h4 class="text-xl font-semibold mb-6">Mudança de Base</h4>
       <div class="grid md:grid-cols-3 gap-6 mb-6">
        <div>
-        <label class="block text-sm text-gray-400 mb-2">Base - Vetor b₁</label>
+
+        <label class="block text-sm text-gray-400 mb-2">Base - <span class="text-red-400">Vetor b₁</span></label>
         <div class="flex gap-2 mb-4">
-         <input type="number" id="b1x" value="1" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()"> <input type="number" id="b1y" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()">
-        </div><label class="block text-sm text-gray-400 mb-2">Base - Vetor b₂</label>
+         <input type="number" id="b1x" value="1" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-red-500 focus:outline-none mono" oninput="updateMudancaViz()"> 
+         <input type="number" id="b1y" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-red-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()">
+        </div>
+
+        <label class="block text-sm text-gray-400 mb-2">Base - <span class="text-cyan-400">Vetor b₂</span></label>
         <div class="flex gap-2">
-         <input type="number" id="b2x" value="2" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()"> <input type="number" id="b2y" value="0" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()">
+         <input type="number" id="b2x" value="2" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()"> 
+         <input type="number" id="b2y" value="0" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-cyan-500/30 focus:border-cyan-500 focus:outline-none mono" oninput="updateMudancaViz()">
         </div>
        </div>
+
        <div>
-        <label class="block text-sm text-gray-400 mb-2">Vetor v</label>
+        <label class="block text-sm text-purple-400 mb-2">Vetor v</label>
         <div class="flex gap-2 mb-4">
-         <input type="number" id="vx" value="2" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()"> <input type="number" id="vy" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()">
+         <input type="number" id="vx" value="2" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()"> 
+         <input type="number" id="vy" value="4" class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-purple-500/30 focus:border-purple-500 focus:outline-none mono" oninput="updateMudancaViz()">
         </div>
+
         <div id="mudanca-info" class="p-4 rounded-xl bg-gray-800/50 mono text-sm mt-4">
          <p>det = <span id="mudanca-det" class="text-cyan-400">-8</span></p>
          <p class="mt-2">λ₁ = <span id="mudanca-l1-val" class="text-purple-400">1.00</span></p>
@@ -462,20 +617,29 @@
            <line x1="0" y1="0" x2="1" y2="0" stroke="rgba(124,58,237,0.12)" stroke-width="0.02" />
            <line x1="0" y1="0" x2="0" y2="1" stroke="rgba(124,58,237,0.12)" stroke-width="0.02" />
           </pattern>
-          <marker id="arrow-mudanca1" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto" markerunits="strokeWidth">
+          <marker id="arrow-mudancaB1" markerwidth="10" markerheight="10" refx="7" refy="3" orient="auto" >
+           <path d="M0,0 L0,6 L9,3 Z" fill="#ec4899" />
+          </marker>
+          <marker id="arrow-mudancaB2" markerwidth="10" markerheight="10" refx="7" refy="3" orient="auto" >
            <path d="M0,0 L0,6 L9,3 Z" fill="#22d3ee" />
           </marker>
-          <marker id="arrow-mudanca2" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto" markerunits="strokeWidth">
-           <path d="M0,0 L0,6 L9,3 Z" fill="#22d3ee" />
-          </marker>
-          <marker id="arrow-mudanca-v" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto" markerunits="strokeWidth">
+          <marker id="arrow-mudanca-v" markerwidth="10" markerheight="10" refx="7" refy="3" orient="auto" >
            <path d="M0,0 L0,6 L9,3 Z" fill="#7c3aed" />
           </marker>
-         </defs> <rect id="grid-background" x="-8" y="-8" width="16" height="16" fill="url(#grid-mudanca)" /> <line x1="-8" y1="0" x2="8" y2="0" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> <line x1="0" y1="-8" x2="0" y2="8" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> <line id="mudanca-base1" x1="0" y1="0" x2="1" y2="-4" stroke="#22d3ee" stroke-width="0.2" stroke-dasharray="0.3,0.15" marker-end="url(#arrow-mudanca1)" /> <line id="mudanca-base2" x1="0" y1="0" x2="2" y2="0" stroke="#22d3ee" stroke-width="0.2" stroke-dasharray="0.3,0.15" marker-end="url(#arrow-mudanca2)" /> <line id="mudanca-vec" x1="0" y1="0" x2="2" y2="-4" stroke="#7c3aed" stroke-width="0.25" marker-end="url(#arrow-mudanca-v)" /> <text id="mudanca-label-b1" x="1.2" y="-4.5" fill="#22d3ee" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
+         </defs> 
+         <rect id="grid-background" x="-16" y="-16" width="20" height="20" fill="url(#grid-mudanca)" /> 
+         <line x1="-8" y1="0" x2="8" y2="0" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> 
+         <line x1="0" y1="-8" x2="0" y2="8" stroke="rgba(255,255,255,0.2)" stroke-width="0.1" /> 
+         <line id="mudanca-base1" x1="0" y1="0" x2="1" y2="-4" stroke="#ec4899" stroke-width="0.2" stroke-dasharray="0.3,0.15" marker-end="url(#arrow-mudancaB1)" /> 
+         <line id="mudanca-base2" x1="0" y1="0" x2="2" y2="0" stroke="#22d3ee" stroke-width="0.2" stroke-dasharray="0.3,0.15" marker-end="url(#arrow-mudancaB2)" /> 
+         <line id="mudanca-vec" x1="0" y1="0" x2="2" y2="-4" stroke="#7c3aed" stroke-width="0.25" marker-end="url(#arrow-mudanca-v)" /> 
+         <text id="mudanca-label-b1" x="1.2" y="-4.5" fill="#ec4899" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
           b₁
-         </text> <text id="mudanca-label-b2" x="2.3" y="0.6" fill="#22d3ee" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
+         </text> 
+         <text id="mudanca-label-b2" x="2.3" y="0.6" fill="#22d3ee" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
           b₂
-         </text> <text id="mudanca-label-v" x="2.3" y="-4.5" fill="#7c3aed" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
+         </text> 
+         <text id="mudanca-label-v" x="2.3" y="-4.5" fill="#7c3aed" font-size="0.8" font-family="JetBrains Mono" font-weight="bold">
           v
          </text>
         </svg>
@@ -526,7 +690,12 @@
         var b=a.contentDocument||a.contentWindow.document;
         if(b){
             var d=b.createElement('script');
-            d.innerHTML="window.__CF$cv$params={r:'9d9c7214f1a3402c',t:'MTc3MzA4NDExNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            d.innerHTML=`
+                window.__CF$cv$params={r:'9d9c7214f1a3402c',t:'MTc3MzA4NDExNy4wMDAwMDA='};
+                var a=document.createElement('script');a.nonce='';
+                a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';
+                document.getElementsByTagName('head')[0].appendChild(a);
+                `;
             b.getElementsByTagName('head')[0].appendChild(d)
             }
         }
@@ -546,6 +715,6 @@
                     }
                 }
             }
-        })();
+        }) ();
     </script>
  </html>
