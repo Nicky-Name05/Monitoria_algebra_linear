@@ -562,7 +562,23 @@ function transformacaoLinear(){
     <div class="p-4 rounded-xl bg-green-500/20 border border-green-500/30 mb-4">
       <p class="text-green-400 font-semibold text-center">T é transformação linear</p>
     </div>
-    <div class="math-block rounded-xl p-4 mb-4">
+    <div class="math-block rounded-xl p-4 mb-4"><p class="mono text-sm mb-2">Por multiplicação de matrizes ([T]·[v]=[w]):</p>
+    <div class="flex items-center justify-center gap-4 mono">
+      <div class="matrix">
+        <div class="matrix-row"><span>${t1x}</span><span>${t1y}</span> </div>
+        <div class="matrix-row"><span>${t2x}</span><span>${t2y}</span> </div>
+      </div>
+      <span>·</span>
+      <div class="matrix">
+        <div class="matrix-row"><span>${tvx}</span> </div>
+        <div class="matrix-row"><span>${tvy}</span> </div>
+      </div>
+      <span>=</span>
+      <div class="matrix">
+        <div class="matrix-row"><span>w<sub>x</sub></span> </div>
+        <div class="matrix-row"><span>w<sub>y</sub></span> </div>
+      </div>
+    </div>
       <p class="mono text-sm text-gray-400 mb-2">Calculando w<sub>x</sub> e w<sub>y</sub>:</p>
       <p class="mono text-center">w<sub>x</sub> = (${t1x}·${tvx} + ${t1y}·${tvy}) = <span class="text-cyan-400">${formatNum(w1)}</span></p>
       <p class="mono text-center">w<sub>y</sub> = (${t2x}·${tvx} + ${t2y}·${tvy}) = <span class="text-cyan-400">${formatNum(w2)}</span></p>
@@ -657,6 +673,23 @@ function operadorLinear(){
   };
   html = `
   <div class="math-block rounded-xl p-4 mb-4">
+    <p class="mono text-sm mb-2">Por multiplicação de matrizes ([O]·[v]=[w]):</p>
+    <div class="flex items-center justify-center gap-4 mono">
+      <div class="matrix">
+        <div class="matrix-row"><span>${o1x}</span><span>${o1y}</span> </div>
+        <div class="matrix-row"><span>${o2x}</span><span>${o2y}</span> </div>
+      </div>
+      <span>·</span>
+      <div class="matrix">
+        <div class="matrix-row"><span>${ovx}</span> </div>
+        <div class="matrix-row"><span>${ovy}</span> </div>
+      </div>
+      <span>=</span>
+      <div class="matrix">
+        <div class="matrix-row"><span>w<sub>x</sub></span> </div>
+        <div class="matrix-row"><span>w<sub>y</sub></span> </div>
+      </div>
+    </div>
     <p class="mono text-sm text-gray-400 mb-2">Calculando w<sub>x</sub> e w<sub>y</sub>:</p>
     <p class="mono text-center">w<sub>x</sub> = (${o1x}·${ovx} + ${o1y}·${ovy}) = <span class="text-cyan-400">${formatNum(ow1)}</span></p>
     <p class="mono text-center">w<sub>y</sub> = (${o2x}·${ovx} + ${o2y}·${ovy}) = <span class="text-cyan-400">${formatNum(ow2)}</span></p>
