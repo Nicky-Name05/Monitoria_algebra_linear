@@ -2,9 +2,19 @@
 <!doctype html>
 <html lang="pt-BR" class="h-full">
  <head>
+  <meta name="google-site-verification" content="MDzx81gmGGhe_p4nVcF1rPUpntyU5uliqyLi0XCuVHo" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Álgebra Linear: Combinações, Dependência, Bases e Transformações Lineares</title>
+  <title>Álgebra Linear: Combinação, Dependência, Bases e Transformações Lineares</title><meta name="description" content="Aprenda e visualize conceitos de Álgebra Linear na prática. Calcule transformações lineares, mudanças de base, vetores e operadores 2D de forma interativa.">
+
+  <meta name="keywords" content="álgebra linear, vetores, transformação linear, mudança de base, matrizes, calculadora de matrizes, matemática interativa">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="App Interativo de Álgebra Linear">
+  <meta property="og:description" content="Visualize e calcule vetores, bases e transformações lineares diretamente no navegador.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://algebra-linear-monitoria.web.app/">
+
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
@@ -539,8 +549,9 @@
           </div>
         </div>
         <p class="mono text-center mb-2">Aplicando a transformação T em v:</p>
+        <p class="flex items-center justify-center mb-2 gap-4 mono"> [T]·[v] = </p>
          <div class="flex items-center justify-center gap-4 mono">
-          <p class="mono text-center"> [T]·[v] = </p>
+           <span>=</span>
            <div class="matrix">
              <div class="matrix-row"><span>1</span><span>0</span><span>1</span></div>
              <div class="matrix-row"><span>0</span><span>1</span><span>0</span></div>
@@ -621,9 +632,11 @@
        </div>
       </div>
       <div class="p-4 rounded-xl bg-purple-500/20 border border-purple-500/30">
-       <p class="mono text-center text-sm">Verificação:</p>
+       <p class="mono text-center mb-2 text-sm">Verificação:</p>
+          <p class="flex items-center justify-center mb-2 gap-4 mono">
+             <span class="mono text-pink-400">[T]</span>·<span class="mono text-purple-400">[v]</span> = 
+          </p>
          <div class="flex items-center justify-center gap-4 mono">
-          <p class="mono text-center"> <span class="mono text-pink-400">[T]</span>·<span class="mono text-purple-400">[v]</span> = </p>
            <span class="mono text-pink-400"><div class="matrix">
              <div class="matrix-row"><span>1</span><span>0</span><span>1</span></div>
              <div class="matrix-row"><span>0</span><span>1</span><span>0</span></div>
@@ -739,29 +752,39 @@
 
       <div class="mt-6 math-block rounded-xl p-4 mb-4"> 
        <p class="mono text-sm mb-2 text-gray-400">Solução usando Gauss-Jordan:</p>
-        <div class="flex items-center justify-center mb-2 gap-4 mono">
+        <div class="grid justify-center mb-2 gap-2 mono">
+        <div class="flex justify-center ">
          <div class="matrix">
-          <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>0</span> </div>
-          <div class="matrix-row"><span>1</span><span>-1</span><span>0</span><span>|</span><span>0</span> </div>
+          <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>0</span></div>
+          <div class="matrix-row"><span>1</span><span>-1</span><span>0</span><span>|</span><span>0</span></div>
          </div>
-         <span><strong class="text-cyan-400">→</strong> L<sub>2</sub> → L<sub>2</sub> - 1·L<sub>1</sub> <strong class="text-cyan-400">→</strong></span>
+        </div>
+         <span class="flex items-center justify-center mb-2 gap-2 mono">
+          <strong class="text-cyan-400">→</strong>
+          L<sub>2</sub> → L<sub>2</sub> - 1·L<sub>1</sub>
+          <strong class="text-cyan-400">→</strong>
+        </span>
+        <div class="flex justify-center ">
          <div class="matrix">
           <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>0</span> </div>
           <div class="matrix-row"><span>0</span><span>-1</span><span>-1</span><span>|</span><span>0</span> </div>
          </div>
-         <span><strong class="text-cyan-400">→</strong> L<sub>2</sub> → (-1)·L<sub>2</sub> <strong class="text-cyan-400">→</strong></span>
+        </div>
+         <span class="flex items-center justify-center mb-2 gap-2 mono"><strong class="text-cyan-400">→</strong> L<sub>2</sub> → (-1)·L<sub>2</sub> <strong class="text-cyan-400">→</strong></span>
+         <span class="flex items-center justify-center gap-1">
          <div class="matrix">
           <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>0</span> </div>
           <div class="matrix-row"><span>0</span><span>1</span><span>1</span><span>|</span><span>0</span> </div>
          </div>
-         <span>=></span>
+         =></span>
       </div>
       <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm mb-2">=></p>
         <p class="mono">x + z = 0<br>y + z= 0</p>
+      </div>
+      <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm mb-2">=></p>
         <p class="mono">x = -z<br>y = -z</p>
-        <p class="mono text-sm mb-2">=></p>
       </div>
       <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm ">=></p>
@@ -879,17 +902,32 @@
       <div class="mt-6 math-block rounded-xl p-4 mb-4"> 
        <p class="mono text-sm mb-2 text-gray-400">Solução usando Gauss-Jordan:</p>
         <div class="grid items-center justify-center mb-2 gap-4 mono">
+          
+        <div class="flex justify-center ">
          <div class="matrix">
           <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>a</span> </div>
-          <div class="matrix-row"><span>1</span><span>-1</span><span>0</span><span>|</span><span>a</span> </div>
+          <div class="matrix-row"><span>1</span><span>-1</span><span>0</span><span>|</span><span>b</span> </div>
          </div>
+        </div>
          
-         <span class="flex items-center justify-center"><strong class="text-cyan-400 mr-2">→</strong> L<sub class="mr-2">2</sub>→ L<sub class="mr-2">2</sub> - 1·L<sub>1</sub> <strong class="text-cyan-400 ml-2">→</strong></span>
+         <span class="flex items-center justify-center">
+          <strong class="text-cyan-400 mr-2">→</strong>
+          L<sub class="mr-2">2</sub>→ L<sub class="mr-2">2</sub> - 1·L<sub>1</sub>
+          <strong class="text-cyan-400 ml-2">→</strong>
+        </span>
+         
+        <div class="flex justify-center ">
          <div class="matrix">
           <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>a</span> </div>
           <div class="matrix-row"><span>0</span><span>-1</span><span>-1</span><span>|</span><span>b - a</span> </div>
          </div>
-         <span class="flex items-center justify-center"><strong class="text-cyan-400 mr-2">→</strong> L<sub class="mr-2">2</sub> → (-1)·L<sub>2</sub> <strong class="text-cyan-400 ml-2">→</strong></span>
+        </div>
+
+         <span class="flex items-center justify-center">
+          <strong class="text-cyan-400 mr-2">→</strong>
+          L<sub class="mr-2">2</sub> → (-1)·L<sub>2</sub>
+          <strong class="text-cyan-400 ml-2">→</strong>
+        </span>
          <span class="flex items-center justify-center gap-1">
          <div class="matrix">
           <div class="matrix-row"><span>1</span><span>0</span><span>1</span><span>|</span><span>a</span> </div>
@@ -901,9 +939,10 @@
       <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm mb-2">=></p>
         <p class="mono">x + z = a<br>y + z = a - b</p>
+      </div>
+      <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm">=></p>
         <p class="mono">w = (a, a - b)</p>
-        <p class="mono text-sm">=></p>
       </div>
       <div class="flex items-center justify-center mb-2 gap-4 mono">
         <p class="mono text-sm ">=></p>
@@ -1162,38 +1201,38 @@
       <div class="math-block rounded-xl p-4 mb-4">
         <p class="mono text-justify mt-2 mb-2 text-gray-400">Sua forma matricial é:</p>
         
-        <div class="flex items-center justify-center mb-2 gap-4 mono">
+        <div class="flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
-          <div class="matrix-row"><span>cos (𝜽)</span><span>- sin (𝜽)</span></div>
-          <div class="matrix-row"><span>sin (𝜽)</span><span>cos (𝜽)</span></div>
+          <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span></div>
+          <div class="matrix-row"><span>sin(𝜽<sub>r</sub>)</span><span>cos(𝜽<sub>r</sub>)</span></div>
          </div>
-         <p>, para n = 2</p>
+         <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 2)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-4 mono">
+        <div class="flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
-          <div class="matrix-row"><span class="mr-4 mono">1</span><span class="mr-4 mono">0</span><span class="mr-4 mono">0</span></div>
-          <div class="matrix-row"><span>0</span><span>cos(𝜽)</span><span>-sin(𝜽)</span></div>
-          <div class="matrix-row"><span>0</span><span>sin(𝜽)</span><span>cos (𝜽)</span></div>
+          <div class="matrix-row"><span class="mr-8 mono">1</span><span class="mr-8 mono">0</span><span class="mr-4 mono">0</span></div>
+          <div class="matrix-row"><span>0</span><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span></div>
+          <div class="matrix-row"><span>0</span><span>sin(𝜽<sub>r</sub>)</span><span>cos (𝜽<sub>r</sub>)</span></div>
          </div>
-         <p>, para n = 3, rotacionando em torno de x</p>
+         <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de x)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-4 mono">
+        <div class="flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
-          <div class="matrix-row"><span>cos(𝜽)</span><span>0</span><span>sin(𝜽)</span></div>
-          <div class="matrix-row"><span class="mr-4 mono">0</span><span class="mr-4 mono">1</span><span class="mr-4 mono">0</span></div>
-          <div class="matrix-row"><span>-sin(𝜽)</span><span>0</span><span>cos(𝜽)</span></div>
+          <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>0</span><span>sin(𝜽<sub>r</sub>)</span></div>
+          <div class="matrix-row"><span class="mr-8 mono">0</span><span class="mr-8 mono">1</span><span class="mr-4 mono">0</span></div>
+          <div class="matrix-row"><span>-sin(𝜽<sub>r</sub>)</span><span>0</span><span>cos(𝜽<sub>r</sub>)</span></div>
          </div>
-         <p>, para n = 3, rotacionando em torno de y</p>
+         <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de y)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-4 mono">
+        <div class="flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
-          <div class="matrix-row"><span>cos(𝜽)</span><span>-sin(𝜽)</span><span>0</span></div>
-          <div class="matrix-row"><span>sin(𝜽)</span><span>cos(𝜽)</span><span>0</span></div>
-          <div class="matrix-row"><span class="mr-4 mono">0</span><span class="mr-4 mono">0</span><span class="mr-4 mono">1</span></div>
+          <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span><span>0</span></div>
+          <div class="matrix-row"><span>sin(𝜽<sub>r</sub>)</span><span>cos(𝜽<sub>r</sub>)</span><span>0</span></div>
+          <div class="matrix-row"><span class="mr-8 mono">0</span><span class="ml-4 mono">0</span><span class="ml-12 mono">1</span></div>
          </div>
-         <p>, para n = 3, rotacionando em torno de z</p>
+         <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de z)</p>
         </div>
-        <p class="flex justify-center gap-1">Em que <span class="text-cyan-400"> 𝜽 está em graus</span></p>
+        <p class="flex justify-center gap-1">Em que <span class="text-cyan-400"> 𝜽<sub>r</sub> está em radianos</span>, ou seja, para rotacionar 𝜽 graus, <span class="text-cyan-400"> 𝜽<sub>r</sub> deverá ser 𝜽 · π / 180</span></p>
         </div>
       <div class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-xl p-6 mb-6 border border-purple-500/30">
         <p class="text-xl font-semibold text-center">Se <span class="text-cyan-400">n = 2</span>, o operador  <span class="text-purple-400">gira em torno da origem</span>.</p>
@@ -1235,13 +1274,18 @@
 
     </section>
 
-    <section id="interativo" class="mb-20"> <div class="flex items-center gap-4 mb-8"> 
+    <section id="interativo" class="mb-20"> 
+      <div class="flex items-center gap-4 mb-8"> 
       <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center glow icon-badge">
        ⚝
       </div>
       <h3 class="text-3xl font-bold">Visualização Interativa</h3>
      </div>
-
+     
+      <p class="mono text-sm mb-2 text-gray-400">(Apenas no computador) Tanto o <strong>plano cartesiano</strong> quanto o <strong class="text-purple-400">vetor v</strong> 
+        podem ser manipulados ao pressionar o <strong class="text-cyan-400">botão direito do mouse</strong> sobre eles e os <strong class="text-cyan-400">arrastar</strong> e o 
+        <strong class="text-cyan-400">scroll do mouse</strong> pode ser usado para dar zoom
+      </p>
      <div class="flex gap-2 mb-6 flex-wrap"> 
         <button onclick="showTab('mudanca-int')" id="tab-mudanca-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Mudança de Base</button>
         <button onclick="showTab('transformacao-int')" id="tab-transformacao-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Transformação Linear</button>
@@ -1327,7 +1371,7 @@
       <h4 class="text-xl font-semibold mb-6">Operador Linear</h4>
       <div class="grid md:grid-cols-3 gap-6 mb-6"> 
         <div>
-         <label for="operadores" class="block text-sm text-gray-400 mb-2">Operador Linear- <span class="text-red-400">Matriz T</span></label>  
+         <label for="operadores" class="block text-sm text-gray-400 mb-2">Operador Linear- <span class="text-red-400">Matriz O</span></label>  
           <select class="glass rounded-2xl p-8 mb-2" name="operadores" id="operadores" onchange="updateOperadorViz()">
             <option value="dilContr">Dilatação/Contração</option>
             <option value="reflexão2DX">Reflexão em X</option>
@@ -1419,11 +1463,35 @@
    </main>
    
    <footer class="glass border-t border-purple-500/20 py-8"><div class="max-w-7xl mx-auto px-6 text-center text-gray-400">
-     <p>Álgebra Linear / Combinações Lineares, Dependência, Bases e Transformações Lineares</p>
-     <p>Trabalho de Monitoria da Aluna Nicole Akemi Takeda de Engenharia da Computação</p>
+     <p>Álgebra Linear / Combinação Lineares, Dependência Lineares, Bases e Transformações Lineares</p>
+     <p>Trabalho de Monitoria Institucional da Unifor do periodo de 25.2 a 26.1</p>
+     <p>Autoria de Nicole Akemi Takeda, graduanda de Engenharia da Computação</p>
     </div>
    </footer>
   </div>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA18ye4IIsB1E73wry1yTMIFvhcbppBwNA",
+    authDomain: "algebra-linear-monitoria.firebaseapp.com",
+    projectId: "algebra-linear-monitoria",
+    storageBucket: "algebra-linear-monitoria.firebasestorage.app",
+    messagingSenderId: "49329647970",
+    appId: "1:49329647970:web:72d251ce3cb2b12606fc3b",
+    measurementId: "G-0CDCJT5KSB"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
   <script src="script.js"> </script>
  </body>
  </html>
