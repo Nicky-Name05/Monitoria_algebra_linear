@@ -16,7 +16,7 @@ Para achar o $N(T)$, é igualado o vetor resultado da transformação linear ao 
 >[!tip]
 >**Relação de $Ker(T)$ com funções**\
 >Como muitas funções podem ser escritas como transformações lineares, ao achar o $Ker(T)$ dessas funções, pode-se chegar a algumas conclusões.\
->Uma das mais importantes é caso $Ker(T)=\set0$, pois isso implica que $T$ é injetora. Isso será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^2].
+>Uma das mais importantes é caso $Ker(T)=\set0$, pois isso implica que $T$ é injetora. Isso será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^1].
 
 >[!important]
 >**Como escrever o $Ker(T)$ nas respostas**\
@@ -77,13 +77,13 @@ $$ Im(T)$$
 
 Para achar a imagem, o vetor resultado de $T$ é igualado a um vetor genérico e em seguida é resolvido o sistema. É necessário tomar cuidado ao solucionar o sistema, pois, para o vetor pertencer a imagem, o sistema tem que ser possível, então:
 
-1. Normalmente é usado [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>)[^3] para resolver sistema, visto que é necessário achar a condição em que o sistema é possível (condição para que o vetor pertença a imagem).
+1. Normalmente é usado [Gauss-Jordan](<Métodos de resolução de Sistemas Lineares.md>)[^2] para resolver sistema, visto que é necessário achar a condição em que o sistema é possível (condição para que o vetor pertença a imagem).
 2. Não é necessário achar todas as soluções do sistema, apenas as condições para que tornam o sistema consistente.
 
 >[!tip]
 >**Relação de $Im(T)$ com funções**\
 >Como muitas funções podem ser escritas como transformações lineares, ao achar o $Im(T)$ dessas funções, pode-se chegar a algumas conclusões.\
->Uma das mais importantes é caso $dim\ Im(T) = dim\ 𝕎$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^4].
+>Uma das mais importantes é caso $dim\ Im(T) = dim\ 𝕎$, pois isso implica que $T$ é sobrejetora. Isso também será mais explicado em [Dimensão de uma Transformação Linear](<Transformações Lineares.md>)[^1].
 
 >[!important]
 >**Como escrever o $Im(T)$ nas respostas**\
@@ -238,10 +238,6 @@ c
 >**Sistemas SPD também podem gerar $𝕎$ ($T: 𝕍 \Rightarrow \boxed{𝕎}$)**\
 >Se os vetores da $Im (T)$ conseguirem gerar $𝕎$, o conjunto $Im(T)$ será igual a $𝕎$ (algebricamente: $Im(T) = 𝕎$).
 
-[^1]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
+[^1]: [Transformações Lineares.pdf](<pdfs/Transformações Lineares.pdf>)
 
-[^2]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
-
-[^3]: [<Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.pdf>)
-
-[^4]: [Transformações Lineares.pdf](<Transformações Lineares.pdf>)
+[^2]: [<Métodos de resolução de Sistemas Lineares.pdf](<pdfs/Métodos de resolução de Sistemas Lineares.pdf>)
