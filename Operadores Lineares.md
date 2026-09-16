@@ -1,6 +1,6 @@
 Operadores Lineares são [Transformações Lineares](<Transformações Lineares.md>)[^1] $T: 𝕍\rightarrow 𝕎$ em que $𝕍 = 𝕎= ℝ^n$ ou simplesmente $T: 𝕍 \rightarrow 𝕍$  em que $𝕍 = ℝ^n$. Vale citar também que, como muitas vezes esses operadores são usados para manipular objetos que conseguimos ver (que tem no máximo 3 dimensões), $n$ costuma ser ou 2 ou 3, o que significa que neste curso serão tratados apenas operadores de ordem 2 ou 3.
 
-[^1]: [Operadores Lineares.pdf](<Operadores Lineares.pdf>)
+[^1]: [Operadores Lineares.pdf](<pdfs/Operadores Lineares.pdf>)
 
 Alguns operadores lineares notáveis são:
 ## 1. Operador de Dilatação/ Operador de Contração
