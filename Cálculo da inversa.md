@@ -90,4 +90,4 @@ c&d& \shortmid & 0&1\\
 \end {bmatrix}
 = [I_2|A^{-1}]$$
 
-[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.md>)
+[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<pdfs/Métodos de resolução de Sistemas Lineares.pdf>)
