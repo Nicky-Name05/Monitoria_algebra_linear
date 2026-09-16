@@ -346,8 +346,8 @@ Em que $\sim$ indica que $[A|I_n]$ e $[I_n|A^{-1}]$ são linha semelhantes e "|"
 >2. Se $A$ e $B$ são inversíveis e da mesma ordem, então $(AB)^{-1} = B^{-1}A^{-1}$.
 >3. $det(A^{-1})=\frac1{det(A)}$
 
-[^1]: [Regra de Laplace.pdf](<Regra de Laplace.pdf>)
+[^1]: [Regra de Laplace.pdf](<Rpdfs/egra de Laplace.pdf>)
 
-[^2]: [Sistema Linear.pdf](<Sistema Linear.pdf>)
+[^2]: [Sistema Linear.pdf](<pdfs/Sistema Linear.pdf>)
 
-[^3]: [Cálculo da inversa.pdf](<Cálculo da inversa.pdf>)
+[^3]: [Cálculo da inversa.pdf](<pdfs/Cálculo da inversa.pdf>)
