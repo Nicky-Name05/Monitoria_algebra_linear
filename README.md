@@ -1,4 +1,4 @@
-Esse repositorio foi feito para servir de uma forma de salvar os materiais que eu fiz durante a minha Monitoria de Álgebra Linear, com o markdown adaptado do Markdown usado pelo Obsidian para o Markdown usado pelo GitHub.
+Esse repositorio foi feito para servir como uma forma de salvar os materiais que eu fiz durante a minha Monitoria de Álgebra Linear na Unifor, com o markdown adaptado do Markdown usado pelo Obsidian para o Markdown usado pelo GitHub.
 
 > [!important]
 > O site é parte do projeto final de monitoria e pode ser acessado pelos seguintes links
