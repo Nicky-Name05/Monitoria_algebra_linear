@@ -186,10 +186,10 @@ Existem algumas características importantes associadas à dimensão do Núcleo 
 2. Para uma transformação $T:𝕍 \rightarrow 𝕎$, se e somente se $dim\ Im(T)= dim\ 𝕎$,  $T$ será sobrejetora. Ou seja, se $dim\ Im(T)= dim\ 𝕎$, então $T$ é sobrejetora e se $T$ for sobrejetora, então $dim\ Im(T)= dim\ 𝕎$.
 3. Para uma transformação $T:𝕍 \rightarrow 𝕎$, sempre vale a soma $dim\ 𝕍=dim\ Ker(T)+dim\ Im(T)$.
 
-[^1]: [Operadores Lineares.pdf](<Operadores Lineares.pdf>)
+[^1]: [Operadores Lineares.pdf](<pdfs/Operadores Lineares.pdf>)
 
-[^2]: [Vetor.pdf](<Vetor.pdf>)
+[^2]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
-[^3]: [Núcleo e Imagem de uma Transformação Linear.pdf](<Núcleo e Imagem de uma Transformação Linear.pdf>)
+[^3]: [Núcleo e Imagem de uma Transformação Linear.pdf](<pdfs/Núcleo e Imagem de uma Transformação Linear.pdf>)
 
-[^4]: [Bases.pdf](<Bases.pdf>)
+[^4]: [Bases.pdf](<pdfs/Bases.pdf>)
