@@ -386,6 +386,6 @@ A Dimensão de um Espaço Vetorial é igual a quantidade de vetores que uma de s
 >[!Warning]
 >A dimensão de um espaço que contém apenas o vetor nulo é igual a $0$!
 
-[^1]: [Vetor.pdf](<Vetor.pdf>)
+[^1]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
-[^2]: [Combinação e Dependência Linear.pdf](<Combinação e Dependência Linear.pdf>)
+[^2]: [Combinação e Dependência Linear.pdf](<pdfs/Combinação e Dependência Linear.pdf>)
