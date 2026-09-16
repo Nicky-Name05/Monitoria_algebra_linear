@@ -29,7 +29,7 @@ $$ \lambda_1  \cdot v_1 + \lambda_2  \cdot v_2 + \lambda_3  \cdot v_3 + ... + \l
 >\
 >Se um conjunto de vetores contém $3$ vetores e o espaço vetorial é $ℝ^2$, por exemplo, o conjunto é LD, pois a dimensão de $ℝ^2$ é menor que $3$.
 
-Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>)[^4] ($(0,0)$, para $ℝ ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
+Em que $0$ é o vetor nulo do [espaço vetorial](<Vetor.md>)[^1] ($(0,0)$, para $ℝ ^2$, por exemplo) e n seja o total de vetores no conjunto analisado. Essa equação gera um sistema linear da seguinte forma:
 
 $$\begin{cases}
 \lambda_1a_1 + \lambda_2a_2 +.... + \lambda_na_n = 0 \\
@@ -118,5 +118,3 @@ Caso esse sistema seja SPD, o conjunto é $LI$. Isso significa que, se o sistema
 [^1]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
 [^2]: [Bases.pdf](<pdfs/Bases.md>)
-
-[^4]: [Vetor.pdf](<Vetor.md>)
