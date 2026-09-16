@@ -44,6 +44,6 @@ Além disso, existem inúmeros [Tipos Especiais de Matrizes](<Tipos Especiais de
 
 É possível também fazer [Operações de Matrizes](<Operações de Matrizes.md>)[^2], como a Soma de Matrizes, porém as operações não são feitas da mesma forma que as operações entre escalares são feitas.
 
-[^1]: [Tipos Especiais de Matrizes.pdf](<Tipos Especiais de Matrizes.pdf>)
+[^1]: [Tipos Especiais de Matrizes.pdf](<pdfs/Tipos Especiais de Matrizes.pdf>)
 
-[^2]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
+[^2]: [Operações de Matrizes.pdf](<pdfs/Operações de Matrizes.pdf>)
