@@ -99,5 +99,5 @@ $$Seja\ 𝕍\ um\ Espaço\ Vetorial \  e\ 𝕎 \subset 𝕍,$$
 >
 > $$II. u+v= (u_1, u_1^2)+(v_1, v_1^2)=(u_1+v_1, u_1^2+v_1^2),\ que\ NÃO\ está\ em\ 𝕎.$$
 
-[^1]: [Tipos Especiais de Matrizes.pdf](<Tipos Especiais de Matrizes.pdf>)
+[^1]: [Tipos Especiais de Matrizes.pdf](<pdfs/Tipos Especiais de Matrizes.pdf>)
 
