@@ -4,6 +4,7 @@
  <head>
   <meta name="google-site-verification" content="MDzx81gmGGhe_p4nVcF1rPUpntyU5uliqyLi0XCuVHo" />
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Álgebra Linear: Combinação, Dependência, Bases e Transformações Lineares</title><meta name="description" content="Aprenda e visualize conceitos de Álgebra Linear na prática. Calcule transformações lineares, mudanças de base, vetores e operadores 2D de forma interativa.">
 
@@ -14,6 +15,7 @@
   <meta property="og:description" content="Visualize e calcule vetores, bases e transformações lineares diretamente no navegador.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://algebra-linear-monitoria.web.app/">
+  <link rel="canonical" href="https://algebra-linear-monitoria.web.app/" />
 
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1289,10 +1291,14 @@
       <h3 class="text-3xl font-bold">Visualização Interativa</h3>
      </div>
      
-      <p class="mono text-sm mb-2 text-gray-400">(Apenas no computador) Tanto o <strong>plano cartesiano</strong> quanto o <strong class="text-purple-400">vetor v</strong> 
+      <p class="mono text-sm mb-2 text-gray-400">(No computador) Tanto o <strong>plano cartesiano</strong> quanto o <strong class="text-purple-400">vetor v</strong> 
         podem ser manipulados ao pressionar o <strong class="text-cyan-400">botão direito do mouse</strong> sobre eles e os <strong class="text-cyan-400">arrastar</strong> e o 
         <strong class="text-cyan-400">scroll do mouse</strong> pode ser usado para dar zoom
-      </p>
+      </p> 
+      <p class="mono text-sm mb-2 text-gray-400">(No celular) Tanto o <strong>plano cartesiano</strong> quanto o <strong class="text-purple-400">vetor v</strong> 
+        podem ser manipulados ao <strong class="text-cyan-400">tocá-los</strong> e <strong class="text-cyan-400">arrastá-los</strong> e fazer um
+        <strong class="text-cyan-400">movimento de pinça</strong> dar zoom
+      <br>
      <div class="flex gap-2 mb-6 flex-wrap"> 
         <button onclick="showTab('mudanca-int')" id="tab-mudanca-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Mudança de Base</button>
         <button onclick="showTab('transformacao-int')" id="tab-transformacao-int" class="tab-btn px-6 py-3 rounded-xl font-semibold bg-gray-800 hover:bg-gray-700 transition">Transformação Linear</button>
@@ -1332,7 +1338,7 @@
        </div>
        
        <div class="vector-canvas rounded-xl overflow-hidden border border-purple-500/30" style="min-height: 280px; height: 100%; position: relative;">
-        <canvas id="mudanca-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;"></canvas>
+        <canvas id="mudanca-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;">Gráfico interativo da aplicação de mudança de base em vetores bidimensionais</canvas>
        </div>
 
       </div>
@@ -1366,7 +1372,7 @@
         </div>
 
         <div class="vector-canvas rounded-xl overflow-hidden border border-purple-500/30" style="min-height: 280px; height: 100%; position: relative;">
-         <canvas id="transformacao-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;"></canvas>
+         <canvas id="transformacao-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;">Gráfico interativo de Transformações Lineares em vetores bidimensionais</canvas>
         </div>
 
       </div>
@@ -1407,7 +1413,7 @@
         </div>
 
         <div class="vector-canvas rounded-xl overflow-hidden border border-purple-500/30" style="min-height: 280px; height: 100%; position: relative;">
-         <canvas id="operador-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;"></canvas>
+         <canvas id="operador-canvas" style="width: 100%; height: 100%; display: block; cursor: grab; min-height: 280px;">Gráfico interativo de Operadores Lineares em vetores bidimensionais</canvas>
         </div>
       </div>
       <button onclick="operadorLinear()" class="w-full py-4 rounded-xl mt-6 bg-gradient-to-r from-cyan-600 to-purple-600 font-semibold text-lg hover:opacity-90 transition">Calcular a aplicação de T em v</button>
