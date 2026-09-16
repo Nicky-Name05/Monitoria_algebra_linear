@@ -91,8 +91,8 @@ $$ A_{3x1} =
 6&1&5
 \end{pmatrix} $$
 
-[^1]: [Vetor.pdf](<Vetor.pdf>)
+[^1]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
-[^2]: [Sistema Linear.pdf](<Sistema Linear.pdf>)
+[^2]: [Sistema Linear.pdf](<pdfs/Sistema Linear.pdf>)
 
-[^3]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
+[^3]: [Operações de Matrizes.pdf](<pdfs/Operações de Matrizes.pdf>)
