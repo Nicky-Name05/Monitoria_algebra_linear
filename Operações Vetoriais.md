@@ -168,6 +168,6 @@ $$ \overrightarrow v \cdot (\overrightarrow u\times \overrightarrow w) $$
 >$$ \Rightarrow
 \boxed {v_f=20} $$
 
-[^1]: [Vetor.pdf](<Vetor.pdf>)
+[^1]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
-[^2]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
+[^2]: [Operações de Matrizes.pdf](<pdfs/Operações de Matrizes.pdf>)
