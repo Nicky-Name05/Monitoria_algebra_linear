@@ -44,8 +44,7 @@ function scrollToSection(id) {
 }
 
 
-// renderizacao dos graficos e seus elementos
-
+//graficos e seus elementos
 const views = {
     mudanca: { camX: 0, camY: 0, zoom: 16 }, 
     transformacao: { camX: 0, camY: 0, zoom: 16 },
@@ -224,7 +223,6 @@ function renderCanvas(canvasId, type) {
         ctx.fillText("v", pv.x + 8, pv.y - 8);
     }else if (type === 'operador') {
         const op = document.getElementById('operadores').value;
-        console.log(op);
         let o1x;
         let o1y;
         let o2x;
@@ -287,9 +285,7 @@ function renderCanvas(canvasId, type) {
     }
 }
 
-
-// Interatividade com os planos cartesianos
-
+// planos cartezianos interativos
 function initCanvasInteractions() {
     setupCanvas('mudanca-canvas', 'mudanca', 'vx', 'vy');
     setupCanvas('transformacao-canvas', 'transformacao', 'tvx', 'tvy');
@@ -308,8 +304,11 @@ function setupCanvas(canvasId, type, vxId, vyId) {
 
     const getMouseWorld = (e) => {
         const rect = canvas.getBoundingClientRect();
-        const sx = e.clientX - rect.left;
-        const sy = e.clientY - rect.top;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        const sx = clientX - rect.left;
+        const sy = clientY - rect.top;
         
         const view = views[type];
         const width = rect.width;
@@ -342,6 +341,43 @@ function setupCanvas(canvasId, type, vxId, vyId) {
             canvas.style.cursor = 'grabbing';
         }
     });
+    canvas.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      const view = views[type];
+      if (e.touches.length === 2) {
+          const touch1 = e.touches[0];
+          const touch2 = e.touches[1];
+          
+          const initialDist = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+          const midX = (touch1.clientX + touch2.clientX) / 2;
+          const midY = (touch1.clientY + touch2.clientY) / 2;
+
+          const fakeEvent = { touches: [{ clientX: midX, clientY: midY }] };
+          const worldBefore = getMouseWorld(fakeEvent);
+
+          activeDrag = {
+              type, mode: 'zoom', initialDist, initialZoom: view.zoom, worldBefore, midX, midY
+          };
+          return;
+      }
+      const world = getMouseWorld(e);
+      const vx = parseFloat(document.getElementById(vxId).value) || 0;
+      const vy = parseFloat(document.getElementById(vyId).value) || 0;
+      
+      const dist = Math.hypot(world.wx - vx, world.wy - vy);
+      const clientX = e.touches[0].clientX;
+      const clientY = e.touches[0].clientY;
+      
+      if (dist < view.zoom * 0.05) { 
+          activeDrag = { type, mode: 'vector', vxId, vyId };
+      } else {
+          activeDrag = { 
+              type, mode: 'pan', 
+              startX: clientX, startY: clientY,
+              startCamX: view.camX, startCamY: view.camY 
+          };
+      }
+}, { passive: false });
 
     canvas.addEventListener('wheel', (e) => {
         e.preventDefault();
@@ -407,6 +443,77 @@ window.addEventListener('mousemove', (e) => {
         renderCanvas(canvasId, activeDrag.type);
     }
 });
+window.addEventListener('touchmove', (e) => {
+    if (!activeDrag) return;
+    
+    const canvasId = activeDrag.type === 'mudanca' ? 'mudanca-canvas' : activeDrag.type === 'transformacao' ? 'transformacao-canvas' : 'operador-canvas';
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+
+    if (activeDrag.mode === 'vector') {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        const sx = clientX - rect.left;
+        const sy = clientY - rect.top;
+        
+        const view = views[activeDrag.type];
+        const scale = rect.width / view.zoom;
+        const viewHeightWorld = rect.height / scale;
+        
+        const wx = (sx / scale) + (view.camX - view.zoom/2);
+        const wy = (view.camY + viewHeightWorld/2) - (sy / scale);
+        
+        document.getElementById(activeDrag.vxId).value = (Math.round(wx * 10) / 10).toFixed(1);
+        document.getElementById(activeDrag.vyId).value = (Math.round(wy * 10) / 10).toFixed(1);
+        
+        if (activeDrag.type === 'mudanca') { 
+            updateMudancaViz(); 
+        } else if (activeDrag.type === 'transformacao') { 
+            updateTransformacaoViz(); 
+        } else {
+          updateOperadorViz();
+        }
+    } else if (activeDrag.mode === 'pan') {
+    e.preventDefault();
+    const clientX = e.touches[0].clientX;
+    const clientY = e.touches[0].clientY;
+    const dx = clientX - activeDrag.startX; 
+    const dy = clientY - activeDrag.startY;
+    
+    const view = views[activeDrag.type];
+    const rect = canvas.getBoundingClientRect();
+    const scale = rect.width / view.zoom;
+    
+    view.camX = activeDrag.startCamX - (dx / scale);
+    view.camY = activeDrag.startCamY + (dy / scale);
+    
+    renderCanvas(canvasId, activeDrag.type);
+  } else if (activeDrag.mode === 'zoom' && e.touches.length === 2) {
+        e.preventDefault();
+        const touch1 = e.touches[0];
+        const touch2 = e.touches[1];
+        
+        const currentDist = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+        
+        const zoomRatio = activeDrag.initialDist / currentDist;
+        const view = views[activeDrag.type];
+        
+        view.zoom = activeDrag.initialZoom * zoomRatio;
+
+        const rect = canvas.getBoundingClientRect();
+        const sx = activeDrag.midX - rect.left;
+        const sy = activeDrag.midY - rect.top;
+        const scaleNew = rect.width / view.zoom;
+        const viewHeightWorldNew = rect.height / scaleNew;
+        
+        view.camX = activeDrag.worldBefore.wx - (sx / scaleNew) + view.zoom / 2;
+        view.camY = activeDrag.worldBefore.wy + (sy / scaleNew) - viewHeightWorldNew / 2;
+        
+        renderCanvas(canvasId, activeDrag.type);
+    }
+});
 
 window.addEventListener('mouseup', () => {
     if (activeDrag) {
@@ -416,10 +523,14 @@ window.addEventListener('mouseup', () => {
         activeDrag = null;
     }
 });
+window.addEventListener('touchend', () => {
+    if (activeDrag) {
+        activeDrag = null;
+    }
+});
 
 
-// codigo de mudanca nos planos cartesianos 
-
+// codigo dos planos cartesianos 
 function mudancaBase() {
   const b1x = parseFloat(document.getElementById('b1x').value) || 0;
   const b1y = parseFloat(document.getElementById('b1y').value) || 0;
@@ -807,8 +918,8 @@ function carregarAnalytics() {
     script.type = 'module';
     script.innerHTML = `
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 
   const firebaseConfig = {
   apiKey: "AIzaSyA18ye4IIsB1E73wry1yTMIFvhcbppBwNA",
