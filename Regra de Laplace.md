@@ -43,4 +43,4 @@ M_{23} =
 0 & 1
 \end{vmatrix}$$
 
-[^1]: [Operações de Matrizes.pdf](<Operações de Matrizes.pdf>)
+[^1]: [Operações de Matrizes.pdf](<pdfs/Operações de Matrizes.pdf>)
