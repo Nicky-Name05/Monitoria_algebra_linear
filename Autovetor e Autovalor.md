@@ -1,7 +1,7 @@
 ## 1. Autovetor
 Um **Autovetor**, também chamado de **Vetor Característico**, é um vetor não nulo que gera um outro vetor na mesma direção que ele (ou seja, gera um múltiplo dele mesmo) ao se aplicar um [Operador Linear](<Operadores Lineares.md>)[^1]. Algebricamente, isso é escrito como:
 
-[^1]:[Operador Linear.pdf](<Operadores Lineares.pdf>)
+[^1]:[Operador Linear.pdf](<pdfs/Operadores Lineares.pdf>)
 
 $$ T(v)= \lambda \cdot v,v \ne 0 $$
 
@@ -19,7 +19,7 @@ Agora que sabemos o que são autovetores e autovalores, é preciso saber como ac
 
 O primeiro passo para fazer isso é achando o chamado **Polinômio Característico** da [Matriz](<Matriz.md>)[^2] $A$, que é escrito como:
 
-[^2]:[Matriz.pdf](<Matriz.pdf>)
+[^2]:[Matriz.pdf](pdfs/<Matriz.pdf>)
 
 $$ P(\lambda)=det(A-\lambda \cdot I) $$
 
@@ -41,4 +41,4 @@ $$A_{\shortmid} = [A-\lambda_i\cdot I_n]$$
 
 Após isso, fazemos o [mesmo processo que fariamos para achar os vetores da Ker(T)](<Núcleo e Imagem de uma Transformação Linear.md>)[^3], ou seja, montamos uma matriz ampliada $[A_\shortmid|0]$ e usamos as operações elementares  para achar os vetores que gerariam o espaço vetorial. Os vetores resultante desse processo é o autovetor associado ao $\lambda_i$.
 
-[^3]:[Núcleo e Imagem de uma Transformação Linear.pdf](<Núcleo e Imagem de uma Transformação Linear.pdf>)
+[^3]:[Núcleo e Imagem de uma Transformação Linear.pdf](<pdfs/Núcleo e Imagem de uma Transformação Linear.pdf>)
