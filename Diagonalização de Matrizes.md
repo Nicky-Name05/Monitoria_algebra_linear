@@ -108,8 +108,8 @@ Como chegamos a uma "função recursiva", ou seja, uma função que a partir de 
 
 $$ \boxed {A^k =P \cdot D^k \cdot P^{-1}} $$
 
-[^1]: [Matriz.md](<Matriz.md>)
+[^1]: [Matriz.pdf](<pdfs/Matriz.pdf>)
 
-[^2]: [Tipos Especiais de Matrizes.pdf](<Tipos Especiais de Matrizes.pdf>)
+[^2]: [Tipos Especiais de Matrizes.pdf](<pdfs/Tipos Especiais de Matrizes.pdf>)
 
-[^3]: [(<Transformações Lineares.pdf>)](<Transformações Lineares.pdf>)
+[^3]: [(<Transformações Lineares.pdf>)](<pdfs/Transformações Lineares.pdf>)
