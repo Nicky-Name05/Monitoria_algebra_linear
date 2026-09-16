@@ -7,3 +7,4 @@ Esse repositorio foi feito para servir como uma forma de salvar os materiais que
 > > - https://algebra-linear-monitoria.firebaseapp.com/
 
 O arquivo com os Markdowns do próprio Obsidian também estão dispostos no arquivo [monitoria_algebra.zip](<monitoria_algebra.zip>).
+Foi disponibilizado também os pdfs dos arquivos em Markdown do Obsidian na pasta [pdfs](<pdfs>).
