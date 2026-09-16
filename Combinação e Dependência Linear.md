@@ -3,7 +3,7 @@ Combinação Linear é o vetor que resulta da soma de do produto de outros vetor
 
 $$v=\lambda_1 \cdot v_1 + \lambda_2 \cdot v_2 + \lambda_3 \cdot v_3 + ... + \lambda_n \cdot v_n$$
 
-Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor.md>)[^1] existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor.md>)[^2] pode ser gerado por um Subespaço (veremos mais sobre isso em [Bases](<Bases.md>)[^3]).
+Basicamente, geramos um novo vetor $v$ a partir de vetores dados. Isso é importante para saber se em um [Subespaço Vetorial](<Vetor.md>)[^1] existe algum vetor que é gerado por outro e se um [Espaço Vetorial](<Vetor.md>)[^1] pode ser gerado por um Subespaço (veremos mais sobre isso em [Bases](<Bases.md>)[^2]).
 
 > [!note]
 > **Exemplo:**
@@ -115,10 +115,8 @@ Caso esse sistema seja SPD, o conjunto é $LI$. Isso significa que, se o sistema
 >
 >$$\Rightarrow P_A = P_B = 2 \  (SPD!) \Rightarrow S= (0,0) \  (\text {Solução  \  única}) $$
 
-[^1]: [Vetor.pdf](<VEtor.pdf>)
+[^1]: [Vetor.pdf](<pdfs/Vetor.pdf>)
 
-[^2]: [Vetor.pdf](<Vetor.pdf>)
-
-[^3]: [Bases.pdf](<Bases.md>)
+[^2]: [Bases.pdf](<pdfs/Bases.md>)
 
 [^4]: [Vetor.pdf](<Vetor.md>)
