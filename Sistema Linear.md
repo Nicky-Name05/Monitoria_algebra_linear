@@ -130,4 +130,4 @@ Existem duas formas principais de se [solucionar um sistema linear usando matriz
 >**Gauss-Jordan consegue classificar todos os sistemas**\
 >Gauss-Jordan consegue afirmar se um sistema é SI, SPI ou SPD, além de achar forma geral das soluções de um SPI e a solução única de um SPD
 
-[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<Métodos de resolução de Sistemas Lineares.pdf>)
+[^1]: [Métodos de resolução de Sistemas Lineares.pdf](<pdfs/Métodos de resolução de Sistemas Lineares.pdf>)
