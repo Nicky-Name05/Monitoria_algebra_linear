@@ -17,10 +17,9 @@
   <meta property="og:url" content="https://algebra-linear-monitoria.web.app/">
   <link rel="canonical" href="https://algebra-linear-monitoria.web.app/" />
 
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <style>body { box-sizing: border-box; }</style>
  </head>
  <body class="h-full overflow-auto">
   <div class="min-h-full grid-bg"><header class="glass sticky top-0 z-50 border-b border-purple-500/20">
@@ -34,7 +33,7 @@
        <p id="subtitle" class="text-xs text-gray-400">Combinações, Dependência, Bases e Transformações Lineares</p>
       </div>
      </div>
-     <nav class="hidden md:flex gap-1">
+     <nav class="md:flex gap-2">
         <button onclick="scrollToSection('combinacao')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
             Combinação e<br>Dependência
         </button> 
@@ -44,19 +43,19 @@
         </button>
 
         <button onclick="scrollToSection('mudanca')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
-            Mudança de <br> Base
+            Mudança de<br>Base
         </button>
 
         <button onclick="scrollToSection('transformacao')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
-            Transformação <br> Linear
+            Transformação<br>Linear
         </button>
         
         <button onclick="scrollToSection('nucleo_e_imagem')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
-            Núcleo e <br> Imagem
+            Núcleo e<br>Imagem
         </button>
         
         <button onclick="scrollToSection('operador_linear')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
-            Operador <br> Linear
+            Operador<br>Linear
         </button>
 
         <button onclick="scrollToSection('interativo')" class="px-4 py-2 text-sm rounded-lg bg-purple-600/30 hover:bg-purple-500/40 transition">
@@ -1210,14 +1209,14 @@
       <div class="math-block rounded-xl p-4 mb-4">
         <p class="mono text-justify mt-2 mb-2 text-gray-400">Sua forma matricial é:</p>
         
-        <div class="flex items-center justify-center mb-2 gap-1 mono">
+        <div class="md:flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
           <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span></div>
           <div class="matrix-row"><span>sin(𝜽<sub>r</sub>)</span><span>cos(𝜽<sub>r</sub>)</span></div>
          </div>
          <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 2)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-1 mono">
+        <div class="md:flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
           <div class="matrix-row"><span class="mr-8 mono">1</span><span class="mr-8 mono">0</span><span class="mr-4 mono">0</span></div>
           <div class="matrix-row"><span>0</span><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span></div>
@@ -1225,7 +1224,7 @@
          </div>
          <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de x)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-1 mono">
+        <div class="md:flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
           <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>0</span><span>sin(𝜽<sub>r</sub>)</span></div>
           <div class="matrix-row"><span class="mr-8 mono">0</span><span class="mr-8 mono">1</span><span class="mr-4 mono">0</span></div>
@@ -1233,15 +1232,15 @@
          </div>
          <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de y)</p>
         </div>
-        <div class="flex items-center justify-center mb-2 gap-1 mono">
+        <div class="md:flex items-center justify-center mb-2 gap-1 mono">
          <div class="matrix">
           <div class="matrix-row"><span>cos(𝜽<sub>r</sub>)</span><span>-sin(𝜽<sub>r</sub>)</span><span>0</span></div>
-          <div class="matrix-row"><span>sin(𝜽<sub>r</sub>)</span><span>cos(𝜽<sub>r</sub>)</span><span>0</span></div>
-          <div class="matrix-row"><span class="mr-8 mono">0</span><span class="ml-4 mono">0</span><span class="ml-12 mono">1</span></div>
+          <div class="matrix-row"><span>sin(𝜽<sub>r</sub>)</span><span>cos(𝜽<sub>r</sub>)</span><span class="ml-2 mono">0</span></div>
+          <div class="matrix-row"><span class="justify-center mr-4 mono">0</span><span class="ml-12 mr-2 mono">0</span><span class="ml-12 mono">1</span></div>
          </div>
-         <p class="mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de z)</p>
+         <p class=" mono text-xs text-justify mt-2 mb-2 text-gray-400">(para n = 3, rotacionando em torno de z)</p>
         </div>
-        <p class="flex justify-center gap-1">Em que <span class="text-cyan-400"> 𝜽<sub>r</sub> está em radianos</span>, ou seja, para rotacionar 𝜽 graus, <span class="text-cyan-400"> 𝜽<sub>r</sub> deverá ser 𝜽 · π / 180</span></p>
+        <p class="md:flex justify-center gap-1">Em que <span class="text-cyan-400"> 𝜽<sub>r</sub> está em radianos</span>, ou seja, para rotacionar 𝜽 graus, <span class="text-cyan-400"> 𝜽<sub>r</sub> deverá ser 𝜽 · π / 180</span></p>
         </div>
       <div class="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-xl p-6 mb-6 border border-purple-500/30">
         <p class="text-xl font-semibold text-center">Se <span class="text-cyan-400">n = 2</span>, o operador  <span class="text-purple-400">gira em torno da origem</span>.</p>
