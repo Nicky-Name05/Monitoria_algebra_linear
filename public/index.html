@@ -17,9 +17,10 @@
   <meta property="og:url" content="https://algebra-linear-monitoria.web.app/">
   <link rel="canonical" href="https://algebra-linear-monitoria.web.app/" />
 
-  <link href="output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
  </head>
  <body class="h-full overflow-auto">
   <div class="min-h-full grid-bg"><header class="glass sticky top-0 z-50 border-b border-purple-500/20">
@@ -33,12 +34,13 @@
        <p id="subtitle" class="text-xs text-gray-400">Combinações, Dependência, Bases e Transformações Lineares</p>
       </div>
      </div>
-     <nav class="md:flex gap-2">
-        <button onclick="scrollToSection('combinacao')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
+     <nav class="md:flex gap-2 md:items-center">
+      <div class="hidden md:flex gap-2">
+        <button onclick="scrollToSection('combinacao')" class=" px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
             Combinação e<br>Dependência
         </button> 
 
-        <button onclick="scrollToSection('bases')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
+        <button onclick="scrollToSection('bases')" class=" px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
             Bases
         </button>
 
@@ -57,7 +59,18 @@
         <button onclick="scrollToSection('operador_linear')" class="px-4 py-2 text-sm rounded-lg hover:bg-purple-500/20 transition">
             Operador<br>Linear
         </button>
-
+      </div>
+      
+        <select id="navegacao" class="block md:hidden text-center mb-2 px-2 py-2 text-sm rounded-lg border border-purple-500/30 hover:bg-purple-500/20 transition" name="navegacao" onchange="scrollToSection(this.value)">
+            <option value="inicio"class="bg-purple-600/50">Assuntos</option>
+            <option value="combinacao" class="bg-purple-600/50">Combinação e Dependência</option>
+            <option value="bases" class="bg-purple-600/50">Bases</option>
+            <option value="mudanca" class="bg-purple-600/50">Mudança de Base</option>
+            <option value="transformacao" class="bg-purple-600/50">Transformação Linear</option>
+            <option value="nucleo_e_imagem" class="bg-purple-600/50">Núcleo e Imagem</option>
+            <option value="operador_linear" class="bg-purple-600/50">Operador Linear</option>
+        </select>
+        
         <button onclick="scrollToSection('interativo')" class="px-4 py-2 text-sm rounded-lg bg-purple-600/30 hover:bg-purple-500/40 transition">
             Visualização Interativa
         </button>
@@ -65,7 +78,7 @@
     </div>
    </header>
    <main class="max-w-7xl mx-auto px-6 py-12">
-    <section class="text-center mb-20 animate-in">
+    <section id="inicio" class="text-center mb-20 animate-in">
      <h2 class="text-5xl md:text-6xl font-bold mb-6"><span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">Álgebra Linear</span></h2>
      <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-4">
         Essa ferramenta foi feita para auxiliar estudantes na Álgebra Linear através da
