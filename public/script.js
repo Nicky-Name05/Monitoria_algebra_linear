@@ -880,7 +880,7 @@ function carregarAnalytics() {
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 
   const firebaseConfig = {
-  apiKey: "AIzaSyCOsC3ghV1DN7E_kVK81Dn-vFUpzfoMpkQ",
+  apiKey: "...",
   authDomain: "algebra-linear-monitoria.firebaseapp.com",
   projectId: "algebra-linear-monitoria",
   storageBucket: "algebra-linear-monitoria.firebasestorage.app",
