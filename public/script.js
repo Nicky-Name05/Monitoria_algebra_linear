@@ -606,13 +606,13 @@ function transformacaoLinear(){
   const t1y = parseFloat(document.getElementById('t1y').value) || 0;
   const t2x = parseFloat(document.getElementById('t2x').value) || 0;
   const t2y = parseFloat(document.getElementById('t2y').value) || 0;
-
   const tvx = parseFloat(document.getElementById('tvx').value) || 0;
   const tvy = parseFloat(document.getElementById('tvy').value) || 0;
   
   let transf = true;
   const delta = 0.0001; 
   const iguais = (a, b) => Math.abs(a - b) < delta;
+
   for (let i = 0; i < 5; i++){
     let lambda = parseFloat(Math.random());
     let x1 = parseFloat(Math.random());
@@ -622,20 +622,18 @@ function transformacaoLinear(){
 
     let teste1X = parseFloat((t1x * x1) + (t1y * y1)) + ((t1x * x2) + (t1y * y2));
     let teste1Y = parseFloat((t2x * x1) + (t2y * y1)) + ((t2x * x2) + (t2y * y2));
-
     let testeSomaX = parseFloat((t1x * (x1 + x2)) + (t1y * (y1 + y2)));
     let testeSomaY = parseFloat((t2x * (x1 + x2)) + (t2y * (y1 + y2)));
     
     let teste2X = parseFloat(lambda * ((t1x * x1) + (t1y * y1)));
     let teste2Y = parseFloat(lambda *((t2x * x1) + (t2y * y1)));
-
     let testeProdX = parseFloat((t1x * (lambda * x1)) + (t1y * (lambda * y1)));
     let testeProdY = parseFloat((t2x * (lambda * x1)) + (t2y * (lambda * y1)));
+
     if (iguais(teste1X, testeSomaX) && iguais(teste1Y, testeSomaY)) {
       if (iguais(teste2X, testeProdX) && iguais(teste2Y, testeProdY)) {
         transf = true;
-      }
-      else {
+      } else {
         transf = false;
         break;
       }
@@ -644,15 +642,23 @@ function transformacaoLinear(){
       break;
     }
   }
-  let html = '';
+
+  const container = document.getElementById('resultado-transformacao');
+  const divErro = document.getElementById('trans-erro');
+  const divSucesso = document.getElementById('trans-sucesso');
+  
+  container.classList.remove('hidden');
+
   if (transf === false) {
-    html = `
-    <div class="p-4 rounded-xl bg-red-500/20 border border-red-500/30">
-      <p class="text-gray-400 text-center mt-2">T não é transformação linear</p>
-    </div>`;
+    divErro.classList.remove('hidden');
+    divSucesso.classList.add('hidden');
   } else {
+    divErro.classList.add('hidden');
+    divSucesso.classList.remove('hidden');
+    
     const w1 = ((t1x * tvx) + (t1y * tvy));
     const w2 = ((t2x * tvx) + (t2y * tvy));
+    
     const formatNum = (n) => {
       if (Number.isInteger(n)) return n.toString();
       for (let d = 1; d <= 16; d++) {
@@ -661,39 +667,24 @@ function transformacaoLinear(){
       }
       return n.toFixed(4);
     };
-    html = `
-    <div class="p-4 rounded-xl bg-green-500/20 border border-green-500/30 mb-4">
-      <p class="text-green-400 font-semibold text-center">T é transformação linear</p>
-    </div>
-    <div class="math-block rounded-xl p-4 mb-4"><p class="mono text-sm mb-2">Por multiplicação de matrizes ([T]·[v]=[w]):</p>
-    <div class="flex items-center justify-center gap-4 mono">
-      <div class="matrix">
-        <div class="matrix-row"><span>${t1x}</span><span>${t1y}</span> </div>
-        <div class="matrix-row"><span>${t2x}</span><span>${t2y}</span> </div>
-      </div>
-      <span>·</span>
-      <div class="matrix">
-        <div class="matrix-row"><span>${tvx}</span> </div>
-        <div class="matrix-row"><span>${tvy}</span> </div>
-      </div>
-      <span>=</span>
-      <div class="matrix">
-        <div class="matrix-row"><span>w<sub>x</sub></span> </div>
-        <div class="matrix-row"><span>w<sub>y</sub></span> </div>
-      </div>
-    </div>
-      <p class="mono text-sm text-gray-400 mb-2">Calculando w<sub>x</sub> e w<sub>y</sub>:</p>
-      <p class="mono text-center">w<sub>x</sub> = (${t1x}·${tvx} + ${t1y}·${tvy}) = <span class="text-cyan-400">${formatNum(w1)}</span></p>
-      <p class="mono text-center">w<sub>y</sub> = (${t2x}·${tvx} + ${t2y}·${tvy}) = <span class="text-cyan-400">${formatNum(w2)}</span></p>
-    </div>
-    <div class="p-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30">
-      <p class="text-center text-xl">
-      <span class="mono text-cyan-400">T(${tvx}, ${tvy})</span> <span class="mx-4"> = </span> <span class="mono text-purple-400">(${formatNum(w1)}, ${formatNum(w2)})</span>
-    </p>
-    </div>`;
+    
+    document.getElementById('res-t1x').textContent = t1x;
+    document.getElementById('res-t1y').textContent = t1y;
+    document.getElementById('res-t2x').textContent = t2x;
+    document.getElementById('res-t2y').textContent = t2y;
+    document.getElementById('res-tvx').textContent = tvx;
+    document.getElementById('res-tvy').textContent = tvy;
+
+    document.getElementById('res-calc-wx').textContent = `${t1x} · ${tvx} + ${t1y} · ${tvy}`;
+    document.getElementById('res-calc-wy').textContent = `${t2x} · ${tvx} + ${t2y} · ${tvy}`;
+    
+    document.getElementById('res-wx').textContent = formatNum(w1);
+    document.getElementById('res-wy').textContent = formatNum(w2);
+
+    
+    document.getElementById('res-t-v-coord').textContent = `${tvx}, ${tvy}`;
+    document.getElementById('res-t-w-coord').textContent = `(${formatNum(w1)}, ${formatNum(w2)})`;
   }
-  document.getElementById('resultado-transformacao').innerHTML = html;
-  document.getElementById('resultado-transformacao').classList.remove('hidden');
 }
 
 function updateTransformacaoViz(){
@@ -717,56 +708,37 @@ function updateTransformacaoViz(){
 
 function operadorLinear(){
   const op = document.getElementById('operadores').value;
-  let o1x;
-  let o1y;
-  let o2x;
-  let o2y;
+  let o1x, o1y, o2x, o2y;
+  const k = parseFloat(document.getElementById('k').value) || 0;
+
   if (op === 'dilContr'){
-    o1x = parseFloat(document.getElementById('k').value);
-    o1y = parseFloat(0);
-    o2x = parseFloat(0);
-    o2y = parseFloat(document.getElementById('k').value);
+    o1x = k; o1y = 0; o2x = 0; o2y = k;
   } else if (op === 'reflexão2DX'){
-    o1x = parseFloat(-1);
-    o1y = parseFloat(0);
-    o2x = parseFloat(0);
-    o2y = parseFloat(1);
+    o1x = -1; o1y = 0; o2x = 0; o2y = 1;
   } else if (op === 'reflexão2DY'){
-    o1x = parseFloat(1);
-    o1y = parseFloat(0);
-    o2x = parseFloat(0);
-    o2y = parseFloat(-1);
+    o1x = 1; o1y = 0; o2x = 0; o2y = -1;
   } else if (op === 'expCompX'){
-    o1x = parseFloat(document.getElementById('k').value);
-    o1y = parseFloat(0);
-    o2x = parseFloat(0);
-    o2y = parseFloat(1);
+    o1x = k; o1y = 0; o2x = 0; o2y = 1;
   } else if (op === 'expCompY'){
-    o1x = parseFloat(1);
-    o1y = parseFloat(0);
-    o2x = parseFloat(0);
-    o2y = parseFloat(document.getElementById('k').value);
+    o1x = 1; o1y = 0; o2x = 0; o2y = k;
   } else if (op === 'rotacao'){
-    o1x = parseFloat(Math.cos(document.getElementById('k').value * Math.PI / 180 ));
-    o1y = parseFloat(-Math.sin(document.getElementById('k').value * Math.PI / 180 ));
-    o2x = parseFloat(Math.sin(document.getElementById('k').value * Math.PI / 180 ));
-    o2y = parseFloat(Math.cos(document.getElementById('k').value * Math.PI / 180 ));
+    const rad = k * Math.PI / 180;
+    o1x = Math.cos(rad);
+    o1y = -Math.sin(rad);
+    o2x = Math.sin(rad);
+    o2y = Math.cos(rad);
   } else if (op === 'c2DX'){
-    o1x = parseFloat(1);
-    o1y = parseFloat(document.getElementById('k').value);
-    o2x = parseFloat(0);
-    o2y = parseFloat(1);
-  }else if (op === 'c2DY'){
-    o1x = parseFloat(1);
-    o1y = parseFloat(0);
-    o2x = parseFloat(document.getElementById('k').value);
-    o2y = parseFloat(1);
+    o1x = 1; o1y = k; o2x = 0; o2y = 1;
+  } else if (op === 'c2DY'){
+    o1x = 1; o1y = 0; o2x = k; o2y = 1;
   }
-  const ovx = parseFloat(document.getElementById('ovx').value);
-  const ovy = parseFloat(document.getElementById('ovy').value);
+
+  const ovx = parseFloat(document.getElementById('ovx').value) || 0;
+  const ovy = parseFloat(document.getElementById('ovy').value) || 0;
 
   const ow1 = ((o1x * ovx) + (o1y * ovy));
   const ow2 = ((o2x * ovx) + (o2y * ovy));
+
   const formatNum = (n) => {
     if (Number.isInteger(n)) return n.toString();
     for (let d = 1; d <= 16; d++) {
@@ -775,37 +747,26 @@ function operadorLinear(){
     }
     return n.toFixed(4);
   };
-  html = `
-  <div class="math-block rounded-xl p-4 mb-4">
-    <p class="mono text-sm mb-2">Por multiplicação de matrizes ([O]·[v]=[w]):</p>
-    <div class="flex items-center justify-center gap-4 mono">
-      <div class="matrix">
-        <div class="matrix-row"><span>${o1x}</span><span>${o1y}</span> </div>
-        <div class="matrix-row"><span>${o2x}</span><span>${o2y}</span> </div>
-      </div>
-      <span>·</span>
-      <div class="matrix">
-        <div class="matrix-row"><span>${ovx}</span> </div>
-        <div class="matrix-row"><span>${ovy}</span> </div>
-      </div>
-      <span>=</span>
-      <div class="matrix">
-        <div class="matrix-row"><span>w<sub>x</sub></span> </div>
-        <div class="matrix-row"><span>w<sub>y</sub></span> </div>
-      </div>
-    </div>
-    <p class="mono text-sm text-gray-400 mb-2">Calculando w<sub>x</sub> e w<sub>y</sub>:</p>
-    <p class="mono text-center">w<sub>x</sub> = (${o1x}·${ovx} + ${o1y}·${ovy}) = <span class="text-cyan-400">${formatNum(ow1)}</span></p>
-    <p class="mono text-center">w<sub>y</sub> = (${o2x}·${ovx} + ${o2y}·${ovy}) = <span class="text-cyan-400">${formatNum(ow2)}</span></p>
-  </div>
-  <div class="p-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30">
-    <p class="text-center text-xl">
-    <span class="mono text-cyan-400">T(${ovx}, ${ovy})</span> <span class="mx-4"> = </span> <span class="mono text-purple-400">(${formatNum(ow1)}, ${formatNum(ow2)})</span>
-  </p>
-  </div>`;
 
-  document.getElementById('resultado-operador').innerHTML = html;
-  document.getElementById('resultado-operador').classList.remove('hidden');
+  const container = document.getElementById('resultado-operador');
+  container.classList.remove('hidden');
+
+  document.getElementById('res-o1x').textContent = formatNum(o1x);
+  document.getElementById('res-o1y').textContent = formatNum(o1y);
+  document.getElementById('res-o2x').textContent = formatNum(o2x);
+  document.getElementById('res-o2y').textContent = formatNum(o2y);
+  
+  document.getElementById('res-ovx').textContent = ovx;
+  document.getElementById('res-ovy').textContent = ovy;
+
+  document.getElementById('res-calc-owx').textContent = `${formatNum(o1x)} · ${ovx} + ${formatNum(o1y)} · ${ovy}`;
+  document.getElementById('res-calc-owy').textContent = `${formatNum(o2x)} · ${ovx} + ${formatNum(o2y)} · ${ovy}`;
+  
+  document.getElementById('res-owx').textContent = formatNum(ow1);
+  document.getElementById('res-owy').textContent = formatNum(ow2);
+
+  document.getElementById('res-o-v-coord').textContent = `${ovx}, ${ovy}`;
+  document.getElementById('res-o-w-coord').textContent = `(${formatNum(ow1)}, ${formatNum(ow2)})`;
 }
 
 function updateOperadorViz(){
@@ -919,7 +880,7 @@ function carregarAnalytics() {
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 
   const firebaseConfig = {
-  apiKey: "...",
+  apiKey: "AIzaSyCOsC3ghV1DN7E_kVK81Dn-vFUpzfoMpkQ",
   authDomain: "algebra-linear-monitoria.firebaseapp.com",
   projectId: "algebra-linear-monitoria",
   storageBucket: "algebra-linear-monitoria.firebasestorage.app",
