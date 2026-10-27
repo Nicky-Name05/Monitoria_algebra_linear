@@ -529,7 +529,6 @@ window.addEventListener('touchend', () => {
     }
 });
 
-
 // codigo dos planos cartesianos 
 function mudancaBase() {
   const b1x = parseFloat(document.getElementById('b1x').value) || 0;
@@ -538,17 +537,25 @@ function mudancaBase() {
   const b2y = parseFloat(document.getElementById('b2y').value) || 0;
   const vx = parseFloat(document.getElementById('vx').value) || 0;
   const vy = parseFloat(document.getElementById('vy').value) || 0;
+  
   const det = b1x * b2y - b2x * b1y;
-  let html = '';
+  
+  const container = document.getElementById('resultado-mudanca');
+  const divErro = document.getElementById('mudanca-erro');
+  const divSucesso = document.getElementById('mudanca-sucesso');
+  
+  container.classList.remove('hidden');
+
   if (det === 0) {
-    html = `
-    <div class="p-4 rounded-xl bg-red-500/20 border border-red-500/30">
-      <p class="text-red-400 font-semibold text-center">Os vetores da base são LD (det = 0)</p>
-      <p class="text-gray-400 text-center mt-2">Não formam uma base válida</p>
-    </div>`;
+    divErro.classList.remove('hidden');
+    divSucesso.classList.add('hidden');
   } else {
+    divErro.classList.add('hidden');
+    divSucesso.classList.remove('hidden');
+
     const lambda1 = (b2y * vx - b2x * vy) / det;
     const lambda2 = (b1x * vy - b1y * vx) / det;
+    
     const formatNum = (n) => {
       if (Number.isInteger(n)) return n.toString();
       for (let d = 1; d <= 16; d++) {
@@ -557,26 +564,16 @@ function mudancaBase() {
       }
       return n.toFixed(4);
     };
-    html = `
-    <div class="p-4 rounded-xl bg-green-500/20 border border-green-500/30 mb-4">
-      <p class="text-green-400 font-semibold text-center">Base válida (det = ${det})</p>
-    </div>
-    <div class="math-block rounded-xl p-4 mb-4">
-      <p class="mono text-sm text-gray-400 mb-2">Calculando λ₁ e λ₂:</p>
-      <p class="mono text-center">λ₁ = (${b2y}·${vx} - ${b2x}·${vy}) / ${det} = <span class="text-cyan-400">${formatNum(lambda1)}</span></p>
-      <p class="mono text-center">λ₂ = (${b1x}·${vy} - ${b1y}·${vx}) / ${det} = <span class="text-cyan-400">${formatNum(lambda2)}</span></p>
-    </div>
-    <div class="p-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30">
-      <p class="text-center text-xl">
-      <span class="mono text-cyan-400">(${vx}, ${vy})</span> <span class="mx-4">→</span> <span class="mono text-purple-400">(${formatNum(lambda1)}, ${formatNum(lambda2)})<sub>β</sub></span>
-      </p>
-      <p class="text-center text-xl">
-      <span class="mono text-purple-400">(${formatNum(lambda1)}, ${formatNum(lambda2)})</span> são as coordenadas de v na base β
-      </p>
-    </div>`;
+
+    document.getElementById('res-det').textContent = det;
+    document.getElementById('res-calc-l1').textContent = `(${b2y} × ${vx} - ${b2x} × ${vy}) / ${det}`;
+    document.getElementById('res-l1').textContent = formatNum(lambda1);
+    document.getElementById('res-calc-l2').textContent = `(${b1x} × ${vy} - ${b1y} × ${vx}) / ${det}`;
+    document.getElementById('res-l2').textContent = formatNum(lambda2);
+    document.getElementById('res-v-coord').textContent = `(${vx}, ${vy})`;
+    document.getElementById('res-base-coord').textContent = `(${formatNum(lambda1)}, ${formatNum(lambda2)})`;
+    document.getElementById('res-base-coord2').textContent = `(${formatNum(lambda1)}, ${formatNum(lambda2)})`;
   }
-  document.getElementById('resultado-mudanca').innerHTML = html;
-  document.getElementById('resultado-mudanca').classList.remove('hidden');
 }
 
 function updateMudancaViz() {
@@ -922,7 +919,7 @@ function carregarAnalytics() {
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 
   const firebaseConfig = {
-  apiKey: "AIzaSyA18ye4IIsB1E73wry1yTMIFvhcbppBwNA",
+  apiKey: "...",
   authDomain: "algebra-linear-monitoria.firebaseapp.com",
   projectId: "algebra-linear-monitoria",
   storageBucket: "algebra-linear-monitoria.firebasestorage.app",
