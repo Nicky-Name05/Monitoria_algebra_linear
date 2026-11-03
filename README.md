@@ -1,10 +1,8 @@
 Esse repositorio foi feito para servir como uma forma de salvar os materiais que eu fiz durante a minha Monitoria de Álgebra Linear na Unifor, com o markdown adaptado do Markdown usado pelo Obsidian para o Markdown usado pelo GitHub.
 
 > [!important]
-> O site é parte do projeto final de monitoria e pode ser acessado pelos seguintes links
+> O site é parte do projeto final de monitoria e pode ser acessado pelo seguinte link
 > > - https://algebra-linear-monitoria.web.app/
-> > 
-> > - https://algebra-linear-monitoria.firebaseapp.com/
 
 O arquivo com os Markdowns do próprio Obsidian também estão dispostos no arquivo [monitoria_algebra.zip](<monitoria_algebra.zip>).
 Foi disponibilizado também os pdfs dos arquivos em Markdown do Obsidian na pasta [pdfs](<pdfs>).
